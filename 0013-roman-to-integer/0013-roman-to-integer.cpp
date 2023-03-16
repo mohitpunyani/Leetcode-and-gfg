@@ -21,7 +21,7 @@ public:
             i++;
             
         }
-        else
+        else if(mp[s[i]]>=mp[s[i+1]])
         {
             ans=ans+mp[s[i]];
             
