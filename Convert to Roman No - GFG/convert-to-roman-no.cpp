@@ -13,19 +13,37 @@ class Solution{
     {
         // code here
         map<int,string> mp;
-        mp.insert({1,"I"});
-        mp.insert({4,"IV"});
-        mp.insert({5,"V"});
-        mp.insert({9,"IX"});
-        mp.insert({10,"X"});
-        mp.insert({40,"XL"});
-        mp.insert({50,"L"});
-        mp.insert({90,"XC"});   
-        mp.insert({100,"C"});
-        mp.insert({400,"CD"});
-        mp.insert({500,"D"});
-        mp.insert({900,"CM"});
+        // mp.insert({1,"I"});
+        // mp.insert({4,"IV"});
+        // mp.insert({5,"V"});
+        // mp.insert({9,"IX"});
+        // mp.insert({10,"X"});
+        // mp.insert({40,"XL"});
+        // mp.insert({50,"L"});
+        // mp.insert({90,"XC"});   
+        // mp.insert({100,"C"});
+        // mp.insert({400,"CD"});
+        // mp.insert({500,"D"});
+        
+        // mp.insert({900,"CM"});
+        // mp.insert({1000,"M"});    
+        
         mp.insert({1000,"M"});
+        mp.insert({900,"CM"});
+        mp.insert({500,"D"});
+        mp.insert({400,"CD"});
+        mp.insert({100,"C"});
+        mp.insert({90,"XC"});   
+        mp.insert({50,"L"});
+        mp.insert({40,"XL"});
+        mp.insert({10,"X"});
+        mp.insert({9,"IX"});
+        mp.insert({5,"V"});
+        mp.insert({4,"IV"});
+        mp.insert({1,"I"});
+
+
+        
         
         string result="";
         // for(auto it=mp.rbegin();it!=mp.rend();it++)
@@ -49,6 +67,7 @@ class Solution{
         {
             for(auto it=mp.rbegin();it!=mp.rend();it++)
             {
+                // we do use this loop from rbegin to r end because
                 int value=it->first;
                 if(n>=value)
                 {
