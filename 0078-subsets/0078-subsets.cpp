@@ -12,10 +12,10 @@ class Solution
            	return;
         }
 
-       	// inclusion
+       	// inclusion or pick
         temp.push_back(nums[index]);
         solve(nums, index + 1);
-       	// exclusion
+       	// exclusion or not pick
         temp.pop_back();
         solve(nums,index+1);
         return ;
