@@ -18,6 +18,7 @@ class Solution
        	// exclusion
         temp.pop_back();
         solve(nums,index+1);
+        return ;
     }
 
 vector<vector < int>> subsets(vector<int> &nums)
