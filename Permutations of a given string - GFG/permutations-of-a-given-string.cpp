@@ -41,8 +41,8 @@ class Solution
 
         solve(S,0);
         sort(ans.begin(),ans.end());
-        // ans.resize(unique(ans.begin(),ans.end()));
-                ans.erase(unique(ans.begin(),ans.end()),ans.end());
+        // ans.resize(unique(ans.begin(),ans.end())-ans.end());
+        ans.erase(unique(ans.begin(),ans.end()),ans.end());
 
         return ans;
         
