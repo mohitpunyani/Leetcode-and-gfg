@@ -111,6 +111,7 @@ Node* deleteNode(Node *head,int x)
             backward->next=forward->next;
             temp->next=NULL;
             delete temp;
+            break;
         }
     }
     return head;
