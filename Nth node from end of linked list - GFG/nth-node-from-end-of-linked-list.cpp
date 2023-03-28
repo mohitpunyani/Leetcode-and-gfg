@@ -79,12 +79,15 @@ int getNthFromLast(Node *head, int n)
        int start=ct-n;
        Node*temp=head;
        int counting=0;
+       if(start<0){
+           return -1;
+       }
        while(counting!=start)
        {
                counting++;
                temp=temp->next;
-               if(temp==NULL)
-                   return -1;
+            //   if(temp==NULL)
+            //       return -1;
            
        }
        return temp->data;
