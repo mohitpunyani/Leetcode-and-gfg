@@ -77,16 +77,16 @@ int getNthFromLast(Node *head, int n)
        // Your code here
        int ct=count(head,n);
        int start=ct-n;
-       Node*temp1=head;
+       Node*temp=head;
        int counting=0;
        while(counting!=start)
        {
                counting++;
-               temp1=temp1->next;
-               if(temp1==NULL)
+               temp=temp->next;
+               if(temp==NULL)
                    return -1;
            
        }
-       return temp1->data;
+       return temp->data;
 }
 
