@@ -10,8 +10,9 @@ class Solution{
         // Your code goes here
         vector<int>mix;
         for(int i=0;i<n;i++){
-            if(arr[i]>=0){
-                mix.push_back(arr[i]);
+            if(arr[i]>=0)
+            {
+             mix.push_back(arr[i]);   
             }
         }
         for(int i=0;i<n;i++){
@@ -22,6 +23,7 @@ class Solution{
         for(int i=0;i<n;i++){
             arr[i]=mix[i];
         }
+        
     }
 };
 
