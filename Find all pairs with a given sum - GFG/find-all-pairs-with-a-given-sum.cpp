@@ -7,7 +7,7 @@ class Solution{
     public:
     vector<pair<int,int>> allPairs(int A[], int B[], int N, int M, int X)
     {
-        // Your code goes here   
+       
         vector<pair<int,int>> ans;
         set<int>s;
         for(int i=0;i<M;i++){
@@ -16,15 +16,17 @@ class Solution{
         for(int i=0;i<N;i++){
             int diff=X-A[i];
             if(s.find(diff)!=s.end()){
-                pair<int,int>p={A[i],diff};
-                ans.push_back(p);
+                // pair<int,int>p={A[i],diff};
+                ans.push_back({A[i],diff});
                 s.erase(diff);
             }
         }
         
         sort(ans.begin(),ans.end());
         return ans;
+    
     }
+    
 };
 
 
