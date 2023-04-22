@@ -67,7 +67,8 @@ class Solution
                             
                             // recursivecall
                             
-                            if(SolveSudoku(grid))
+                            bool ans=SolveSudoku(grid);
+                            if(ans==true)
                             {
                                 return true;
                             }
