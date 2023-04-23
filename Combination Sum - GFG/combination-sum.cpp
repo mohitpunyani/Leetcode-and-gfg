@@ -42,7 +42,6 @@ class Solution {
         vector<vector<int>>ans;
           A.resize(unique(A.begin() , A.end())-A.begin());
         // A.erase(unique(A.begin(), A.end()), A.end()); // remove duplicate elements
-        sort(ans.begin(),ans.end());
         solve(A,0,B,temp,ans);
         // for(int i=0;i<ans.size();i++){
         //     sort(ans[i].begin(),ans[i].end());
@@ -55,7 +54,7 @@ class Solution {
         // for(auto y:st){
         //     ans.push_back(y);
         // }
-        // sort(ans.begin(),ans.end());
+        sort(ans.begin(),ans.end());
         return ans;
     }
 };
