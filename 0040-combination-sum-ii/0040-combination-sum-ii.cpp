@@ -14,7 +14,7 @@ public:
     for(int i=index;i<arr.size();i++)
     {
         if(i>index && arr[i]==arr[i-1]) 
-        continue;
+            continue;
 
         if(arr[i]>k){
             break;
@@ -35,6 +35,10 @@ public:
         vector<int>temp;
         sort(candidates.begin(),candidates.end());
         solve(0,k,candidates,temp,ans);
+        // ans.erase(unique(ans.begin(),ans.end()),ans.end());
+        // ans.resize(unique(ans.begin(),ans.end())-ans.begin());
+        // A.erase(unique(A.begin(), A.end()), A.end()); // remove duplicate elements
+
         return ans;
     }
 };
