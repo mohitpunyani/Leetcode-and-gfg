@@ -23,7 +23,7 @@ class Solution {
             return ;
         }
         
-        for(int i=s;i<=A.size()-1;i++){
+        for(int i=s;i<A.size();i++){
            temp.push_back(A[i]);
            solve(A,i,sum-A[i],temp,ans);
            temp.pop_back();
