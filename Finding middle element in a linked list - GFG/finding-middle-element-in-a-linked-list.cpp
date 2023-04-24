@@ -38,24 +38,24 @@ struct Node {
 }; */
 class Solution{
     public:
+
     /* Should return data of middle node. If linked list is empty, then  -1*/
     int getMiddle(Node *head)
     {
-        // Your code here
-        // using slow ans fast theorm
+        // using slow and fast pointer theorm
         Node*slow=head;
         Node*fast=head;
-        while(fast!=NULL && fast->next!=NULL){
+        while(fast->next!=NULL && fast!=NULL)
+        {
             fast=fast->next;
-            slow=slow->next;
             if(fast->next!=NULL){
                 fast=fast->next;
             }
+            slow=slow->next;
         }
         return slow->data;
         
     }
-    
 };
 
 
