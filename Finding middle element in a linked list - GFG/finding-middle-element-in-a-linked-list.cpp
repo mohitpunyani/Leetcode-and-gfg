@@ -45,7 +45,7 @@ class Solution{
         // using slow and fast pointer theorm
         Node*slow=head;
         Node*fast=head;
-        while(fast->next!=NULL && fast!=NULL)
+        while(fast->next!=NULL)
         {
             fast=fast->next;
             if(fast->next!=NULL){
