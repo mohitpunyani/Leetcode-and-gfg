@@ -95,7 +95,7 @@ int getNthFromLast(Node *head, int n)
       Node*temp=head;
       int count=1;
       
-      while(temp!=NULL && count<=k)
+      while(temp->next!=NULL && count<=k)
       {
           temp=temp->next;
           count++;
