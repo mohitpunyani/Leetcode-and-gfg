@@ -110,7 +110,7 @@ class Solution
             }
         }
         
-        if(fast==NULL or slow!=fast){
+        if(fast==NULL ){
             return ;
             // it means loop is not present
             
@@ -122,7 +122,7 @@ class Solution
         // IMP
          
          // SLOW KO HEAD par point kiya aur fast ko wahi se start kiya
-         
+         else if(slow==fast){
          slow=head;
          while(slow!=fast){
              slow=slow->next;
@@ -136,7 +136,7 @@ class Solution
          }
          temp->next=NULL;
          return;
-        
+         }
        
     }
     void removeLoop(Node* head)
