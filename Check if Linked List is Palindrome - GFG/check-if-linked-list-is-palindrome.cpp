@@ -62,6 +62,9 @@ class Solution{
            high--;
        }
        return true;
+       
+       // this is my approach
+       
     }
        
 };
