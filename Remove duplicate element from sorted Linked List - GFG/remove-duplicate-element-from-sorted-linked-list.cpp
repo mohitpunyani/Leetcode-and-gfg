@@ -70,8 +70,8 @@ Node *removeDuplicates(Node *head)
 {
  // your code goes here
  
- if(head==NULL or head->next==NULL){
-     // handle for one and two nodes
+ if(head->next==NULL){
+     // handle for one
      return head;
  }
  Node*prev=head;
