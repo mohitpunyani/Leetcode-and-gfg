@@ -86,11 +86,14 @@ Node *removeDuplicates(Node *head)
          prev->next=curr;
          delete temp;
      }
-     else{
+     else if(prev->data!=curr->data)
+     {
          prev=curr;
          curr=curr->next;
      }
     
  }
  return head;
+ 
+ // this is mine solution
 }
