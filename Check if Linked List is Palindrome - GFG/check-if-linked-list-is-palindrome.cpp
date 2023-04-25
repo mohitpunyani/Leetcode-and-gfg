@@ -103,15 +103,14 @@ class Solution{
        
        // now we have two different linked lists compare the data
        
-       Node*temp=newhead;
-       
-       while(temp!=NULL)
+      
+       while(newhead!=NULL)
        {
-           if(temp->data!=head->data){
+           if(newhead->data!=head->data)
+           {
                return false;
            }
-          
-           temp=temp->next;
+           newhead=newhead->next;
            head=head->next;
            
        }
