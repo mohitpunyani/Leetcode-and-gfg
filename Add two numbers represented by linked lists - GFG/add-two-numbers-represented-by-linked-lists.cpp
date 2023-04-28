@@ -139,7 +139,7 @@ class Solution
 
             // int digit=sum%10;
 
-            Node *temp=new Node();
+            Node *temp=new Node(sum);
 
             head->next=temp;
 
