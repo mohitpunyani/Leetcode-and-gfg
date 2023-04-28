@@ -134,7 +134,8 @@ class Solution
             carry=sum/10;
             head2=head2->next;
         }
-        while(carry!=0){
+        while(carry!=0)
+        {
             int sum=carry;
 
             // int digit=sum%10;
