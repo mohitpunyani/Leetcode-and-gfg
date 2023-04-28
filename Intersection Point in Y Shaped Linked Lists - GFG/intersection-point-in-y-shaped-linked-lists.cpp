@@ -102,6 +102,24 @@ Node* chalaya(Node*head,int diff)
     return head;
     
 }
+int dono_ko_equalchalaya(Node*head,Node*newhead)
+{
+      int ans=-1;
+      while(head!=NULL && newhead!=NULL)
+        {
+            if(head==newhead)
+            {
+                ans=head->data;
+                return ans;
+                
+            }
+            else{
+              head=head->next;
+              newhead=newhead->next;
+            }            
+        }
+        return ans;
+}
 int intersectPoint(Node* head1, Node* head2)
 {
     // Your Code Here
@@ -117,54 +135,23 @@ int intersectPoint(Node* head1, Node* head2)
     {
         Node*newhead=chalaya(head1,diff);
         // ab dono ko equal chalaya
-        while(head2!=NULL && newhead!=NULL)
-        {
-            if(head2==newhead)
-            {
-                ans=head2->data;
-                return ans;
-                
-            }
-            else{
-              head2=head2->next;
-              newhead=newhead->next;
-            }            
-        }
-        return ans;
+        int data=dono_ko_equalchalaya(head2,newhead);
+        return data;
+       
     }
     else if(l2>l1)
     {
          Node*newhead=chalaya(head2,diff);
         // ab dono ko equal chalaya
-        while(head1!=NULL && newhead!=NULL)
-        {
-            if(head1==newhead)
-            {
-                ans=head1->data;
-                return ans;
-            }
-            else{
-            head1=head1->next;
-            newhead=newhead->next;
-            }
-            
-        }
-        return ans;
+        int data=dono_ko_equalchalaya(head1,newhead);
+        return data;
+
     }
     
     else if(l1==l2)
     {
-        while(head1!=NULL && head2!=NULL){
-            if(head1==head2){
-                ans=head1->data;
-                return ans;
-            }
-            else{
-                head1=head1->next;
-                head2=head2->next;
-            }
-        }
-        return ans;
+        int data=dono_ko_equalchalaya(head1,head2);
+        return data;
         
     }
     
