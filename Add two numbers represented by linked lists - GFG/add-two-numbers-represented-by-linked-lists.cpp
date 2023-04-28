@@ -146,7 +146,7 @@ class Solution
 
             head=temp;
 
-            carry=sum/10;
+            // carry=sum/10;
         }
         return dummy->next;
     }
