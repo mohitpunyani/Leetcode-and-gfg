@@ -93,6 +93,7 @@ class Solution
     
     // or 
     *del=*temp;
+    temp->next=NULL;
        delete temp;
         
     }
