@@ -87,31 +87,30 @@ struct Node
 Node* deleteNode(Node *head,int x)
 {
     //Your code here
-    if(x==1 && head->next!=NULL)
+    
+    Node*prev=NULL;
+    Node*curr=head; 
+    // we minimum have two nodes;
+    if(x==1){
         return head->next;
-    
-    Node*backward=head;
-    Node*forward=head->next;
-    if(x==2){
-        Node*temp=forward;
-        backward->next=forward->next;
-        temp->next=NULL;
-        delete temp;
     }
-    
-    int count=2;
-    while(forward!=NULL)
+   
+    int count=1;
+    while(curr!=NULL)
     {
-        backward=forward;
-        forward=forward->next;
-        count++;
         if(count==x)
         {
-            Node*temp=forward;
-            backward->next=forward->next;
+            Node*temp=curr;
+            prev->next=curr->next;
+            curr=curr->next;
             temp->next=NULL;
             delete temp;
             break;
+        }
+        else {
+            count++;
+            prev=curr;
+            curr=curr->next;
         }
     }
     return head;
