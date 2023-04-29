@@ -104,12 +104,13 @@ class Solution
                 d->next=NULL;
                 delete d;
                 curr=head; // temp ko wapis head par le aaye aur phir wapis shuru se check kiya
-                
+                head=curr;
             }
             else{
                 curr=curr->next;
             }
         }
+        
         return head;
         
         
