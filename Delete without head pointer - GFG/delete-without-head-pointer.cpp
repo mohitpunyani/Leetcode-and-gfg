@@ -88,8 +88,11 @@ class Solution
        // data copy and link copy ka game tha
        
        Node*temp=del->next;
-       del->data=temp->data;
-       del->next=temp->next;
+    //   del->data=temp->data;
+    //   del->next=temp->next;
+    
+    // or 
+    *del=*temp;
        delete temp;
         
     }
