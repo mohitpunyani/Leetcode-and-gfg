@@ -85,9 +85,12 @@ class Solution
        
        // apne ko deleted node ka address de rakha hai
        
-        Node* temp = del->next;
-        *del = *temp;
-        delete temp;
+       // data copy and link copy ka game tha
+       
+       Node*temp=del->next;
+       del->data=temp->data;
+       del->next=temp->next;
+       delete temp;
         
     }
 
