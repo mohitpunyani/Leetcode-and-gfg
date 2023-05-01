@@ -37,7 +37,8 @@ public:
             if (nums[l] < nums[h]) // this condition is for sorted array.
                 return nums[l];
             
-            if (nums[mid] > nums[h])  // or nums[mid]>=nums[low]
+            // if (nums[mid] > nums[h])
+            if(nums[mid]>=nums[l])
                 l = mid+1;
             else if(nums[mid]<nums[l])
                 h = mid;
