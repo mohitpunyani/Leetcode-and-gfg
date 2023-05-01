@@ -55,7 +55,7 @@ int last(int arr[],int n,int x){
             // mid== n-1 denotes that we reach at the end of the array, now we can't go further 
             // and we can't compare mid+1 with mid so we use mid==n-1 
             
-            if(arr[mid+1]!=arr[mid]  or mid==n-1){
+            if((arr[mid+1]!=arr[mid] && mid<n-1)  or mid==n-1){
                 ans=mid;
                 return ans;
             }
