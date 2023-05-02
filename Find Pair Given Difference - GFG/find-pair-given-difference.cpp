@@ -59,11 +59,12 @@ bool findPair(int arr[], int size, int n)
  
     while (j<size)
     {
-        if (i != j && arr[j]-arr[i] == n)
+        int diff=arr[j]-arr[i];
+        if (i != j && diff== n)
         {
             return true;
         }
-        else if (arr[j]-arr[i] < n)
+        else if (diff < n)
             j++;
         else
             i++;
