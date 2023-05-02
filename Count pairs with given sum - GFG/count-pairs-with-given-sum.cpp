@@ -25,11 +25,15 @@ public:
         {
             int second=k-arr[i];
             
-            // if second number is negative than we have to do continue
+            if(arr[i]>k){
+                continue;
+            }
+            // if second number is negative, it means pair does n't exist than we have to do continue
+            
             if(second<0){
                 continue;
             }
-            if(mp.find(second)!=mp.end())
+            else if(mp.find(second)!=mp.end())
             {
                 mp[arr[i]]--;
                 if(mp[arr[i]]==0){
@@ -43,6 +47,8 @@ public:
            
         }
         return count;
+        
+        // my approach
     }
 };
 
