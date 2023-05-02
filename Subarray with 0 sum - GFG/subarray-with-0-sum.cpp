@@ -16,15 +16,12 @@ class Solution{
     bool subArrayExists(int arr[], int n)
     {
         //Your code here
-        
+        s.insert(0);
         long long int sum=0;
         for(int i=0;i<n;i++){
             sum=sum+arr[i];
-            // if(sum==0)
-            // {
-            //     return true;
-            // }
-            if(s.find(sum)!=s.end() or sum==0)
+           
+            if(s.find(sum)!=s.end())
             {
                 return true;
             }
