@@ -35,10 +35,11 @@ class Solution{
 	       }
 	       else{
 	           res[k]=a[i];
-	           
+	           k++;
+	           res[k]=b[j];
 	           // either inrease i or j
 	           
-	           //i++;
+	           i++;
 	           j++;
 	           k++;
 	       }
