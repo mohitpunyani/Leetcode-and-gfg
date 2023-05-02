@@ -35,6 +35,9 @@ class Solution{
 	       }
 	       else{
 	           res[k]=a[i];
+	           
+	           // either inrease i or j
+	           
 	           //i++;
 	           j++;
 	           k++;
