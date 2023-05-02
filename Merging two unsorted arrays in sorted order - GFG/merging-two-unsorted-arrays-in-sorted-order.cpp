@@ -20,7 +20,7 @@ class Solution{
 	   while(i<n && j<m)
 	   {
 	       
-	       if(a[i]<=b[j])
+	       if(a[i]<b[j])
 	       {
 	           res[k]=a[i];
 	           i++;
@@ -33,12 +33,12 @@ class Solution{
 	           k++;
 	           
 	       }
-	       //else{
-	       //    res[k]=a[i];
-	       //    i++;
-	       //    j++;
-	       //    k++;
-	       //}
+	       else{
+	           res[k]=a[i];
+	           //i++;
+	           j++;
+	           k++;
+	       }
 	   }
 	   while(i<n)
 	   {
@@ -48,8 +48,11 @@ class Solution{
 	       i++;
 	       k++;
 	   }
-	   while(j<m){
+	   while(j<m)
+	   {
+	       
 	       //yaha toh j bach gaya
+	       
 	       res[k]=b[j];
 	       j++;
 	       k++;
