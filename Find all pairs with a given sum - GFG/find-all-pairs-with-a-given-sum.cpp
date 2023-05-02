@@ -18,7 +18,12 @@ class Solution{
             if(s.find(diff)!=s.end()){
                 // pair<int,int>p={A[i],diff};
                 ans.push_back({A[i],diff});
-                s.erase(diff);
+                // s.erase(diff);
+            }
+            else{
+                // means A[i] is greater than x, A[i]>X so difference will be negative 
+                // which is not found in set so we have to continue
+                continue;
             }
         }
         
