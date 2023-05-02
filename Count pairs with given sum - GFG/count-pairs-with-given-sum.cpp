@@ -24,6 +24,11 @@ public:
         for(int i=0;i<n;i++)
         {
             int second=k-arr[i];
+            
+            // if second number is negative than we have to do continue
+            if(second<0){
+                continue;
+            }
             if(mp.find(second)!=mp.end())
             {
                 mp[arr[i]]--;
