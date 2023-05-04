@@ -70,8 +70,8 @@ Node *removeDuplicates(Node *head)
 {
  // your code goes here
  
- if(head->next==NULL){
-     // handle for one
+ if(head==NULL or head->next==NULL){
+     // handle for one node
      return head;
  }
  Node*prev=head;
@@ -81,9 +81,9 @@ Node *removeDuplicates(Node *head)
      if(prev->data==curr->data)
      {
          Node*temp=curr;
+         prev->next=curr->next;
          curr=curr->next;
-         temp->next==NULL;
-         prev->next=curr;
+         temp->next=NULL;
          delete temp;
      }
      else if(prev->data!=curr->data)
