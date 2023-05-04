@@ -92,7 +92,7 @@ Node* sortedMerge(Node* head1, Node* head2)
     
     while(curr1!=NULL && curr2!=NULL)
     {
-        if(curr1->data<curr2->data)
+        if(curr1->data<=curr2->data)
         {
             temp->next=curr1;
             temp=curr1;
