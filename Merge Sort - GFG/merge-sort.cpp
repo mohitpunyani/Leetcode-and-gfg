@@ -35,8 +35,8 @@ class Solution
          for(int i=0;i<ls;i++){
              left[i]=arr[l+i];
          }
-         for(int j=0;j<rs;j++){
-             right[j]=arr[j+m+1];
+         for(int i=0;i<rs;i++){
+             right[i]=arr[i+m+1];
          }
          // now write logic or merge two sorted arrays.
          int i=0,j=0,k=l;
@@ -67,6 +67,7 @@ class Solution
              j++;
              k++;
          }
+         return ;
     }
     public:
     void mergeSort(int arr[], int l, int r)
@@ -80,6 +81,9 @@ class Solution
         mergeSort(arr,l,m);
         mergeSort(arr,m+1,r);
         merge(arr,l,m,r);
+        
+        // my code by own
+        return ;
     }
 };
 
