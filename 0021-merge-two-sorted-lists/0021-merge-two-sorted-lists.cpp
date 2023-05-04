@@ -26,11 +26,13 @@ public:
             curr1=curr1->next;
             
         }
-        else{
+      
+         else{
             temp->next=curr2;
             temp=curr2;
             curr2=curr2->next;
         }
+    
     }
     while(curr1!=NULL){
         temp->next=curr1;
