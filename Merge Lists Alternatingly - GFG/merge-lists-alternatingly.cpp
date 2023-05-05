@@ -99,6 +99,9 @@ void mergeList(struct Node **p, struct Node **q)
          curr2=Next2;
      }
     *q=curr2;
+    
+    // this is my approach
+    
 }
 
 
