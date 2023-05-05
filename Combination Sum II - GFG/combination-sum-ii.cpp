@@ -12,10 +12,10 @@ public:
 
 void solve(int index,int k,vector<int>&arr,vector<int>&temp,vector<vector<int>>&ans)
 {
-    if(k<0){
-        return ;
+    // if(k<0){
+    //     return ;
         
-    }
+    // }
     if(k==0){
         ans.push_back(temp);
         return ;
@@ -25,7 +25,8 @@ void solve(int index,int k,vector<int>&arr,vector<int>&temp,vector<vector<int>>&
         if(i>index && arr[i]==arr[i-1]) 
         continue;
 
-        if(arr[i]>k){
+        if(arr[i]>k)
+        {
             break;
             // iska matlab hai ki aage wali values ke liye bhi solution nahi hai 
         }
