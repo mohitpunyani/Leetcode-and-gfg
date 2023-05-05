@@ -98,10 +98,14 @@ void mergeList(struct Node **p, struct Node **q)
          curr1=Next1;
          curr2=Next2;
      }
-     // this do when curr1 is null 
+     // this do when curr1 is null or curr2 is null
      
-     if(curr1==NULL or curr2==NULL){
+     if(curr1==NULL){
     *q=curr2;
+     }
+     
+     if(curr2==NULL){
+         *q=NULL;
      }
     
     // this is my approach
