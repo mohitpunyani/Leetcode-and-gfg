@@ -113,41 +113,77 @@ struct Node{
     the flattened linked list. */
     
     
-    Node *merge(Node *l1, Node *l2){
-         Node *head=new Node(0);
-         Node *l3=head; 
-         while(l1!=NULL && l2!=NULL){
-            if(l1->data<=l2->data){
-                l3->bottom=l1;
-                l1=l1->bottom;
-            }
-            else{
-                l3->bottom=l2;
-                l2=l2->bottom;
-            }
-            l3=l3->bottom;
+// Node *merge(Node *l1, Node *l2){
+//          Node *head=new Node(0);
+//          Node *l3=head; 
+         
+//          while(l1!=NULL && l2!=NULL){
+//             if(l1->data<=l2->data){
+//                 l3->bottom=l1;
+//                 l1=l1->bottom;
+//                 l
+//             }
+//             else{
+//                 l3->bottom=l2;
+//                 l2=l2->bottom;
+//             }
+//             l3=l3->bottom;
+            
+//         }
+//         while(l1){
+//             l3->bottom=l1;
+//             l1=l1->bottom;
+//             l3=l3->bottom;
+//         }
+//         while(l2){
+//             l3->bottom=l2;
+//             l2=l2->bottom;
+//             l3=l3->bottom;
+//         }
+//         return head->bottom;
+//     }
+   Node* merge(Node* head1, Node* head2)  
+{  
+    // code here
+    Node*dummynode=new Node(-1);
+    Node*temp=dummynode;
+    Node*curr1=head1;
+    Node*curr2=head2;
+    
+    while(curr1!=NULL && curr2!=NULL)
+    {
+        if(curr1->data<=curr2->data)
+        {
+            temp->bottom=curr1;
+            temp=curr1;
+            curr1=curr1->bottom;
             
         }
-        while(l1){
-            l3->bottom=l1;
-            l1=l1->bottom;
-            l3=l3->bottom;
+        else{
+            temp->bottom=curr2;
+            temp=curr2;
+            curr2=curr2->bottom;
         }
-        while(l2){
-            l3->bottom=l2;
-            l2=l2->bottom;
-            l3=l3->bottom;
-        }
-        return head->bottom;
+       
     }
-    
+    while(curr1!=NULL){
+        temp->bottom=curr1;
+        temp=temp->bottom;
+        curr1=curr1->bottom;
+    }
+    while(curr2!=NULL){
+        temp->bottom=curr2;
+        temp=temp->bottom;
+        curr2=curr2->bottom;
+    }
+    return dummynode->bottom;
+} 
 Node *flatten(Node *root)
 {
    // Your code here
    
       // Your code here
     Node *nexty=root->next;
-    
     while(nexty!=NULL){
         root=merge(root,nexty);
         nexty=nexty->next;
