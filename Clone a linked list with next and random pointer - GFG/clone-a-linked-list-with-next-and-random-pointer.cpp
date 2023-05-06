@@ -76,19 +76,22 @@ class Solution
           Node*temp=head;
         while(temp!=NULL)
         {
-            if(temp->next!=NULL && temp->arb!=NULL )
+            if(temp->next!=NULL)
             {
-                if(temp->arb!=NULL)
+                if(temp->arb!=NULL && temp->next!=NULL)
                 {
                     
                 temp->next->arb=temp->arb->next;
                 }
     
-            else{
-                temp->next=temp->arb;
-            }
-        }
+               else{
+                  temp->next->arb=temp->arb;
+             }
             temp=temp->next->next;
+           }
+           else{
+               temp=temp->next->next;
+           }
         }
         // step 4 revert changes done in step2 
         
