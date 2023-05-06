@@ -88,9 +88,6 @@ class Solution
                 temp->next=temp->arb;
             }
         }
-            // if(temp->next!=NULL){
-            //     temp->next->arb=temp->arb?temp->arb->next:temp->arb;
-            // }
             temp=temp->next->next;
         }
         // step 4 revert changes done in step2 
