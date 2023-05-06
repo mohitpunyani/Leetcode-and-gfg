@@ -107,22 +107,39 @@ Node* reverseDLL(Node * head)
     // because here we can also go backward
     
     
-    Node*curr=head;
+    // Node*curr=head;
     
-    // traversing to find the end of the linked list
+    // // traversing to find the end of the linked list
     
-    while(curr->next!=NULL){
-        curr=curr->next;
+    // while(curr->next!=NULL){
+    //     curr=curr->next;
+    // }
+    // Node*start=head;
+    // Node*end=curr;
+    // while(start<end){
+    //     swap(start->data,end->data);
+    //     start=start->next;
+    //     end=end->prev;
+    // }
+    // return head;
+    
+    
+    // approach 2 -> similar to reverse the singly linked list
+    
+    // think good about the links
+    
+    Node*previous=NULL;
+    Node*current=head;
+    while(current!=NULL){
+        
+        Node*temp=current->prev;
+        current->prev=current->next;
+        current->next=temp;
+        previous=current;
+        // current ko ek kadam aage badaya
+        current=current->prev;
     }
-    Node*start=head;
-    Node*end=curr;
-    while(start<end){
-        swap(start->data,end->data);
-        start=start->next;
-        end=end->prev;
-    }
-    return head;
-    
+    return previous;
     
     
 }
