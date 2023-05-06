@@ -136,8 +136,11 @@ Node* reverseDLL(Node * head)
         current->prev=current->next;
         current->next=temp;
         previous=current;
+        
         // current ko ek kadam aage badaya
+        
         current=current->prev;
+        // current=temp;
     }
     return previous;
     
