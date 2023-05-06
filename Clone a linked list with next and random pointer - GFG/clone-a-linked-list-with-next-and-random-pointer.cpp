@@ -39,6 +39,7 @@ class Solution
     }
     Node *copyList(Node *head)
     {
+        // NOTE-> THIS IS MY SOLUTION 
         // step1 create a clone list of next pointer.
         Node*clonehead=NULL;
         Node*clonetail=NULL;
@@ -71,23 +72,27 @@ class Solution
                  // step3 -> with the help of step2 we can link the random pointer of the clone 
         
 //         // ab is step me we have to play with random pointer
-        
-        Node*temp=head;
+    
+          Node*temp=head;
         while(temp!=NULL)
         {
-            // if(temp->next!=NULL && temp->arb!=NULL )
-            // {
-            //     temp->next->arb=temp->arb->next;
-            // }
-            // else{
-            //     temp->next=temp->arb;
-            // }
-            if(temp->next!=NULL){
-                temp->next->arb=temp->arb?temp->arb->next:temp->arb;
+            if(temp->next!=NULL && temp->arb!=NULL )
+            {
+                if(temp->arb!=NULL)
+                {
+                    
+                temp->next->arb=temp->arb->next;
+                }
+    
+            else{
+                temp->next=temp->arb;
             }
+        }
+            // if(temp->next!=NULL){
+            //     temp->next->arb=temp->arb?temp->arb->next:temp->arb;
+            // }
             temp=temp->next->next;
         }
-        
         // step 4 revert changes done in step2 
         
                  // // or  the main reason to do step 2 is to copy the random pointer 
