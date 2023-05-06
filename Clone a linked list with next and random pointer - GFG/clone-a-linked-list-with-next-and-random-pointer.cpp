@@ -89,9 +89,10 @@ class Solution
              }
             temp=temp->next->next;
            }
-           else{
-               temp=temp->next->next;
-           }
+          else{
+            //   temp=temp->next->next
+              break;
+          }
         }
         // step 4 revert changes done in step2 
         
