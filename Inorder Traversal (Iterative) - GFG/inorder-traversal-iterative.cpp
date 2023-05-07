@@ -100,21 +100,44 @@ public:
     {
         //code here
         
-        vector<int>ans;
-        Node*temp=root;
+        // vector<int>ans;
+        // Node*temp=root;
+        // stack<Node*>st;
+        // while(temp!=NULL){
+        //     st.push(temp);
+        //     temp=temp->left;
+        // }
+        // while(!st.empty()){
+        //     auto curr=st.top();
+        //     ans.push_back(curr->data);
+        //     st.pop();
+        //     curr=curr->right;
+        //     while(curr!=NULL){
+        //         st.push(curr);
+        //         curr=curr->left;
+        //     }
+        // }
+        // return ans;
+        
+        
+        // another way to write code
+        
         stack<Node*>st;
-        while(temp!=NULL){
-            st.push(temp);
-            temp=temp->left;
-        }
-        while(!st.empty()){
-            auto curr=st.top();
-            ans.push_back(curr->data);
-            st.pop();
-            curr=curr->right;
-            while(curr!=NULL){
-                st.push(curr);
-                curr=curr->left;
+        vector<int>ans;
+        while(true)
+        {
+            if(root!=NULL){
+                st.push(root);
+                root=root->left;
+            }
+            else{
+                if(st.empty()){
+                    return ans;
+                }
+                root=st.top();
+                ans.push_back(root->data);
+                st.pop();
+                root=root->right;
             }
         }
         return ans;
