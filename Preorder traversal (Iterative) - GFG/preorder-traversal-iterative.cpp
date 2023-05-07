@@ -105,8 +105,9 @@ class Solution{
         while(!st.empty() || root!=NULL)
 {
     if(root!=NULL){
-        ans.push_back(root->data);
+        // ans.push_back(root->data);
         st.push(root);
+        ans.push_back(root->data);
         root=root->left;
     }
     else{
