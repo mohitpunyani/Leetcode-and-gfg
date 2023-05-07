@@ -100,9 +100,29 @@ class Solution{
     vector<int> preOrder(Node* root)
     {
         //code here
+        
+        // NOTE-> THIS IS A GOOD APPROACH USING ONLY ONE LOOP REST OF HIS IF AND ELSE CONDIITON
+        
         stack<Node*>st;
         vector<int>ans;
-        while(!st.empty() || root!=NULL)
+// while(!st.empty() || root!=NULL)
+// {
+//     if(root!=NULL){
+//         // ans.push_back(root->data);
+//         st.push(root);
+//         ans.push_back(root->data);
+//         root=root->left;
+//     }
+//     else{
+//         if(st.size()==0){
+//             return ans;
+//         }
+//         root=st.top();
+//         st.pop();
+//         root=root->right;
+//     }
+// }
+while(true)
 {
     if(root!=NULL){
         // ans.push_back(root->data);
