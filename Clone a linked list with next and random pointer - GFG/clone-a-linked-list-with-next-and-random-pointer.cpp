@@ -78,21 +78,23 @@ class Solution
         {
             if(temp->next!=NULL)
             {
-                if(temp->arb!=NULL && temp->next!=NULL)
+                if(temp->arb!=NULL)
                 {
                     
                 temp->next->arb=temp->arb->next;
                 }
     
-               else{
+              else{
                   temp->next->arb=temp->arb;
              }
             temp=temp->next->next;
-           }
+          }
           else{
-            //   temp=temp->next->next
+            //   temp=temp->next->next;
               break;
           }
+        
+        
         }
         // step 4 revert changes done in step2 
         
