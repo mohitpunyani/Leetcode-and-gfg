@@ -98,37 +98,53 @@ struct Node
 */
 class Solution{
     public:
+    
+    int recursiveheight(Node* &root)
+    {
+        if(root==NULL){
+            return 0;
+        }
+        else{
+          int left_height=recursiveheight(root->left);
+          int right_height=recursiveheight(root->right);
+          int ans=1+max(left_height,right_height);
+          return ans;
+             
+        }
+    }
     //Function to find the height of a binary tree.
     int height(struct Node* node)
     {
         // code here 
         
         // APPROACH 1 -> recursive
-        
+        Node*root=node;
+        int ans=recursiveheight(root);
+        return ans;
         // APPROACH 2 ->  iterative
      
-     int count=0;  
-     queue<Node*>q;
-      q.push(node);
+    //  int count=0;  
+    //  queue<Node*>q;
+    //   q.push(node);
      
-      while(!q.empty())
-      {
-          int size=q.size();
+    //   while(!q.empty())
+    //   {
+    //       int size=q.size();
           
-          while(size--)
-          {
-              node=q.front();
-              q.pop();
-              if(node->left!=NULL){
-                  q.push(node->left);
-              }
-              if(node->right!=NULL){
-                  q.push(node->right);
-              }
-          }
-          count++;
-      }
-      return count;
+    //       while(size--)
+    //       {
+    //           node=q.front();
+    //           q.pop();
+    //           if(node->left!=NULL){
+    //               q.push(node->left);
+    //           }
+    //           if(node->right!=NULL){
+    //               q.push(node->right);
+    //           }
+    //       }
+    //       count++;
+    //   }
+    //   return count;
     }
 };
 
