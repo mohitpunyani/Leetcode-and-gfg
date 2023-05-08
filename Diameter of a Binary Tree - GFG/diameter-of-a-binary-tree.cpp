@@ -94,16 +94,40 @@ struct Node
 class Solution {
   public:
   
-  int recursiveheight(Node* &root)
+  int maxi=0;
+  
+  // FOR APPROACH 1
+  
+  
+//   int recursiveheight(Node* &root)
+//     {
+//         if(root==NULL){
+//             return 0;
+//         }
+//         else{
+//           int left_height=recursiveheight(root->left);
+//           int right_height=recursiveheight(root->right);
+//           int ans=1+max(left_height,right_height);
+//           return ans;
+             
+//         }
+//     }
+
+
+
+   //  FOR APPROACH 2 
+
+     int recursiveheight2(Node* root)
     {
         if(root==NULL){
             return 0;
         }
         else{
-          int left_height=recursiveheight(root->left);
-          int right_height=recursiveheight(root->right);
-          int ans=1+max(left_height,right_height);
-          return ans;
+          int left_height=recursiveheight2(root->left);
+          int right_height=recursiveheight2(root->right);
+          maxi=max(maxi,left_height+right_height+1);
+          
+          return 1+max(left_height,right_height);
              
         }
     }
@@ -114,21 +138,41 @@ class Solution {
         
          // APPROACH 1 -> using height function 
          
-         if(root==NULL)
-         {
-             return 0;
+         
+         
+        //  if(root==NULL)
+        //  {
+        //      return 0;
              
-         }
-         // find the height for the left
-         int left_diameter=diameter(root->left);
-         int right_diameter=diameter(root->right);
+        //  }
+         // find the height for the left and reight 
          
-         int left_height=recursiveheight(root->left);
-         int right_height=recursiveheight(root->right);
+        //  // option 1
+        //  int left_diameter=diameter(root->left);
+        //  // option 2
+        //  int right_diameter=diameter(root->right);
          
-         int ans=left_height+right_height;
+        //  // option 3
          
-         return max(1+ans,max(left_diameter,right_diameter));
+        //  int left_height=recursiveheight(root->left);
+        //  int right_height=recursiveheight(root->right);
+         
+        //  int ans=left_height+right_height;
+         
+        //  return max(1+ans,max(left_diameter,right_diameter));
+        
+        
+        
+        // APPROACH 2 -> OPTIMIZED THROUGH APPROACH 1.
+        
+        recursiveheight2(root);
+        return maxi;
+        
+        // APPROACH 3 -> IT IS IMPORTANT APPROACH
+        
+        
+        
+        
     }
 };
 
