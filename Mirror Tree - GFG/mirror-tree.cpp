@@ -138,9 +138,16 @@ class Solution {
             while(size--)
             {
                 
-                temp=q.front();
-                q.pop();
-                swap(temp->left,temp->right);
+              temp=q.front();
+              q.pop();
+            //   Node *t;
+            //   t=temp->right;
+            //   temp->right=temp->left;
+            //   temp->left=t; 
+              
+              swap(temp->left,temp->right);
+              
+              
                 //   if(temp->right!=NULL){
                 //     q.push(temp->right);
                 // }
