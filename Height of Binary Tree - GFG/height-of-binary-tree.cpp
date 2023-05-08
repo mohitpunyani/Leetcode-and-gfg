@@ -99,7 +99,7 @@ struct Node
 class Solution{
     public:
     
-    int recursiveheight(Node* &root)
+    int recursiveheight(Node* root)
     {
         if(root==NULL){
             return 0;
