@@ -110,7 +110,7 @@ class Solution
         if(root==NULL){
             return ;
         }
-        if(mp.count(hd)==0 or level<mp[hd].second)
+        if(mp.find(hd)==mp.end())
         {
             // compare the levels
             
@@ -136,52 +136,55 @@ class Solution
         
         
         
-        // map<int,int>mp;
-        // queue<pair<Node*,int>>q;
-        // q.push({root,0});
-        // vector<int>ans;
-        // while(!q.empty())
-        // {
-        //     int size=q.size();
-        //     while(size--)
-        //     {
-        //     auto top=q.front();
+        map<int,int>mp;
+        queue<pair<Node*,int>>q;
+        q.push({root,0});
+        vector<int>ans;
+        while(!q.empty())
+        {
+            int size=q.size();
+            while(size--)
+            {
+            auto top=q.front();
             
-        //     Node *temp=top.first;
-        //     // horizontal distance hd
-        //     int hd=top.second;
-        //     q.pop();
+            Node *temp=top.first;
+            // horizontal distance hd
+            int hd=top.second;
+            q.pop();
             
-        //     // mp.insert({hd,temp->data});
-        //     if(mp.find(hd)==mp.end()){
-        //         mp[hd]=temp->data;
-        //     }
-        //     if(temp->left!=NULL){
-        //         q.push({temp->left,hd-1});
-        //     }
-        //     if(temp->right!=NULL){
-        //         q.push({temp->right,hd+1});
-        //     }
-        //     }
-        // }
-        // for(auto i:mp)
-        // {
-        //     ans.push_back(i.second);
-        // }
-        // return ans;
+            // mp.insert({hd,temp->data});
+            if(mp.find(hd)==mp.end()){
+                mp[hd]=temp->data;
+            }
+            if(temp->left!=NULL){
+                q.push({temp->left,hd-1});
+            }
+            if(temp->right!=NULL){
+                q.push({temp->right,hd+1});
+            }
+            }
+        }
+        for(auto &it:mp)
+        {
+            ans.push_back(it.second);
+            // mp.erase(x);
+        }
+        if(mp.size()==0){
+            return ans;
+        }
         
         
         // RECURSIVE APPROACH 
         
         
-        recursive(root,0,0);
+        // recursive(root,0,0);
         
         // sort according to horizontal distance
         
-        for(auto it:mp){
-            ans.push_back(it.second.first);
-        }
-        return ans;
+        // for(auto it:mp){
+        //     ans.push_back(it.second.first);
+        // }
+        // return ans;
     }
 
 };
