@@ -110,7 +110,10 @@ class Solution
         if(root==NULL){
             return ;
         }
-        if(mp.count(hd)==0 or level<mp[hd].second){
+        if(mp.count(hd)==0 or level<mp[hd].second)
+        {
+            // compare the levels
+            
             mp[hd]={root->data,level};
         }
         recursive(root->left,hd-1,level+1);
