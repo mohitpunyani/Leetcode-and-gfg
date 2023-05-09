@@ -101,10 +101,11 @@ class Solution{
         // code here
         
         // APPROACH 1 -> using one stack 
+        
         stack<Node*>st;
         vector<int>ans;
         Node*curr=node;
-        while(curr!=NULL or ! st.empty()){
+        while(!st.empty() or curr!=NULL){
             
             if(curr!=NULL){
                 st.push(curr);
@@ -123,12 +124,58 @@ class Solution{
                     }
                 }
                 else{
+                        // curr ko right par badaya (this understanding is important)
+                        
                     curr=temp;
                 }
             }
         }
         return ans;
         
+        // approach 2 -> it is also a good approach 
+        
+    //     stack<Node*>st;
+    //     vector<int>ans;
+    //     Node*curr=node;
+    //     st.push(node);
+    //     while(!st.empty())
+    //     {
+    //         curr=st.top();
+    //         ans.push_back(curr->data);
+    //         st.pop();
+    //     if(curr->left!=NULL){
+    //         st.push(curr->left);
+    //     }
+    //     if(curr->right!=NULL){
+    //         st.push(curr->right);
+    //     }
+    // }
+    //  reverse(ans.begin(),ans.end());
+    //  return ans;
+     
+     // approach 3 -> modify approach 2 and using two stacks
+     
+    //  stack<Node*>st1,st2;
+    //  Node*curr=node;
+    //  vector<int>ans;
+    //  st1.push(curr);
+    //  while(!st1.empty()){
+    //      curr=st1.top();
+    //      st2.push(curr);
+    //      st1.pop();
+    //      if(curr->left!=NULL){
+    //          st1.push(curr->left);
+    //      }
+    //      if(curr->right!=NULL){
+    //          st1.push(curr->right);
+    //      }
+    //  }
+    //  while(!st2.empty()){
+    //      ans.push_back(st2.top()->data);
+    //      st2.pop();
+    //  }
+    //  return ans;
+     
     }
 };
 
