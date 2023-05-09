@@ -95,47 +95,77 @@ Node* buildTree(string str)
 
 class Solution {
   public:
+  
+  map<int,pair<int,int>>mp;
+  
+  // similarly approach to top view of binary tree
+  
+  // make a map of horizontal distance and pair of data and level
+  vector<int>ans;
+  void recursive(Node*root,int hd ,int level)
+  {
+      if(root==NULL){
+          return ;
+      }
+      
+    if(mp.count(hd)==0  ||  level>=mp[hd].second)
+    {
+       mp[hd]={root->data,level};
+      }
+      recursive(root->left,hd-1,level+1);
+      recursive(root->right,hd+1,level+1);
+      return ;
+  }
     vector <int> bottomView(Node *root) 
     {
         // Your Code Here
         
         // iterative approach
         
-        queue<pair<Node*,int>>q;
-        q.push({root,0});
-        map<int,int>mp;
-        vector<int>ans;
-        while(!q.empty())
-        {
-            int size=q.size();
-            while(size--)
-            {
-                auto it=q.front();
-                Node*temp=it.first;
-                int hd=it.second;
-                mp[hd]=temp->data;
-                q.pop();
+        // queue<pair<Node*,int>>q;
+        // q.push({root,0});
+        // map<int,int>mp;
+        // vector<int>ans;
+        // while(!q.empty())
+        // {
+        //     int size=q.size();
+        //     while(size--)
+        //     {
+        //         auto it=q.front();
+        //         Node*temp=it.first;
+        //         int hd=it.second;
+        //         mp[hd]=temp->data;
+        //         q.pop();
 
-                if(temp->left!=NULL){
-                    q.push({temp->left,hd-1});
-                }
-                if(temp->right!=NULL){
-                    q.push({temp->right,hd+1});
-                }
+        //         if(temp->left!=NULL){
+        //             q.push({temp->left,hd-1});
+        //         }
+        //         if(temp->right!=NULL){
+        //             q.push({temp->right,hd+1});
+        //         }
                 
-            }
-        }
+        //     }
+        // }
+        // for(auto it:mp){
+            
+        //     ans.push_back(it.second);
+            
+        //     // delete that value with the help of key 
+            
+        //     mp.erase(it.first);
+        // }
+        // if(mp.size()==0){
+        //     return ans;
+        // }
+        
+        
+        // recursive approach 
+        
+        recursive(root,0,0);
         for(auto it:mp){
-            
-            ans.push_back(it.second);
-            
-            // delete that value with the help of key 
-            
-            mp.erase(it.first);
+            ans.push_back(it.second.first);
         }
-        if(mp.size()==0){
-            return ans;
-        }
+        return ans;
     }
 };
 
