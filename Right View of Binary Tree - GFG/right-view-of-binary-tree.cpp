@@ -40,6 +40,21 @@ struct Node
 class Solution
 {
     public:
+    vector<int>ans;
+    void recursive(Node*root,int level)
+    {
+        if(root==NULL){
+            return ;
+        }
+        if(level==ans.size())
+        {
+            ans.push_back(root->data);
+        }
+        recursive(root->right,level+1);
+        recursive(root->left,level+1);
+        return ;
+        
+    }
     //Function to return list containing elements of right view of binary tree.
     vector<int> rightView(Node *root)
     {
@@ -48,33 +63,37 @@ class Solution
     //   similarly to left view
     
     // iterative approach
-     queue<Node*>q;
-  vector<int>ans;
-  q.push(root);
-  if(root==0){
-      return ans;
-  }
-  while(!q.empty())
-  {
-      ans.push_back(q.front()->data);
-      int level=q.size();
-      while(level--)
-      {
-         root=q.front();
-          q.pop();
-        if(root->right!=NULL){
-          q.push(root->right);
-      }
-        if(root->left!=NULL){
-          q.push(root->left);
+    
+//   queue<Node*>q;
+//   vector<int>ans;
+//   q.push(root);
+//   if(root==0){
+//       return ans;
+//   }
+//   while(!q.empty())
+//   {
+//       ans.push_back(q.front()->data);
+//       int level=q.size();
+//       while(level--)
+//       {
+//          root=q.front();
+//           q.pop();
+//         if(root->right!=NULL){
+//           q.push(root->right);
+//       }
+//         if(root->left!=NULL){
+//           q.push(root->left);
            
-      }
-    }
+//       }
+//     }
      
        
-  }
-  return ans;
+//   }
+//   return ans;
     // recursive approach 
+    
+    recursive(root,0);
+    return ans;
     }
 };
 
