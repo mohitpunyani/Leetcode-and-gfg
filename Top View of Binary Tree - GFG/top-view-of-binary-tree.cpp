@@ -119,18 +119,21 @@ class Solution
         vector<int>ans;
         while(!q.empty())
         {
-            auto temp=q.front();
+            int size=q.size();
+            while(size--){
+            auto top=q.front();
             
-            Node *node=temp.first;
-            int level=temp.second;
+            Node *temp=top.first;
+            int level=top.second;
             q.pop();
-            mp.insert({level,node->data});
+            mp.insert({level,temp->data});
             
-            if(node->left!=NULL){
-                q.push({node->left,level-1});
+            if(temp->left!=NULL){
+                q.push({temp->left,level-1});
             }
-            if(node->right!=NULL){
-                q.push({node->right,level+1});
+            if(temp->right!=NULL){
+                q.push({temp->right,level+1});
+            }
             }
         }
         for(auto i:mp)
