@@ -167,9 +167,10 @@ class Solution
         for(auto &it:mp)
         {
             ans.push_back(it.second);
-            // mp.erase(x);
+            // mp.erase(it);
         }
-        if(mp.size()==0){
+        if(mp.size()==0)
+        {
             return ans;
         }
         
