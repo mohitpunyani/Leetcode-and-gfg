@@ -128,9 +128,14 @@ class Solution {
         for(auto it:mp){
             
             ans.push_back(it.second);
+            
+            // delete that value with the help of key 
+            
             mp.erase(it.first);
         }
-        return ans;
+        if(mp.size()==0){
+            return ans;
+        }
     }
 };
 
