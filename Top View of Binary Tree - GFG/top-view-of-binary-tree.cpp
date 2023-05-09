@@ -100,45 +100,83 @@ struct Node
 class Solution
 {
     public:
+    
+    map<int,pair<int,int>>mp;
+    
+    // map of horizontal distance and pair of data and level
+    vector<int>ans;
+    void recursive(Node*root,int hd,int level)
+    {
+        if(root==NULL){
+            return ;
+        }
+        if(mp.count(hd)==0 or level<mp[hd].second){
+            mp[hd]={root->data,level};
+        }
+        recursive(root->left,hd-1,level+1);
+        recursive(root->right,hd+1,level+1);
+        return ;
+    }
     //Function to return a list of nodes visible from the top view 
     //from left to right in Binary Tree.
     vector<int> topView(Node *root)
     {
         //Your code here
         
-        // iterative approach
+        // ITERATIVE APPROACH 
         
         //  using queue
         
         // sara khel levels ka hai
         
         // i do dry run we need a map in sorted order
-        map<int,int>mp;
-        queue<pair<Node*,int>>q;
-        q.push({root,0});
-        vector<int>ans;
-        while(!q.empty())
-        {
-            int size=q.size();
-            while(size--){
-            auto top=q.front();
+        
+        
+        
+        // map<int,int>mp;
+        // queue<pair<Node*,int>>q;
+        // q.push({root,0});
+        // vector<int>ans;
+        // while(!q.empty())
+        // {
+        //     int size=q.size();
+        //     while(size--)
+        //     {
+        //     auto top=q.front();
             
-            Node *temp=top.first;
-            int level=top.second;
-            q.pop();
-            mp.insert({level,temp->data});
+        //     Node *temp=top.first;
+        //     // horizontal distance hd
+        //     int hd=top.second;
+        //     q.pop();
             
-            if(temp->left!=NULL){
-                q.push({temp->left,level-1});
-            }
-            if(temp->right!=NULL){
-                q.push({temp->right,level+1});
-            }
-            }
-        }
-        for(auto i:mp)
-        {
-            ans.push_back(i.second);
+        //     // mp.insert({hd,temp->data});
+        //     if(mp.find(hd)==mp.end()){
+        //         mp[hd]=temp->data;
+        //     }
+        //     if(temp->left!=NULL){
+        //         q.push({temp->left,hd-1});
+        //     }
+        //     if(temp->right!=NULL){
+        //         q.push({temp->right,hd+1});
+        //     }
+        //     }
+        // }
+        // for(auto i:mp)
+        // {
+        //     ans.push_back(i.second);
+        // }
+        // return ans;
+        
+        
+        // RECURSIVE APPROACH 
+        
+        
+        recursive(root,0,0);
+        
+        // sort according to horizontal distance
+        
+        for(auto it:mp){
+            ans.push_back(it.second.first);
         }
         return ans;
     }
