@@ -67,7 +67,7 @@ class Solution
 
      {
 
-         if(count==1)
+         if(count%2!=0)
 
          {
 
