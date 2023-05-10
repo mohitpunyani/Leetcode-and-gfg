@@ -63,7 +63,7 @@ class Solution
 
      int count=1;
 
-     while(curr->next)
+     while(curr->next!=NULL)
 
      {
 
@@ -96,8 +96,6 @@ class Solution
      }
 
      return head;
-
-     
 
     
     }
