@@ -163,6 +163,10 @@ public:
         
         // 3. which print all right part in reverse order except all leaf nodes.
         vector<int> ans;
+        if(root->left==NULL && root->right==NULL){
+            ans.push_back(root->data);
+            return ans;
+        }
         ans.push_back(root->data);
         left(root->left,ans);
         leaf(root->left,ans);
