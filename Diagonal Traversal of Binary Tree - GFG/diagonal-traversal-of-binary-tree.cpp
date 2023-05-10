@@ -136,7 +136,7 @@ vector<int> diagonal(Node *root)
    while(!q.empty()){
        
        int size=q.size();
-       while(size--){
+    //   while(size--){
            Node*temp=q.front();
            q.pop();
            while(temp!=NULL){
@@ -146,7 +146,7 @@ vector<int> diagonal(Node *root)
                }
                temp=temp->right;
            }
-       }
+    //   }
    }
    return ans;
 }
