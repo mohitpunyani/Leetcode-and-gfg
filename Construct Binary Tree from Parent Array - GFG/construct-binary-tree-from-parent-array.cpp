@@ -83,13 +83,16 @@ class Solution{
   public:
     //Function to construct binary tree from parent array.
     
-    // searching the index of parent
-  vector<int> search(int a[],int n,int data){
+    // searching the index of parent my parent
+  vector<int> search(int a[],int n,int data)
+  {
+      
         vector<int> v(2,-1);
         int t = 0;
         for(int i=0;i<n;i++)
             if(a[i] == data)
                 v[t++] = i;
+                // t++;
         return v;
     }
     Node* helper(int p[],int n,int idx){
