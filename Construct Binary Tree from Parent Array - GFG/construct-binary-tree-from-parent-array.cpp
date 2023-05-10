@@ -84,42 +84,72 @@ class Solution{
     //Function to construct binary tree from parent array.
     
     // searching the index of parent my parent
-  vector<int> search(int a[],int n,int data)
+    
+    // binary tree is a tree which have less than or equal to two children
+    
+    vector<int>v;
+    
+    // this is my approach 
+ 
+ // NOTE-> KABHI BAAP BHI BATE THA THINKING (and play with index)
+ 
+ vector<int> find_child_of_parent(int parent[],int N,int baap)
+ {
+         // binary tree is a tree which have less than or equal to two children
+    
+    vector<int>child(2,-1);
+     
+     int t=0;
+     for(int beta=0;beta<N;beta++)
+     {
+         if(parent[beta]==baap)
+         {
+             child[t++]=beta;
+            //  t++;
+             
+         }
+     }
+     return child;
+ }
+ //
+  Node*solve(Node*root,int parent [],int N,int baap )
   {
+      // we know that every parent has atmost two child
       
-        vector<int> v(2,-1);
-        int t = 0;
-        for(int i=0;i<n;i++)
-            if(a[i] == data)
-                v[t++] = i;
-                // t++;
-        return v;
-    }
-    Node* helper(int p[],int n,int idx){
-        if(idx == -1)
-            return NULL;
-        
-        Node* node = new Node(idx);
-        vector<int> v = search(p,n,idx);
-        
-        node->left = helper(p,n,v[0]);
-        node->right = helper(p,n,v[1]);
-        
-        return node;
-    }
+      //  NOTE -> baap ke bache doondo.(IMP)
+      
+      if(baap==-1){
+          return NULL;
+      }
+      root=new Node(baap);
+      vector<int>child=find_child_of_parent(parent,N,baap);
+      
+      // NOTE -> aur JAISE HI BACHE MILE AB BACHE baap ban jayega (IMP)
+      
+      root->left=solve(root->left,parent,N,child[0]);
+      root->right=solve(root->right,parent,N,child[1]);
+      return root;
+  }
     Node *createTree(int parent[], int N)
     {
         // Your code here
         // 1. recursive approach  that comes
       
+      Node*root=NULL;
+      int baap;
+      for(int i=0;i<N;i++)
+      {
+          if(parent[i]==-1){
+              baap=i;
+              break;
+          }
+          
+      }
+      
+      // idx will be our parent
+      root=solve(root,parent,N,baap);
+      return root;
         
-         Node* root = NULL;
-        int idx = -1;
-        for(int i=0;i<N;i++)
-            if(parent[i] == -1)
-                idx = i;
-        root = helper(parent,N,idx);
-        return root;
     }
 };
 
