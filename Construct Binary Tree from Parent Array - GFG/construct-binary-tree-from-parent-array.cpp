@@ -104,8 +104,8 @@ class Solution{
      {
          if(parent[beta]==baap)
          {
-             child[t++]=beta;
-            //  t++;
+             child[t]=beta;
+             t++;
              
          }
      }
