@@ -108,14 +108,9 @@ class Solution {
 public :
     void left(Node*root,vector<int> &ans)
     {
-        if(root==NULL)
+        if((root==NULL) or (root->left==NULL && root->right==NULL))
         {
             return ;
-        }
-        if(root->left==NULL && root->right==NULL){
-            return ;
-            
-            // Leaf node hai toh wapas chale gaye
         }
         ans.push_back(root->data);
         if(root->left!=NULL){
