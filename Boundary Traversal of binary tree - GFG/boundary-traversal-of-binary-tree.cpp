@@ -113,13 +113,26 @@ public :
             return ;
         }
         ans.push_back(root->data);
+        
+        // here prefer left subtree over right subtree
         if(root->left!=NULL){
             left(root->left,ans);
         }
-        if(root->left==NULL){
-        // else{
+        if(root->left==NULL)
+        {
+            // agar root->left is  null toh hi jaana hai right me
+
+            // I conclude this point using dry run 
+            
             left(root->right,ans);
         }
+        
+        
+        // do dry run these will give you mistake
+        
+        // left(root->left,ans);
+        // left(root->right,ans);
+        
         return ;
     }
     void leaf(Node*root,vector<int> &ans)
@@ -134,22 +147,23 @@ public :
         }
         leaf(root->left,ans);
         leaf(root->right,ans);
+        return ;
     }
-    void right(Node*root,vector<int> &ans){
-        if(root==NULL){
-            return ;
-        }
-        if(root->left==NULL && root->right==NULL)
+    void right(Node*root,vector<int> &ans)
+    {
+        if((root==NULL) or (root->left==NULL && root->right==NULL))
         {
             return ;
         }
-        if(root->right!=NULL){
-            right(root->right,ans);
-        }
-        else{
-            right(root->left,ans);
-        }
+         // priority will me given to right subtree over left subtree
+         if(root->right!=NULL){
+             right(root->right,ans);
+         }
+         if(root->right==NULL){
+             right(root->left,ans);
+         }
         ans.push_back(root->data);
+        return ;
     }
 public:
     vector <int> boundary(Node *root)
@@ -162,8 +176,12 @@ public:
         // 2. which print all leaf nodes 
         
         // 3. which print all right part in reverse order except all leaf nodes.
+        
         vector<int> ans;
-        if(root->left==NULL && root->right==NULL){
+        if(root->left==NULL && root->right==NULL)
+        {
+            // this means that we have only single nodes
+            
             ans.push_back(root->data);
             return ans;
         }
