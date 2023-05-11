@@ -150,26 +150,55 @@ class Solution
         }
         return ;
     }
+      Node* temp1 = NULL;
+    Node* head = NULL;
+    void ino(Node* root){
+        if(root == NULL){
+            return ;
+        }
+        
+        ino(root->left);
+        if(head == NULL){
+            head = root;
+            head->left = NULL;
+            temp1 = head;
+        }
+        else{
+            Node* temp = root;
+            temp1->right = temp;
+            temp->left =temp1;
+            temp1 = temp1->right;
+        }
+        
+        ino(root->right);
+    }
     //Function to convert binary tree to doubly linked list and return it.
     Node * bToDLL(Node *root)
     {
         // your code here
         
-        inorder(root);
+        // inorder(root);
         //  APPROACH 1 -> FIND INORDER TRAVERSAL
         
-        // now convert vector into doubly linked lis
-        Node*curr=newNode(ans[0]);
+        // now convert vector into doubly linked list
         
-        root=curr;
-        for(int i=1;i<ans.size();i++)
-        {
-            Node*temp=new Node(ans[i]);
-            curr->right=temp;
-            temp->left=curr;
-            curr=temp;
-        }
-        return root;
+        // Node*curr=newNode(ans[0]);
+        
+        // root=curr;
+        // for(int i=1;i<ans.size();i++)
+        // {
+        //     Node*temp=new Node(ans[i]);
+        //     curr->right=temp;
+        //     temp->left=curr;
+        //     curr=temp;
+        // }
+        // return root;
+        
+        
+        // APPROACH 2 DEVELOPED FROM APPROACH 1 , WE DON'T CONVERT BINARY TREE INTO ARRAY
+        
+        ino(root);
+        return head;
     }
 };
 
