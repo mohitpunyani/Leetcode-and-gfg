@@ -103,25 +103,51 @@ class Solution
     vector<int>v;
     void preorder(Node*root)
     {
-        if(root==NULL)
-        {
-            return ;
-        }
-        v.push_back(root->key);
-        preorder(root->left);
-        preorder(root->right);
-        return ;
+        // if(root==NULL)
+        // {
+        //     return ;
+        // }
+        // v.push_back(root->key);
+        // preorder(root->left);
+        // preorder(root->right);
+        // return ;
         
+        // iterative approach
+        stack<Node*>st;
+        while(true)
+        {
+            if(root!=NULL)
+            {
+                v.push_back(root->key);
+                st.push(root);
+                root=root->left;
+            }
+            else{
+                 if(st.size()==0)
+                {
+                    return ;
+                }
+                root=st.top();
+               
+                st.pop();
+                root=root->right;
+            }
+        }
+        return ;
     }
     void flatten(Node *root)
     {
         //code here
         
         // NOTE -> IT IS REVERSE OF CONVERT LINKED LIST INTO BINARY TREE
+        
+        // APPROACH 1 
+        
         Node*temp=root;
-        preorder(root);
+        preorder(temp);
         
         // left child is NULL;
+        
         root->left=NULL;
         // convert array  into linked list
         for(int i=1;i<v.size();i++)
@@ -130,6 +156,10 @@ class Solution
             temp->right=newnode;
             temp=newnode;
         }
+        
+        
+        
+        // APPROACH 2 
     }
 };
 
