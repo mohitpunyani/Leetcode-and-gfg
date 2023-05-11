@@ -117,13 +117,37 @@ class Solution
     
     vector<int>ans;
     
-    void inorder(Node*root){
-        if(root==NULL){
-            return ;
+    void inorder(Node*root)
+    {
+        // if(root==NULL){
+        //     return ;
+        // }
+        // inorder(root->left);
+        // ans.push_back(root->data);
+        // inorder(root->right);
+        // return ;
+        
+        
+        // iterative approach 
+        
+        stack<Node*>st;
+        while(true)
+        {
+            if(root!=NULL){
+                st.push(root);
+                root=root->left;
+            }
+            else{
+                if(st.size()==0){
+                    return ;
+                }
+                root=st.top();
+                st.pop();
+                ans.push_back(root->data);
+                root=root->right;
+            }
+            
         }
-        inorder(root->left);
-        ans.push_back(root->data);
-        inorder(root->right);
         return ;
     }
     //Function to convert binary tree to doubly linked list and return it.
