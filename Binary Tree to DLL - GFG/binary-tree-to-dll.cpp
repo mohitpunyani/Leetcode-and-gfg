@@ -150,7 +150,8 @@ class Solution
         }
         return ;
     }
-      Node* temp1 = NULL;
+     
+    Node* temp1 = NULL;
     Node* head = NULL;
     void ino(Node* root){
         if(root == NULL){
@@ -164,13 +165,14 @@ class Solution
             temp1 = head;
         }
         else{
-            Node* temp = root;
+            Node* temp = new Node(root->data);
             temp1->right = temp;
             temp->left =temp1;
-            temp1 = temp1->right;
+            temp1 =temp;
         }
         
         ino(root->right);
+        return ;
     }
     //Function to convert binary tree to doubly linked list and return it.
     Node * bToDLL(Node *root)
