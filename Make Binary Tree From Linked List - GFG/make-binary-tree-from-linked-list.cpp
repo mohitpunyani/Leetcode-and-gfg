@@ -161,25 +161,28 @@ void convert(Node *head, TreeNode *&root)
     //     }
     // }
     
-      queue<TreeNode*> q;
+    
+    // my approach 
+    
+    queue<TreeNode*> q;
     root = new TreeNode(head->data);
     q.push(root);
     
-    Node* ptr = head->next;
-    while(!q.empty()){
+    head = head->next;
+    while(!q.empty() &&){
         TreeNode* temp = q.front();
         q.pop();
         
-        if(ptr){
-            temp->left = new TreeNode(ptr->data);
+        if(head){
+            temp->left = new TreeNode(head->data);
             q.push(temp->left);
-            ptr = ptr->next;
+            head= head->next;
         }
         
-        if(ptr){
-            temp->right = new TreeNode(ptr->data);
+        if(head){
+            temp->right = new TreeNode(head->data);
             q.push(temp->right);
-            ptr = ptr->next;
+            head = head->next;
         }
         else{
             break;
