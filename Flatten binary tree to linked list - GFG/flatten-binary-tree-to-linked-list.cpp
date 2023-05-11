@@ -119,7 +119,7 @@ class Solution
         
         // NOTE -> IT IS REVERSE OF CONVERT LINKED LIST INTO BINARY TREE
         Node*temp=root;
-        preorder(temp);
+        preorder(root);
         
         // left child is NULL;
         root->left=NULL;
