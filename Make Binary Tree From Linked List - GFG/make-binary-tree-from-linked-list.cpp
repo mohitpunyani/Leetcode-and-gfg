@@ -143,21 +143,48 @@ void convert(Node *head, TreeNode *&root)
     
     // 2. iterative approach using bfs
     
+    // root = new TreeNode(head->data);
+    
+    // head = head->next;
+    // queue<TreeNode*> q;
+    // q.push(root);
+    // while(head!=NULL && !q.empty()){
+    //     TreeNode* curr = q.front();
+    //     q.pop();
+    //     curr->left = new TreeNode(head->data);
+    //     q.push(curr->left);
+    //     head = head->next;
+    //     if(head){
+    //         curr->right = new TreeNode(head->data);
+    //         q.push(curr->right);
+    //         head = head->next;
+    //     }
+    // }
+    
+      queue<TreeNode*> q;
     root = new TreeNode(head->data);
-    head = head->next;
-    queue<TreeNode*> q;
     q.push(root);
-    while(head!=NULL && !q.empty()){
-        ro= q.front();
+    
+    Node* ptr = head->next;
+    while(!q.empty()){
+        TreeNode* temp = q.front();
         q.pop();
-        curr->left = new TreeNode(head->data);
-        q.push(curr->left);
-        head = head->next;
-        if(head){
-            curr->right = new TreeNode(head->data);
-            q.push(curr->right);
-            head = head->next;
+        
+        if(ptr){
+            temp->left = new TreeNode(ptr->data);
+            q.push(temp->left);
+            ptr = ptr->next;
         }
+        
+        if(ptr){
+            temp->right = new TreeNode(ptr->data);
+            q.push(temp->right);
+            ptr = ptr->next;
+        }
+        else{
+            break;
+        }
+        
     }
 
 }
