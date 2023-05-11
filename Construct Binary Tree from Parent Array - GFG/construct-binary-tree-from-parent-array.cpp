@@ -81,6 +81,7 @@ struct Node
 
 class Solution{
   public:
+  
     //Function to construct binary tree from parent array.
     
     // searching the index of parent my parent
@@ -91,8 +92,10 @@ class Solution{
     
     // this is my approach 
  
- // NOTE-> KABHI BAAP BHI BATE THA THINKING (and play with index)
+ // NOTE-> KABHI BAAP BHI BACHE THA THINKING (and play with index)
  
+//  NOTE-> KABHI BACHE BHI BAAP BANAGE
+
  vector<int> find_child_of_parent(int parent[],int N,int baap)
  {
          // binary tree is a tree which have less than or equal to two children
@@ -118,7 +121,8 @@ class Solution{
       
       //  NOTE -> baap ke bache doondo.(IMP)
       
-      if(baap==-1){
+      if(baap==-1)
+      {
           return NULL;
       }
       root=new Node(baap);
@@ -133,23 +137,71 @@ class Solution{
     Node *createTree(int parent[], int N)
     {
         // Your code here
-        // 1. recursive approach  that comes
+        // 1. recursive approach  that comes in mind
       
-      Node*root=NULL;
-      int baap;
-      for(int i=0;i<N;i++)
-      {
-          if(parent[i]==-1){
-              baap=i;
-              break;
-          }
+    //   Node*root=NULL;
+    //   int baap;
+    //   for(int i=0;i<N;i++)
+    //   {
+    //       if(parent[i]==-1){
+    //           baap=i;
+    //           break;
+    //       }
           
-      }
+    //   }
       
       // idx will be our parent
-      root=solve(root,parent,N,baap);
-      return root;
+      
+      
+      //recursive approach 
+      
+      
+    //   root=solve(root,parent,N,baap);
+    //   return root;
+    
+    // 2 iterative approach using queue
+    
+    // HAR EK PARENT KE CORRESPONDING BACHE STORE KAR LIYE
+    
+    
+    // NOTE -> HERE VALUES OF THE ARRAY ARE THE PARENT AND INDEXES OF THE ARRAY ARE THE CHILDREN
+    
+        unordered_map<int,pair<Node*,Node*>>mp;
         
+        // in map keys are always unique
+        
+        for(int i=0;i<N;i++){
+            if(mp.find(parent[i])==mp.end())
+            {
+                mp[parent[i]].first=new Node(i);
+                
+            }
+            else{
+                mp[parent[i]].second=new Node(i);
+            }
+        }
+        queue<Node*>q;
+        
+        Node*root=mp[-1].first;
+        Node*copyroot=root;
+        q.push(root);
+        while(!q.empty())
+        {
+            root=q.front();
+            q.pop();
+            
+            // ab  baap (root) ke corresponding jo bache hai inko  jod do.
+            
+            root->left=mp[root->data].first;
+            root->right=mp[root->data].second;
+            if(root->left!=NULL){
+                q.push(root->left);
+            }
+            if(root->right!=NULL){
+                q.push(root->right);
+            }
+        }
+        return copyroot;
     }
 };
 
