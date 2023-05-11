@@ -155,12 +155,12 @@ class Solution
     {
         // your code here
         
-        Node*temp=root;
-        inorder(temp);
+        inorder(root);
         //  APPROACH 1 -> FIND INORDER TRAVERSAL
         
         // now convert vector into doubly linked lis
         Node*curr=newNode(ans[0]);
+        
         root=curr;
         for(int i=1;i<ans.size();i++)
         {
