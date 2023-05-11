@@ -187,7 +187,12 @@ class Solution{
         q.push(root);
         while(!q.empty())
         {
+            int size=q.size();
+            
+            while(size--){
+                
             root=q.front();
+            
             q.pop();
             
             // ab  baap (root) ke corresponding jo bache hai inko  jod do.
@@ -200,6 +205,7 @@ class Solution{
             if(root->right!=NULL){
                 q.push(root->right);
             }
+        }
         }
         return copyroot;
     }
