@@ -142,20 +142,18 @@ class Solution
         if(sum && left_sum.second && right_sum.second)
         {
            
-            //   pair<int,bool>p=make_pair(true,left_sum.first+right_sum.first+root->data);
-            //   ans.first=true;
-            p.first=left_sum.first+right_sum.first+root->data;
-              p.second=true;
+              pair<int,bool>p=make_pair(left_sum.first+right_sum.first+root->data,true);
+              return p;
+           
             // return p;
             
         }
         else{
           
-            //   pair<int,bool>p=make_pair(0,false);
-              p.second=false;
-            // return p;
+              pair<int,bool>p=make_pair(0,false);
+            return p;
         }
-        return p;
+        // return p;
         
     }
     bool isSumTree(Node* root)
