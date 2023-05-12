@@ -101,7 +101,8 @@ class Solution
     bool res=true;
     int recursive(Node*root)
     {
-        if(root==NULL){
+        if(root==NULL)
+        {
             return 0;
         }
         if(root->left==NULL && root->right==NULL){
