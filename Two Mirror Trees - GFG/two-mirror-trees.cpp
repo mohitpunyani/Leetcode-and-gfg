@@ -119,21 +119,41 @@ class Solution
         
         // convert one tree into another tree and then find the inorder traversal of the trees 
         
-        convert_into_second_tree(a);
-        inorder(a,ans1);
-        inorder(b,ans2);
+        // convert_into_second_tree(a);
+        // inorder(a,ans1);
+        // inorder(b,ans2);
         
-        int ans=1;
-        for(int i=0;i<ans1.size();i++){
-            if(ans2[i]!=ans1[i]){
-                ans=0;
-                break;
-            }
-            else{
-             continue;   
-            }
-        }
-        return ans;
+        // int ans=1;
+        // for(int i=0;i<ans1.size();i++){
+        //     if(ans2[i]!=ans1[i]){
+        //         ans=0;
+        //         break;
+        //     }
+        //     else{
+        //      continue;   
+        //     }
+        // }
+        // return ans;
+        
+        
+        
+    if(a==NULL && b==NULL){
+         return 1;
+     }
+     if(a==NULL || b==NULL){
+         return 0;
+    }
+    if(a->data!=b->data){
+        return 0;
+    }
+    int left=areMirror(a->left,b->right);
+    int right=areMirror(a->right,b->left);
+    if(left&&right){
+        return 1;
+    }
+    else{
+    return 0;
+    }
     }
 
 };
