@@ -119,12 +119,56 @@ class Solution
         }
       
     }
+    
+    // pair approach make a pair of int and bool or sum and true or false;
+    
+    // NOTE -> PAIR APPROACH DEVELOPED FROM ABOVE RECURSIVE  APPROACH 
+    
+    pair<int,bool> solve(Node*root)
+    {
+        if(root==NULL){
+            pair<int,bool>p=make_pair(0,true);
+            return p;
+        }
+        if(root->left==NULL && root->right==NULL){
+            pair<int,bool>p=make_pair(root->data,true);
+            return p;
+        }
+        pair<int,bool>left_sum=solve(root->left);
+        pair<int,bool>right_sum=solve(root->right);
+             bool sum = root->data == left_sum.first + right_sum.first;
+        
+        pair<int,bool>p;
+        if(sum && left_sum.second && right_sum.second)
+        {
+           
+            //   pair<int,bool>p=make_pair(true,left_sum.first+right_sum.first+root->data);
+            //   ans.first=true;
+            p.first=left_sum.first+right_sum.first+root->data;
+              p.second=true;
+            // return p;
+            
+        }
+        else{
+          
+            //   pair<int,bool>p=make_pair(0,false);
+              p.second=false;
+            // return p;
+        }
+        return p;
+        
+    }
     bool isSumTree(Node* root)
     {
          // Your code here
          // recursive approach 
-         int ans=recursive(root);
-         return res;
+         
+         
+        //  int ans=recursive(root);
+        //  return res;
+        
+        // pair approach 
+        return solve(root).second;
     }
 };
 
