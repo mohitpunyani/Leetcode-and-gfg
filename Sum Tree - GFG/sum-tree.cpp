@@ -113,8 +113,9 @@ class Solution
         if(root->data!=left_sum+right_sum){
             res=false;
         }
+        else{
         return root->data+left_sum+right_sum;
-        
+        }
       
     }
     bool isSumTree(Node* root)
