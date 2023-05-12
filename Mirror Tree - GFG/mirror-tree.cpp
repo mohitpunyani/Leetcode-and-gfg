@@ -117,13 +117,13 @@ class Solution {
         
         // NOTE -> USING RECURSION IS A BOTTOM UP APPROACH 
         
-        if(node==NULL){
-            return ;
-        }
-        mirror(node->left);
-        mirror(node->right);
-        swap(node->left,node->right);
-        return ;
+        // if(node==NULL){
+        //     return ;
+        // }
+        // mirror(node->left);
+        // mirror(node->right);
+        // swap(node->left,node->right);
+        // return ;
         
         
         // iterative approach  can be done using both stack and queue but queue approach first
@@ -190,29 +190,29 @@ class Solution {
 
         
         
-        //   queue<Node*>q;
-        // Node*temp=node;
-        // q.push(node);
-        // while(!q.empty()){
+          queue<Node*>q;
+        Node*temp=node;
+        q.push(node);
+        while(!q.empty()){
             
-        //     int size=q.size();
+            int size=q.size();
             
            
                 
-        //       temp=q.front();
-        //       q.pop();
-        //         //   if(temp->right!=NULL){
-        //         //     q.push(temp->right);
-        //         // }
-        //         if(temp->left!=NULL){
-        //             q.push(temp->left);
-        //         }
-        //         if(temp->right!=NULL){
-        //             q.push(temp->right);
-        //         }
+              temp=q.front();
+              q.pop();
+                  if(temp->right!=NULL){
+                    q.push(temp->right);
+                }
+                if(temp->left!=NULL){
+                    q.push(temp->left);
+                }
+                // if(temp->right!=NULL){
+                //     q.push(temp->right);
+                // }
                 
-        //     swap(temp->left,temp->right);
-        // }
+            swap(temp->left,temp->right);
+        }
     }
 };
 
