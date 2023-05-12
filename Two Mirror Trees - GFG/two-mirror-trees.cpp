@@ -92,7 +92,8 @@ class Solution
     
     vector<int>ans1;
     vector<int>ans2;
-    void convert_into_second_tree(Node*root){
+    void convert_into_second_tree(Node*root)
+    {
         
         if(root==NULL){
             return ;
