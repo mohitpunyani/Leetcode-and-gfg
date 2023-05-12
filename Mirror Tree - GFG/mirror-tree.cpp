@@ -198,9 +198,11 @@ class Solution {
             int size=q.size();
             
            
-                
+               
+            while(size--){ 
               temp=q.front();
               q.pop();
+              
                   if(temp->right!=NULL){
                     q.push(temp->right);
                 }
@@ -212,6 +214,7 @@ class Solution {
                 // }
                 
             swap(temp->left,temp->right);
+        }
         }
     }
 };
