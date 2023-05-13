@@ -12,8 +12,8 @@ vector<string>res;
             res.push_back(ans);
             return;
         }
-        solve(ind+1,S,n,ans+' '+S[ind]);
-        solve(ind+1,S,n,ans+S[ind]);
+        solve(ind+1,S,ans+' '+S[ind]);
+        solve(ind+1,S,ans+S[ind]);
         return ;
     }
 
@@ -26,8 +26,8 @@ vector<string>res;
         
          int n=S.size();
         string ans="";
-        ans+=S[0];
-        solve(1,S,n,ans);
+        ans.push_back(S[0]);
+        solve(1,S,ans);
         return res;
     }
 };
