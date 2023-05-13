@@ -11,51 +11,63 @@ using namespace std;
 class Solution {
   public:
     //Function to return a list of indexes denoting the required 
-    
-    void solve(vector<int>&A,int s,int sum,vector<int>&temp,vector<vector<int>>&ans){
-        
-        if(sum==0){
-            ans.push_back(temp);
-            return ;
-        }
-        
-        if(sum<0){
-            return ;
-        }
-        
-        for(int i=s;i<A.size();i++){
-           temp.push_back(A[i]);
-           solve(A,i,sum-A[i],temp,ans);
-           temp.pop_back();
-        }
-        return;
-        
-    }
+
+NOTE
+ void find(int i,int target,vector<int> &A, vector<vector<int>>&ans,vector<int>&v)
+
+     {
+
+         if(i==A.size())
+
+         {
+
+             if(target==0)
+
+             {
+
+                ans.push_back(v); 
+
+             }
+
+             return;
+
+         }
+
+         
+
+         if(A[i]<=target)
+
+         {
+
+            v.push_back(A[i]);
+
+            find(i,target-A[i],A,ans,v);
+
+            v.pop_back();
+
+         }
+
+         
+
+         find(i+1,target,A,ans,v);
+
+     }
     vector<vector<int> > combinationSum(vector<int> &A, int B) 
     {
         // Your code here 
-        
-        // // we are hret o do so that there is not a god deal iwht out 
-        
-        sort(A.begin(),A.end());
-        vector<int>temp;
-        vector<vector<int>>ans;
-          A.resize(unique(A.begin() , A.end())-A.begin());
-        // A.erase(unique(A.begin(), A.end()), A.end()); // remove duplicate elements
-        solve(A,0,B,temp,ans);
-        // for(int i=0;i<ans.size();i++){
-        //     sort(ans[i].begin(),ans[i].end());
-        // }
-        // set<vector<int>>st;
-        // for(auto x:ans){
-        //     st.insert(x);
-        // }
-        // ans.clear();
-        // for(auto y:st){
-        //     ans.push_back(y);
-        // }
-        sort(ans.begin(),ans.end());
-        return ans;
+            vector<vector<int>>ans;
+
+       vector<int>v;
+
+       sort(A.begin(),A.end());
+
+       A.erase(unique(A.begin(),A.end()),A.end());
+
+       find(0,B,A,ans,v);
+
+       return ans;
+  
+    
     }
 };
 
