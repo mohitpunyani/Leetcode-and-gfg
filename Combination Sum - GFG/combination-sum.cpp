@@ -16,8 +16,11 @@ class Solution {
 
 
  void find(int i,int target,vector<int> &A, vector<vector<int>>&ans,vector<int>&v)
- if(ta)
+
      {
+         if(target<0){
+             return ;
+         }
 
          if(i>=A.size())
 
