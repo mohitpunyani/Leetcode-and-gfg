@@ -7,33 +7,32 @@ using namespace std;
 class Solution{
 public:
 
-vector<string> ans;
 
-void solve(string &ip,string op,int index){
-    if(index>=ip.size()-1){
-        op.push_back(ip[index]);
-        ans.push_back(op);
-        return ;
+
+    void solve(int ind,string S,int n,string ans,vector<string>&res){
+        if(ind==n){
+            res.push_back(ans);
+            return;
+        }
+        solve(ind+1,S,n,ans+' '+S[ind],res);
+        solve(ind+1,S,n,ans+S[ind],res);
     }
-    op.push_back(ip[index]);
-    op.push_back(' ');
-    // inclusion  (character with space)
-    solve(ip,op,index+1);
-    // exclusion (character without space)
-    op.pop_back();
-    solve(ip,op,index+1);
-    return ;
-}
+
     vector<string> permutation(string S)
     {
         // Code Here
-        int n=S.size();
-        string op="";
-        solve(S,op,0);
-        return ans;
+        
+        // jaise dry run kar raha vaise code likhade
+      
+        
+         int n=S.size();
+        string ans="";
+        ans+=S[0];
+        vector<string>res;
+        solve(1,S,n,ans,res);
+        return res;
     }
 };
-
 
 //{ Driver Code Starts.
 
