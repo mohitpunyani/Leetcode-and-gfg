@@ -16,7 +16,7 @@ class Solution {
 
 
  void find(int i,int target,vector<int> &A, vector<vector<int>>&ans,vector<int>&v)
-
+ if(ta)
      {
 
          if(i>=A.size())
@@ -28,6 +28,7 @@ class Solution {
              {
 
                 ans.push_back(v); 
+                return ;
 
              }
 
