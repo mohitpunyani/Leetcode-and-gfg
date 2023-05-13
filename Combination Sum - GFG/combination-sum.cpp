@@ -12,12 +12,14 @@ class Solution {
   public:
     //Function to return a list of indexes denoting the required 
 
-NOTE
+// NOTE -> MY APPROACH
+
+
  void find(int i,int target,vector<int> &A, vector<vector<int>>&ans,vector<int>&v)
 
      {
 
-         if(i==A.size())
+         if(i>=A.size())
 
          {
 
@@ -50,6 +52,7 @@ NOTE
          
 
          find(i+1,target,A,ans,v);
+         return ;
 
      }
     vector<vector<int> > combinationSum(vector<int> &A, int B) 
