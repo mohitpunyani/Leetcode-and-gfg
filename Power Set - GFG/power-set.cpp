@@ -8,7 +8,7 @@ class Solution{
 	vector<string>ans;
 	
 
-	void Helper(string &s,int idx,vector<string> &ans,string &out){
+	void Helper(string &s,int idx,string &out){
         //BASE CASE
         if(idx>=s.length()){
             if(out.length()>0){
@@ -18,19 +18,19 @@ class Solution{
         }
         // include
         out.push_back(s[idx]);
-        Helper(s,idx+1,ans,out);
+        Helper(s,idx+1,out);
         //exclude
         out.pop_back();
-        Helper(s,idx+1,ans,out);
+        Helper(s,idx+1,out);
     }
 		vector<string> AllPossibleStrings(string s)
 		{
 		    // Code here
 
-		        vector<string>ans;
+		      //  vector<string>ans;
 		    string out = "";
 		    int idx = 0;
-		    Helper(s,idx,ans,out);
+		    Helper(s,idx,out);
 		    sort(ans.begin(),ans.end());
 		    return ans;
 		}
