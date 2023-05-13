@@ -56,6 +56,9 @@ class Solution{
         if(preorder_index>=n){
             return NULL;
         }
+        if(inorder_ending_index<0){
+            return NULL;
+        }
         if(inorder_starting_index > inorder_ending_index)
         {
             return NULL;
