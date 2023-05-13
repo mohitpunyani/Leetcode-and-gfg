@@ -49,7 +49,7 @@ class Solution{
         }
         return -1;
     }
-    Node* solve(int in[],int pre[],int & preorder_index,int inorder_starting_index,int inorder_ending_index,int n)
+    Node* solve(int in[],int pre[],int &preorder_index,int inorder_starting_index,int inorder_ending_index,int n)
     {
         
         // base case
@@ -62,7 +62,9 @@ class Solution{
             
         }
         int element=pre[preorder_index];
+        
         preorder_index++;
+        
         Node*root=new Node(element);
         
         int position=findposition(in,element,inorder_starting_index,inorder_ending_index);
