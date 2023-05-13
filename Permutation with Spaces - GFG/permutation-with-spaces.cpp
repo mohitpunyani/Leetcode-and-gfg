@@ -7,8 +7,8 @@ using namespace std;
 class Solution{
 public:
 vector<string>res;
-    void solve(int ind,string S,int n,string ans){
-        if(ind==n){
+    void solve(int ind,string S,string ans){
+        if(ind>=S.size()){
             res.push_back(ans);
             return;
         }
