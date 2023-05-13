@@ -6,16 +6,15 @@ using namespace std;
 // } Driver Code Ends
 class Solution{
 public:
-
-
-
-    void solve(int ind,string S,int n,string ans,vector<string>&res){
+vector<string>res;
+    void solve(int ind,string S,int n,string ans){
         if(ind==n){
             res.push_back(ans);
             return;
         }
-        solve(ind+1,S,n,ans+' '+S[ind],res);
-        solve(ind+1,S,n,ans+S[ind],res);
+        solve(ind+1,S,n,ans+' '+S[ind]);
+        solve(ind+1,S,n,ans+S[ind]);
+        return ;
     }
 
     vector<string> permutation(string S)
@@ -28,8 +27,7 @@ public:
          int n=S.size();
         string ans="";
         ans+=S[0];
-        vector<string>res;
-        solve(1,S,n,ans,res);
+        solve(1,S,n,ans);
         return res;
     }
 };
