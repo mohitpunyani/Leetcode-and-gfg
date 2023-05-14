@@ -167,12 +167,12 @@ void convert(Node *head, TreeNode *&root)
     queue<TreeNode*> q;
     root = new TreeNode(head->data);
     q.push(root);
-    
-    head = head->next;
-    while(!q.empty() &&){
+    while(!q.empty() && head!=NULL){
+        
         TreeNode* temp = q.front();
         q.pop();
         
+        head=head->next;
         if(head){
             temp->left = new TreeNode(head->data);
             q.push(temp->left);
@@ -182,7 +182,7 @@ void convert(Node *head, TreeNode *&root)
         if(head){
             temp->right = new TreeNode(head->data);
             q.push(temp->right);
-            head = head->next;
+            // head = head->next;
         }
         else{
             break;
