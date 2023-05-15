@@ -103,41 +103,66 @@ class Solution{
     public:
     // return true/false denoting whether the tree is Symmetric or not
     
-    bool solve(Node*a,Node*b)
-    {
-        if((a==NULL && b!=NULL) || (b==NULL && a!=NULL)){
-            return false;
-        }
-        if(a==NULL && b==NULL){
-            return true;
-        }
-        if(a->data!=b->data){
-            return false;
-        }
+    // bool solve(Node*a,Node*b)
+    // {
+    //     if((a==NULL && b!=NULL) || (b==NULL && a!=NULL)){
+    //         return false;
+    //     }
+    //     if(a==NULL && b==NULL){
+    //         return true;
+    //     }
+    //     if(a->data!=b->data){
+    //         return false;
+    //     }
         
-        bool left=solve(a->left,b->right);
-        bool right=solve(a->right,b->left);
-        // bool ans=left && right;
-        if(left && right){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
+    //     bool left=solve(a->left,b->right);
+    //     bool right=solve(a->right,b->left);
+    //     // bool ans=left && right;
+    //     if(left && right){
+    //         return true;
+    //     }
+    //     else{
+    //         return false;
+    //     }
+    // }
     bool isSymmetric(struct Node* root)
     {
 	    // Code here
 	    
 	    // similar to mirror tree , break this tree into two parts (left and right)
-	       if(root==NULL)
+	    
+	    
+	   //    if(root==NULL)
 
-       return true;
-	    // TREES KE SYMMETRIC HONE KE CHANCE TABHI HO SAKTE HAI JAB LEFT AUR RIGHT EK HI LEVEL PAR HO
-	    Node*left_tree=root->left;
-	    Node*right_tree=root->right;
-	    bool ans=solve(left_tree,right_tree);
-	    return ans;
+    //   return true;
+	   // // TREES KE SYMMETRIC HONE KE CHANCE TABHI HO SAKTE HAI JAB LEFT AUR RIGHT EK HI LEVEL PAR HO
+	   // Node*left_tree=root->left;
+	   // Node*right_tree=root->right;
+	   // bool ans=solve(left_tree,right_tree);
+	   // return ans;
+	    
+	    // iterative approach 
+	    
+	    
+	      Node *left,*right;
+	   if(!root) return true;
+	   queue<Node*>q1,q2;
+	   q1.push(root->left);
+	   q2.push(root->right);
+	   while(!q1.empty() && !q2.empty()){
+	       left=q1.front();
+	       q1.pop();
+	       right=q2.front();
+	       q2.pop();
+	       if(left==NULL && right==NULL) continue;
+	       if(left==NULL || right==NULL) return false;
+	       if(left->data != right->data) return false;
+	       q1.push(left->left);
+	       q1.push(left->right);
+	       q2.push(right->right);
+	       q2.push(right->left);
+	   }
+	   return true;
     }
 };
 
