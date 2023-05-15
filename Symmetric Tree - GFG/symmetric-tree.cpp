@@ -117,8 +117,13 @@ class Solution{
         
         bool left=solve(a->left,b->right);
         bool right=solve(a->right,b->left);
-        bool ans=left && right;
-        return ans;
+        // bool ans=left && right;
+        if(left && right){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     bool isSymmetric(struct Node* root)
     {
