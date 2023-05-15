@@ -37,15 +37,16 @@ struct Node
 class Solution
 {
     public:
- 
+  // MY APPROACH 
 bool helper(Node *root , vector<int> & v ,  int target){
 
         if(!root) return false;
 
-        
 
+      
         v.push_back(root->data);
 
+      if(root->data==target) return true;
         
 
       bool lh=  helper(root->left , v, target);
@@ -54,7 +55,7 @@ bool helper(Node *root , vector<int> & v ,  int target){
 
       
 
-      if(root->data==target) return true;
+    //   if(root->data==target) return true;
 
       
 
