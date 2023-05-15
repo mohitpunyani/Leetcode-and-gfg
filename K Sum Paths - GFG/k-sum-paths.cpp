@@ -118,22 +118,25 @@ class Solution{
     
     // 2ND APPROACH 
     
-    
-        void sumKHelper(Node *root, int k, unordered_map<long long, int> &mp, int &total, long long currSum) {
-        if(root == NULL) return ;
+        int count=0;
+        void sumKHelper(Node *root, int k, unordered_map<long long, int> &mp, long long currSum) {
+        if(root == NULL)
+           return ;
         
         currSum += root->data;
-        long long rSum = currSum - k;
         
-        if(mp.find(rSum) != mp.end()) total += mp[rSum];
+        if(mp.find(currSum-k) != mp.end())
+           count += mp[currSum-k];
         
-        mp[currSum] += 1;
+        mp[currSum]++;
+        sumKHelper(root->left, k, mp,  currSum);
         
-        sumKHelper(root->left, k, mp, total, currSum);
-        sumKHelper(root->right, k, mp, total, currSum);
+        sumKHelper(root->right, k, mp,  currSum);
         
         mp[currSum] -= 1;
         currSum -= root->data;
+        
+
     }
   
 
@@ -164,13 +167,11 @@ class Solution{
         // USING MAP
      
        unordered_map<long long, int> mp;
-        mp.insert({0,1});
-        
-        int total = 0;
+        mp[0]=1;
         long long currSum = 0;
-        
-        sumKHelper(root, k, mp, total, currSum);
-        return total;
+    
+        sumKHelper(root, k, mp,  currSum);
+        return count;
         // appraoch 3 ->
     }
 };
