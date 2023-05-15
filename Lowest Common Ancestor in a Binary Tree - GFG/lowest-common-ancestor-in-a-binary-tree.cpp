@@ -38,35 +38,43 @@ class Solution
 {
     public:
   // MY APPROACH 
-bool helper(Node *root , vector<int> & v ,  int target){
+// bool helper(Node *root , vector<int> & v ,  int target){
 
-        if(!root) return false;
+//         if(root==NULL)
+//         return false;
 
 
       
-        v.push_back(root->data);
+//         v.push_back(root->data);
 
-      if(root->data==target) return true;
+//       if(root->data==target) return true;
         
+//       bool lh=  helper(root->left , v, target);
+      
+//       bool rh= helper(root->right , v, target);
+      
+//       if(lh==false && rh==false) 
+//       {
+//           // it means that we reach the leaf node
+//           v.pop_back(); return false;
+//       } 
+//       else if((lh==true && rh==false) or (rh==true && lh==false))
+//       {
+//           return true;
+//       }
+      
 
-      bool lh=  helper(root->left , v, target);
 
-      bool rh= helper(root->right , v, target);
-
-      if(lh==false && rh==false) 
-      {
-          // it means that we reach the leaf node
-
-          v.pop_back(); return false;
-
-      } 
-      else if((lh==true && rh==false) or (rh==true && lh==false))
-      {
-          return true;
-          
-      }
-        
-
+//     }
+    
+    Node * solve(Node* root ,int n1 ,int n2)
+    {
+        if(root==NULL || root->data==n1 || root->data==n2)return root;
+        Node * l = solve(root->left,n1,n2);
+        Node * r = solve(root->right,n1,n2);
+        if(l==NULL)return r;
+        else if(r==NULL)return l;
+        else  return root;
     }
     //Function to return the lowest common ancestor in a Binary Tree.
     Node* lca(Node* root ,int n1 ,int n2 )
@@ -75,26 +83,32 @@ bool helper(Node *root , vector<int> & v ,  int target){
       
        // approach 1 -> directly comes in my mind
        
-    vector<int> v , v1;
+    // vector<int> v , v1;
 
-       helper(root , v , n1);
+    //   helper(root , v , n1);
 
-       helper(root , v1 , n2);
+    //   helper(root , v1 , n2);
 
 
-       int m=min(v.size() , v1.size());
+    //   int m=min(v.size() , v1.size());
 
-       for(int i=m-1; i>=0;i--){
+    //   for(int i=m-1; i>=0;i--){
 
-           if(v[i]==v1[i]) {
-               Node*ans=new Node(v[i]);
-               return ans;
-               break;
-           }
+    //       if(v[i]==v1[i]) 
+    //       {
+    //           Node*ans=new Node(v[i]);
+    //           return ans;
+    //           break;
+    //       }
+    //   }
 
-       }
+    //   return root;
+      
+      // approach 2 -> good approach 
+              return solve(root,n1,n2);
 
-      return root;
+      
+      
     }
 };
 
