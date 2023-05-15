@@ -31,7 +31,7 @@ public:
                 mp[sum]++;
             }
             else{
-                mp[sum]
+                mp[sum]=1;
             }
             
         }
