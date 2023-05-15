@@ -81,27 +81,20 @@ bool helper(Node *root , vector<int> & v ,  int target){
 
        helper(root , v1 , n2);
 
-       
-
-       Node *ans=NULL;
-
-       int c=0;
-
-  
 
        int m=min(v.size() , v1.size());
 
-       for(int i=0; i<m; i++){
+       for(int i=m-1; i>=0;i--){
 
-           if(v[i]==v1[i]) c=v[i];
-
-           else break;
+           if(v[i]==v1[i]) {
+               Node*ans=new Node(v[i]);
+               return ans;
+               break;
+           }
 
        }
 
-       ans=new Node(c);
-
-       return ans;
+      return root;
     }
 };
 
