@@ -81,13 +81,13 @@ class Solution
         if(left==NULL && right==NULL){
             return NULL;
         }
-        if(left ==NULL && right!=NULL){
+      if(left ==NULL && right!=NULL){
             return right;
         }
-        if(left!=NULL && right==NULL){
+        else if(left!=NULL && right==NULL){
             return left;
         }
-        if(left!=NULL && right!=NULL){
+        else if(left!=NULL && right!=NULL){
             return root;
         }
     }
