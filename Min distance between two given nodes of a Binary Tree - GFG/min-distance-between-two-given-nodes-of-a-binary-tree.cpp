@@ -98,7 +98,8 @@ class Solution{
     /* Should return minimum distance between a and b
     in a tree with given root*/
 
-      Node *lca(Node* root,int a,int b){
+      Node *lca(Node* root,int a,int b)
+      {
        if(root==NULL){
            return NULL;
        }
@@ -106,22 +107,47 @@ class Solution{
            return root;
        }
        
-       Node*l = lca(root->left,a,b);
-       Node *r = lca(root->right,a,b);
-       if(l!=NULL  && r==NULL)return l;
-       if(l==NULL && r!=NULL)return r;
-       if(l!=NULL && r!=NULL)return root;
+       Node*left = lca(root->left,a,b);
+       Node *right = lca(root->right,a,b);
+       
+      
+         if(left==NULL && right==NULL){
+            return NULL;
+        }
+        if(left ==NULL && right!=NULL){
+            return right;
+        }
+        if(left!=NULL && right==NULL){
+            return left;
+        }
+        if(left!=NULL && right!=NULL){
+            return root;
+        }
    }
-   void getPath(Node* root, int a,vector<int> ans,vector<int> &path){
-       if(root==NULL)return;
+   bool getPath(Node* root, int a,vector<int>&ans)
+   {
+       if(root==NULL)
+       return false;
        ans.push_back(root->data);
-       if(root->data == a){
-           path=ans;
-           return;
+       if(root->data == a)
+       {
+           return true;
+           
        }
-       getPath(root->left,a,ans,path);
-       getPath(root->right,a,ans,path);
-       ans.pop_back();
+       bool l=getPath(root->left,a,ans);
+       bool r=getPath(root->right,a,ans);
+       if(l==false && r==false)
+       {
+           ans.pop_back();
+           return false;
+       }
+       if(l==false && r==true){
+           return true;
+       }
+       if(l==true && r==false){
+           return true;
+       }
+       
    }
     int findDist(Node* root, int a, int b) {
         // Your code here
@@ -134,18 +160,16 @@ class Solution{
        // now our lca becomes new root;
        
         // step 2 make two vector and store the path into those vectors 
-        
-        
-
        
-           Node* common = lca(root,a,b);
+        Node* common = lca(root,a,b);
        vector<int> first;
        vector<int> second;
        vector<int> ans;
-       getPath(common,a,ans,first);
-       ans.clear();
-       getPath(common,b,ans,second);
-       return first.size()+second.size()-2;
+       getPath(common,a,first);
+      ans.clear();
+       getPath(common,b,second);
+       
+      return first.size()+second.size()-2;
 
         
     }
