@@ -144,7 +144,7 @@ class Solution{
 	    // iterative approach 
 	    
 	    
-	      Node *left,*right;
+	    Node *left,*right;
 	   if(!root) return true;
 	   queue<Node*>q1,q2;
 	   q1.push(root->left);
@@ -154,13 +154,17 @@ class Solution{
 	       q1.pop();
 	       right=q2.front();
 	       q2.pop();
-	       if(left==NULL && right==NULL) continue;
-	       if(left==NULL || right==NULL) return false;
+	       if(left==NULL && right==NULL)
+	       continue;
+	       if((left==NULL && right!=NULL) || (right==NULL && left!=NULL)) return false;
 	       if(left->data != right->data) return false;
 	       q1.push(left->left);
 	       q1.push(left->right);
 	       q2.push(right->right);
 	       q2.push(right->left);
+	       if(q1.size()!=q2.size()){
+	           return false;
+	       }
 	   }
 	   return true;
     }
