@@ -60,7 +60,7 @@ bool helper(Node *root , vector<int> & v ,  int target){
           v.pop_back(); return false;
 
       } 
-      else if((lh==true or rh==true) or (lh==false or rh==false) or (lh==true && rh==true))
+      else if((lh==true or rh==true) or (lh==false or rh==false))
       {
           return true;
           
