@@ -53,12 +53,18 @@ bool helper(Node *root , vector<int> & v ,  int target){
 
       bool rh= helper(root->right , v, target);
 
-      if(lh==false && rh==false){
+      if(lh==false && rh==false) 
+      {
+          // it means that we reach the leaf node
 
           v.pop_back(); return false;
 
-      } else return true;
-
+      } 
+      else if((lh==true or rh==true) or (lh==false or rh==false) or (lh==true && rh==true))
+      {
+          return true;
+          
+      }
         
 
     }
