@@ -134,7 +134,7 @@ class Solution{
         sumKHelper(root->right, k, mp,  currSum);
         
         mp[currSum] -= 1;
-        currSum -= root->data;
+        // currSum -= root->data;
         
 
     }
