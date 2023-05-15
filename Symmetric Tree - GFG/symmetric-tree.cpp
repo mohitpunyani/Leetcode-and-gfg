@@ -149,7 +149,8 @@ class Solution{
 	   queue<Node*>q1,q2;
 	   q1.push(root->left);
 	   q2.push(root->right);
-	   while(!q1.empty() && !q2.empty()){
+	   while(!q1.empty() && !q2.empty())
+	   {
 	       left=q1.front();
 	       q1.pop();
 	       right=q2.front();
@@ -165,6 +166,12 @@ class Solution{
 	       if(q1.size()!=q2.size()){
 	           return false;
 	       }
+	   }
+	   if(q1.size()==0 && q2.size()!=0){
+	       return false;
+	   }
+	   if(q2.size()==0 && q1.size()!=0){
+	       return false;
 	   }
 	   return true;
     }
