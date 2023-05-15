@@ -126,6 +126,8 @@ class Solution{
         currSum += root->data;
         
         if(mp.find(currSum-k) != mp.end())
+        // this also handles duplciates values
+        
            count += mp[currSum-k];
         
         mp[currSum]++;
@@ -133,9 +135,8 @@ class Solution{
         
         sumKHelper(root->right, k, mp,  currSum);
         
-        mp[currSum] -= 1;
-        // currSum -= root->data;
-        
+        mp[currSum]--;
+        return ;
 
     }
   
@@ -167,7 +168,8 @@ class Solution{
         // USING MAP
      
        unordered_map<long long, int> mp;
-        mp[0]=1;
+        mp[0]=1; // this is to handle when we have a zero difference
+        
         long long currSum = 0;
     
         sumKHelper(root, k, mp,  currSum);
