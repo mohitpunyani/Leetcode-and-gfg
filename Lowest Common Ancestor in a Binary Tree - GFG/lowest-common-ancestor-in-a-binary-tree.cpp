@@ -53,13 +53,7 @@ bool helper(Node *root , vector<int> & v ,  int target){
 
       bool rh= helper(root->right , v, target);
 
-      
-
-    //   if(root->data==target) return true;
-
-      
-
-      if(!lh && !rh){
+      if(lh==false && rh==false){
 
           v.pop_back(); return false;
 
