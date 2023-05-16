@@ -73,47 +73,64 @@ struct TNode
 class Solution{
   public:
   
-  TNode* convert_into_bst(vector<int>&nums,int low,int high,TNode* root)
+  // find middle element in linked list  using slow and fast pointer concept 
+  
+  LNode* middle(LNode* head){
+      
+      LNode*slow=head;
+      LNode*fast=head;
+      LNode*prev=head;
+      while(fast!=NULL && fast->next!=NULL)
+      {
+          prev=slow;
+          fast=fast->next;
+          slow=slow->next;
+          if(fast->next!=NULL){
+              fast=fast->next;
+          }
+      }
+      if(prev){
+          
+     
+     prev->next=NULL;
+      }
+      return slow;
+  }
+  
+  TNode* convert_into_bst(LNode*head,TNode*root)
 {
     
-    if(low>high)
-    {
-        return NULL; 
-    }
-    int mid=low+(high-low+1)/2;
-    root=new TNode(nums[mid]);
+         if(head==NULL)return NULL;
+         if(head->next==NULL){
+           TNode* newnode=new TNode(head->data);
+           return newnode;
+       }
+    LNode* mid=middle(head);
     
-    root->left=convert_into_bst(nums,low,mid-1,root);
+    root=new TNode(mid->data);
     
-    root->right=convert_into_bst(nums,mid+1,high,root);
+    root->left=convert_into_bst(head,root);
+    
+    root->right=convert_into_bst(mid->next,root);
     
     return root;
 }
 
     TNode* sortedListToBST(LNode *head)
     {
-        //code here
         
-        // similar to the (convert array into bst )
         
-        // first convert linked list into array
+        //  APPROACH 2 -> WITHOUT CONVERTING INTO ARRAY
         
-        vector<int>nums;
-        
-        LNode*temp=head;
-        while(temp!=NULL)
-        {
-            nums.push_back(temp->data);
-            temp=temp->next;
-        }
-        
-        int low=0;
-        int high=nums.size()-1;
         TNode*root=NULL;
-        root=convert_into_bst(nums,low,high,root);
+        root=convert_into_bst(head,root);
         return root;
+        
+        
     }
 };
+
+
 
 //{ Driver Code Starts.
 
