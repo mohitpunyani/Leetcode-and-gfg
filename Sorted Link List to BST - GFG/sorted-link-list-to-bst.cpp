@@ -89,11 +89,11 @@ class Solution{
               fast=fast->next;
           }
       }
-      if(prev){
-          
+    //   if(prev){
+        //   
      
      prev->next=NULL;
-      }
+    //   }
       return slow;
   }
   
