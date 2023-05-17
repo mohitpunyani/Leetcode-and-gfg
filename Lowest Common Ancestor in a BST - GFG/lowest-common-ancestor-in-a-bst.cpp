@@ -106,17 +106,16 @@ Node* solve(Node*root,int n1,int n2)
         return NULL;
     }
 
-    // if((root->data > n1 && root->data < n2) || (root->data < n1 && root->data > n2)){
-    //     return root;
-    // }
     if(root->data == n1 || root->data == n2){
         return root;
     }
     if(root->data < n1 && root->data < n2){
-        return solve(root->right, n1, n2);
+        Node*right=solve(root->right, n1, n2);
+        return right;
     }
     if(root->data > n1 && root->data > n2){
-        return solve(root->left, n1, n2);
+        Node*left=solve(root->left, n1, n2);
+        return left;
     }
      if((root->data > n1 && root->data < n2) || (root->data < n1 && root->data > n2)){
         return root;
