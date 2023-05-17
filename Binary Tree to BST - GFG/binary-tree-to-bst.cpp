@@ -132,7 +132,7 @@ class Solution{
 
     }
 
-    Node* solve(vector<int>v,int s,int e)
+    Node* solve(Node*root,vector<int>v,int s,int e)
 
     {
 
@@ -148,13 +148,13 @@ class Solution{
 
         
 
-        Node*root=new Node(v[mid]);
+        root=new Node(v[mid]);
 
         
 
-        root->left=solve(v,s,mid-1);
+        root->left=solve(root,v,s,mid-1);
 
-        root->right=solve(v,mid+1,e);
+        root->right=solve(root,v,mid+1,e);
 
         
 
@@ -170,21 +170,24 @@ class Solution{
         //Your code goes here
         
         
-         vector<int>v;
+        // wahi same question same approach 
+        
+    
+        vector<int>v;
 
         inorder(root,v);
-
+        
+        
+        // when we sort the vector, now the question convert into that create bst from sorted array 
         
 
         sort(v.begin(),v.end());
 
         
+       root=NULL;
+        root=solve(root,v,0,v.size()-1);
 
-        Node*temp=solve(v,0,v.size()-1);
-
-        
-
-        return temp;
+        return root;
     }
 };
 
