@@ -132,33 +132,17 @@ class Solution{
 
     }
 
-    Node* solve(Node*root,vector<int>v,int s,int e)
+    void solve(Node*root,int &i,vector<int>v)
 
     {
-
-        if(s>e)
-
-        {
-
-            return 0;
-
+        if(root==NULL){
+            return;
         }
-
-        int mid=s+(e-s)/2;
-
-        
-
-        root=new Node(v[mid]);
-
-        
-
-        root->left=solve(root,v,s,mid-1);
-
-        root->right=solve(root,v,mid+1,e);
-
-        
-
-        return root;
+        solve(root->left,i,v);
+        root->data=v[i];
+        i++;
+        solve(root->right,i,v);
+        return;
 
     }
 
@@ -170,9 +154,6 @@ class Solution{
         //Your code goes here
         
         
-        // wahi same question same approach 
-        
-    
         vector<int>v;
 
         inorder(root,v);
@@ -182,12 +163,12 @@ class Solution{
         
 
         sort(v.begin(),v.end());
-
         
-        root=NULL;
-        root=solve(root,v,0,v.size()-1);
-
+        int i=0;
+         solve(root,i,v);
+       
         return root;
+        
     }
 };
 
