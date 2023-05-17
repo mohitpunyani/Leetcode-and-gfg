@@ -117,7 +117,9 @@ Node* solve(Node*root,int n1,int n2)
         Node*left=solve(root->left, n1, n2);
         return left;
     }
-     if((root->data > n1 && root->data < n2) || (root->data < n1 && root->data > n2)){
+    if((root->data > n1 && root->data < n2) || (root->data < n1 && root->data > n2))
+    {
+        // JAB DONO NODE DONO ALAG-ALAG SIDE ME HONGE TOH ANSWER ROOT HI HOGA (THINKING MUST BE GOOD)
         return root;
     }
    
@@ -126,11 +128,36 @@ Node* LCA(Node *root, int n1, int n2)
 {
    //Your code here
    
-  root=solve(root,n1,n2);
-  return root;
+   // RECURSIVE APPROACH 
+   
+//   root=solve(root,n1,n2);
+//   return root;
+   
+   // ITERATIVE APPROACH (O(1) SPACE COMPLEXITY 
    
    
-  
+  while(root!=NULL)
+  {
+    if(root->data==n1 or root->data==n2){
+          return root;
+      }
+      
+      if(root->data < n1 && root->data < n2)
+       {
+        root=root->right;
+      }
+   
+      if(root->data > n1 && root->data > n2)
+      {
+        root=root->left;
+      }
+        if((root->data > n1 && root->data < n2) || (root->data < n1 && root->data > n2))
+    {
+        // JAB DONO NODE DONO ALAG-ALAG SIDE ME HONGE TOH ANSWER ROOT HI HOGA (THINKING MUST BE GOOD)
+        return root;
+    }
+      
+  }
     
 }
 
