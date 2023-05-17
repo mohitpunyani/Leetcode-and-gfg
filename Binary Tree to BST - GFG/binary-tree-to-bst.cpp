@@ -144,7 +144,7 @@ class Solution{
 
         }
 
-        int mid=(s+e)/2;
+        int mid=s+(e-s)/2;
 
         
 
@@ -184,7 +184,7 @@ class Solution{
         sort(v.begin(),v.end());
 
         
-       root=NULL;
+        root=NULL;
         root=solve(root,v,0,v.size()-1);
 
         return root;
