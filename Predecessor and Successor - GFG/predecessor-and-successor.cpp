@@ -227,8 +227,6 @@ void findPreSuc(Node* root, Node*& pre, Node*& suc, int key)
 
         pre=leftree;
 
- 
-
         leftree=leftree->right;
 
  
