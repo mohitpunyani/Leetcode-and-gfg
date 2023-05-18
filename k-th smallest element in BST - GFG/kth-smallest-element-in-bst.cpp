@@ -95,19 +95,19 @@ class Solution {
   public:
     // Return the Kth smallest element in the given BST
     
-        int ans;
-    void inorder(Node*root,int &i,int K){
+        
+    void inorder(Node * root,int &i,int K,int &ans){
         
         if(root==NULL){
             return ;
         }
-        inorder(root->left,i,K);
+        inorder(root->left,i,K,ans);
         i++;
         if(i==K){
             ans=root->data;
             return ;
         }
-        inorder(root->right,i,K);
+        inorder(root->right,i,K,ans);
         return ;
         
     }
@@ -115,10 +115,9 @@ class Solution {
     {
         // add code here.
         
-        // optimized approach morris traversal 
           int i=0;
-        ans=-1;
-        inorder(root,i,K);
+        int ans=-1;
+        inorder(root,i,K,ans);
         return ans;
         
     }
