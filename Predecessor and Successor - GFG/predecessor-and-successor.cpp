@@ -147,6 +147,9 @@ void findPreSuc(Node* root, Node*& pre, Node*& suc, int key)
 
 // approach 2 -> good approach 
 
+// NOTE-> IT'S A VERY GOOD QUESTION 
+
+
 // THIS IS A SUB PART OF MIN AND MAX IN BST , first find that key
 
 //  predecessor means left_subtree me maximum element
@@ -162,7 +165,6 @@ void findPreSuc(Node* root, Node*& pre, Node*& suc, int key)
    suc=NULL;
 
  
-
     while(temp!=NULL){
 
          if(key==temp->key)
