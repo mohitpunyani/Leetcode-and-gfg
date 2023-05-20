@@ -12,7 +12,9 @@ class Solution {
       queue<int>q;
       unordered_map<int,bool>visited;
       
-      void bfs(int start, vector<int> &ans, vector<int> adj[])
+      vector<int>ans;
+      
+      void bfs(int start,vector<int> adj[])
       {
           
         q.push(start);
@@ -20,12 +22,13 @@ class Solution {
         while(!q.empty())
         {
             int node = q.front();
-            ans.push_back(node);
             q.pop();
-            for(auto it : adj[node]){
-                if(!visited[it]){
-                    q.push(it);
-                    visited[it] = true;
+            ans.push_back(node);
+            
+            for(auto neighbour : adj[node]){
+                if(!visited[neighbour]){
+                    q.push(neighbour);
+                    visited[neighbour] = true;
                 }
             }
         }
@@ -34,12 +37,9 @@ class Solution {
     // Function to return Breadth First Traversal of given graph.
     vector<int> bfsOfGraph(int V, vector<int> adj[])
     {
-        vector<int> ans;
         
-        queue<int> q;
         
-
-        bfs(0,ans,adj);
+        bfs(0,adj);
         
         return ans;
     }
