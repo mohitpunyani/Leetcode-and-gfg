@@ -8,29 +8,32 @@ using namespace std;
 
 class Solution {
     
-    private:
-    
-    void solve(vector<int> &ans,unordered_map<int,bool> &visited,int node,
-    vector<int> adj[]){
+  public:
+  
+  vector<int>ans;
+  unordered_map<int,bool>visited;
+    void solve(int node ,vector<int> adj[]){
         ans.push_back(node);
         visited[node]=true;
-        for(auto &x:adj[node]){
-            if(!visited[x]){
-                solve(ans,visited,x,adj);
+        
+        for(auto &neighbour:adj[node])
+        {
+            if(!visited[neighbour])
+            {
+                
+                solve(neighbour,adj);
             }
         }
         return ;
     }
-  public:
+ 
     // Function to return a list containing the DFS traversal of the graph.
     vector<int> dfsOfGraph(int V, vector<int> adj[]) 
     {
         // Code here
         
-        vector<int> ans;
         
-        unordered_map<int,bool> visited;
-        solve(ans,visited,0,adj);
+        solve(0,adj);
         return ans;
     }
 };
