@@ -5,34 +5,41 @@ using namespace std;
 // } Driver Code Ends
 
 class Solution {
-private:
-    void bfs(int start, queue<int> q, vector<int> &ans, vector<int> adj[], vector<int> &vis){
+    
+
+  public:
+      
+      queue<int>q;
+      unordered_map<int,bool>visited;
+      
+      void bfs(int start, vector<int> &ans, vector<int> adj[])
+      {
+          
         q.push(start);
-        vis[start] = 1;
-        while(!q.empty()){
+        visited[start] = true;
+        while(!q.empty())
+        {
             int node = q.front();
             ans.push_back(node);
             q.pop();
             for(auto it : adj[node]){
-                if(vis[it] == 0){
+                if(!visited[it]){
                     q.push(it);
-                    vis[it] = 1;
+                    visited[it] = true;
                 }
             }
         }
     }
     
-    
-  public:
     // Function to return Breadth First Traversal of given graph.
-    vector<int> bfsOfGraph(int V, vector<int> adj[]) {
+    vector<int> bfsOfGraph(int V, vector<int> adj[])
+    {
         vector<int> ans;
         
         queue<int> q;
         
-        vector<int> vis(V, 0);
-        
-        bfs(0, q, ans, adj, vis);
+
+        bfs(0,ans,adj);
         
         return ans;
     }
