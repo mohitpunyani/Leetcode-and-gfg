@@ -12,9 +12,11 @@ class Solution {
   
   vector<int>ans;
   unordered_map<int,bool>visited;
-    void solve(int node ,vector<int> adj[]){
-        ans.push_back(node);
+    void solve(int node ,vector<int> adj[])
+    {
         visited[node]=true;
+        ans.push_back(node);
+        // visited[node]=true;
         
         for(auto &neighbour:adj[node])
         {
