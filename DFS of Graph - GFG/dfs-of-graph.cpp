@@ -16,9 +16,9 @@ class Solution {
     {
         visited[node]=true;
         ans.push_back(node);
-        // visited[node]=true;
+
         
-        for(auto &neighbour:adj[node])
+        for(auto neighbour:adj[node])
         {
             if(!visited[neighbour])
             {
