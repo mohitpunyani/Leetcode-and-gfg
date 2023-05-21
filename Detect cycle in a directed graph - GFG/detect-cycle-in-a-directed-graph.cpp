@@ -7,30 +7,60 @@ class Solution {
   public:
     // Function to detect cycle in a directed graph.
     
-    bool dfs(int node,vector<int> adj[],unordered_map<int,bool>&visited,unordered_map<int,bool>&dfs_visited)
+    // bool dfs(int node,vector<int> adj[],unordered_map<int,bool>&visited,unordered_map<int,bool>&dfs_visited)
+    // {
+    //     visited[node]=true;
+        
+    //     dfs_visited[node]=true;
+        
+    //     for(auto neighbours:adj[node])
+    //     {
+    //         if(!visited[neighbours])
+    //         {
+    //             bool ans=dfs(neighbours,adj,visited,dfs_visited);
+    //             if(ans==true)
+    //             {
+    //                 return true;
+    //             }
+    //         }
+    //             else if(dfs_visited[neighbours]==true)
+    //             {
+    //                 return true;
+                    
+    //             }
+    //     }
+    //     dfs_visited[node]=false;
+    //     return false;
+    // }
+    
+    void bfs(int V,vector<int>adj[],queue<int>&q,vector<int>&ans,vector<int>&indegree,int &count)
     {
-        visited[node]=true;
-        
-        dfs_visited[node]=true;
-        
-        for(auto neighbours:adj[node])
+        for(int i=0;i<V;i++)
         {
-            if(!visited[neighbours])
+            if(indegree[i]==0)
             {
-                bool ans=dfs(neighbours,adj,visited,dfs_visited);
-                if(ans==true)
+                q.push(i);
+            }
+        }
+        while(!q.empty()){
+            int top=q.front();
+            
+            q.pop();
+            
+            ans.push_back(top);
+            
+            count++;
+            
+            for(auto neighbours:adj[top])
+            {
+                indegree[neighbours]--;
+                if(indegree[neighbours]==0)
                 {
-                    return true;
+                    q.push(neighbours);
                 }
             }
-                else if(dfs_visited[neighbours]==true)
-                {
-                    return true;
-                    
-                }
         }
-        dfs_visited[node]=false;
-        return false;
+        
     }
     bool isCyclic(int V, vector<int> adj[])
     {
@@ -40,21 +70,59 @@ class Solution {
          
         // loop through handle disconnected components
         
-        unordered_map<int,bool>visited;
+        // unordered_map<int,bool>visited;
         
-        unordered_map<int,bool>dfs_visited;
+    //     unordered_map<int,bool>dfs_visited;
         
-        for(int i=0;i<V;i++){
-            // if(!visited[i])
-            // {
-                bool ans=dfs(i,adj,visited,dfs_visited);
-                if(ans==true){
-                    return true;
-                }
-            // }
+    //     for(int i=0;i<V;i++){
+    //         if(!visited[i])
+    //         {
+    //             bool ans=dfs(i,adj,visited,dfs_visited);
+    //             if(ans==true){
+    //                 return true;
+    //             }
+    //         }
             
-        }
-       return false;
+    //     }
+    //   return false;
+       
+       
+       // bfs using topological sort (khan's algorithm)
+       
+       // a valid topological sort contains all the nodes that exist in graph. 
+       
+       //  TOPOLOGICAL SORT APPLY FOR DAG ,  IF WE ARE UNABLE TO WRITE VALID TOPOLOGICAL SORT , SO 
+       
+      //   THAT MEANS CYCLE IS PRESENT.
+      
+       vector<int>indegree(V);
+       
+       int count=0;
+       for(int i=0;i<V;i++)
+       {
+           for(auto x:adj[i])
+           {
+               indegree[x]++;
+           }
+       }
+       
+       
+       
+      queue<int> q;
+      
+      vector<int>ans;
+      
+      bfs(V,adj,q,ans,indegree,count);
+       
+    //   cout<<ans<<endl;
+    
+      if(V==ans.size())
+      {
+          return false;
+      }
+      else{
+          return true;
+      }
     }
 };
 
