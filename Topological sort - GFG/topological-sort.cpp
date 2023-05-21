@@ -57,7 +57,7 @@ class Solution
 	    // METHOD 2 -> TOPOLOGICAL SORT USING BFS USING  (KHAN'S ALGORITHM)
 	   
 
-	     vector<int> indegree(V, 0);
+	     vector<int> indegree(V);
 	    
 	    for(int i=0; i<V; i++){
 	        for(auto it : adj[i]){
@@ -71,7 +71,8 @@ class Solution
 	    
 	    
 	    for(int i=0; i<V; i++){
-	        if(indegree[i] == 0){
+	        if(indegree[i] == 0)
+	        {
 	            q.push(i);
 	        }
 	    }
