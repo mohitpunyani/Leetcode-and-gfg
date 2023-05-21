@@ -30,6 +30,28 @@ class Solution
 // 	}
 
 
+void bfs(int V,vector<int>adj [],queue<int>&q,vector<int>&ans,vector<int>&indegree)
+{
+     
+	    for(int i=0; i<V; i++){
+	        if(indegree[i] == 0)
+	        {
+	            q.push(i);
+	        }
+	    }
+	    
+	    while(!q.empty()){
+	        int a = q.front();
+	        q.pop();
+	        ans.push_back(a);
+	        
+	        for(auto it: adj[a]){
+	            indegree[it]--;
+	            if(indegree[it] == 0) q.push(it);
+	        }
+	    }
+	    
+}
 	vector<int> topoSort(int V, vector<int> adj[]) 
 	{
 	    // code here
@@ -70,24 +92,25 @@ class Solution
 	    queue<int> q;
 	    
 	    
-	    for(int i=0; i<V; i++){
-	        if(indegree[i] == 0)
-	        {
-	            q.push(i);
-	        }
-	    }
+	   // for(int i=0; i<V; i++){
+	   //     if(indegree[i] == 0)
+	   //     {
+	   //         q.push(i);
+	   //     }
+	   // }
 	    
-	    while(!q.empty()){
-	        int a = q.front();
-	        q.pop();
-	        ans.push_back(a);
+	   // while(!q.empty()){
+	   //     int a = q.front();
+	   //     q.pop();
+	   //     ans.push_back(a);
 	        
-	        for(auto it: adj[a]){
-	            indegree[it]--;
-	            if(indegree[it] == 0) q.push(it);
-	        }
-	    }
+	   //     for(auto it: adj[a]){
+	   //         indegree[it]--;
+	   //         if(indegree[it] == 0) q.push(it);
+	   //     }
+	   // }
 	    
+	    bfs(V,adj,q,ans,indegree);
 	
 	    return ans;
 	}
