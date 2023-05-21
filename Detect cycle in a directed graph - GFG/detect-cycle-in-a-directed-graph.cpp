@@ -45,13 +45,13 @@ class Solution {
         unordered_map<int,bool>dfs_visited;
         
         for(int i=0;i<V;i++){
-            if(!visited[i])
-            {
+            // if(!visited[i])
+            // {
                 bool ans=dfs(i,adj,visited,dfs_visited);
                 if(ans==true){
                     return true;
                 }
-            }
+            // }
             
         }
        return false;
