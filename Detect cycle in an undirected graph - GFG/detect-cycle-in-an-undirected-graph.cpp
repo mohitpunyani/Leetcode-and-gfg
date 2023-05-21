@@ -10,36 +10,68 @@ class Solution {
   
     // make a map of child and parent.
     
-    bool solve(int node,vector<int>adj[],unordered_map<int,int>&parent,queue<int>&q,
-    unordered_map<int,bool>&visited)
+    // bool bfs(int node,vector<int>adj[],unordered_map<int,int>&parent,queue<int>&q,
+    // unordered_map<int,bool>&visited)
+    // {
+    //     q.push(node);
+        
+    //     visited[node]=true;
+        
+    //     parent[node]=-1;
+        
+    //     while(!q.empty()){
+            
+    //         int node=q.front();
+    //         q.pop();
+            
+    //         for(auto neighbours:adj[node])
+    //         {
+    //             if(!visited[neighbours]){
+    //                 q.push(neighbours);
+    //                 visited[neighbours]=true;
+    //                 parent[neighbours]=node;
+    //             }
+    //             else if(visited[neighbours]==true && neighbours==parent[node]){
+    //                 continue;
+    //             }
+    //             else if(visited[neighbours]==true && neighbours!=parent[node])
+    //             {
+    //                 return true;
+    //             }
+                
+    //         }
+    //     }
+    //     return false;
+        
+    // }
+    bool dfs(int node,int p,vector<int>adj[],unordered_map<int,bool>&visited,unordered_map<int,int>&parent)
     {
-        q.push(node);
+        // developed from bfs
+        
+        parent[node]=p;
         
         visited[node]=true;
         
-        parent[node]=-1;
         
-        while(!q.empty()){
-            
-            int node=q.front();
-            q.pop();
-            
-            for(auto neighbours:adj[node])
+        for(auto neighbours:adj[node])
+        {
+            if(!visited[neighbours])
             {
-                if(!visited[neighbours]){
-                    q.push(neighbours);
-                    visited[neighbours]=true;
-                    parent[neighbours]=node;
-                }
-                else if(visited[neighbours]==true && neighbours==parent[node]){
-                    continue;
-                }
-                else if(visited[neighbours]==true && neighbours!=parent[node])
-                {
+                bool cycle=dfs(neighbours,node,adj,visited,parent);
+                if(cycle==true){
                     return true;
                 }
                 
             }
+            else if(visited[neighbours]==true && neighbours==parent[node])
+            {
+                continue;
+                
+            }
+            else if(visited[neighbours]==true && neighbours!=parent[node]){
+                return true;
+            }
+            
         }
         return false;
         
@@ -54,20 +86,34 @@ class Solution {
         
         unordered_map<int,bool>visited;
         unordered_map<int,int>parent;
-        queue<int>q;
-        for(int i=0;i<V;i++){
+        // queue<int>q;
+        // for(int i=0;i<V;i++){
+        //     if(!visited[i])
+        //     {
+        //         bool ans=bfs(i,adj,parent,q,visited);
+        //         if(ans==1){
+        //             return true;
+        //         }
+        //     }
+        // }
+        // return false;
+        
+        // using dfs
+        
+        
+        for(int i=0;i<V;i++)
+        {
             if(!visited[i])
             {
-                bool ans=solve(i,adj,parent,q,visited);
-                if(ans==1){
+                bool ans=dfs(i,-1,adj,visited,parent);
+                if(ans==1)
+                {
                     return true;
                 }
             }
+            
         }
         return false;
-
-        
-       
     }
 };
 
