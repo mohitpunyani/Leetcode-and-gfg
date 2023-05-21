@@ -114,13 +114,12 @@ class Solution {
       
       bfs(V,adj,q,ans,indegree,count);
        
-    //   cout<<ans<<endl;
-    
       if(V==ans.size())
       {
           return false;
       }
-      else{
+      else
+      {
           return true;
       }
     }
