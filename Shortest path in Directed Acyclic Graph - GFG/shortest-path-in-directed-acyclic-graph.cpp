@@ -86,6 +86,7 @@ class Solution {
                 else if(distance[node]<=distance[top]+weight)
                 {
                     // distance[node]=distance[node];
+                    continue;
                     
                 }
                 
