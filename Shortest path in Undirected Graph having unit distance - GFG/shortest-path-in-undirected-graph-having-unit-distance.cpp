@@ -5,7 +5,7 @@
 using namespace std;
 
 // } Driver Code Ends
-// User function Template for C++
+// User function Template for 
 class Solution {
   public:
  
@@ -36,8 +36,12 @@ class Solution {
       }
       
       for(int i =0 ; i<N; i++){
-          if(parent.find(i)!=parent.end()){
-          ans[i] = parent[i];
+          if(parent.find(i)!=parent.end())
+          {
+             ans[i] = parent[i];
+          }
+          else{
+              ans[i]=-1;
           }
       }
       return ans;
