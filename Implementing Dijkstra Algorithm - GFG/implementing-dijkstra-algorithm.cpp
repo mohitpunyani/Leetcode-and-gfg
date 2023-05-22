@@ -38,13 +38,12 @@ class Solution
                 if(distance[node]>distance[top]+weight)
                 {
                     distance[node]=distance[top]+weight;
+                    q.push(node);
                 
-                // }
-                // else if(distance[node]<=distance[front]+weight)
-                // {
-                //     continue;
-                // }
-                q.push(node);
+                }
+                else if(distance[node]<=distance[top]+weight)
+                {
+                    continue;
                 }
             }
         }
