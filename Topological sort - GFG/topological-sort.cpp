@@ -8,46 +8,50 @@ class Solution
 	public:
 	//Function to return list containing vertices in Topological order. 
 	
-// 	stack<int>st;
+	stack<int>st;
 	
-// 	unordered_map<int,bool>visited;
+	unordered_map<int,bool>visited;
 	
-// 	void dfs(int node,vector<int>adj[])
-// 	{
+	void dfs(int node,vector<int>adj[])
+	{
 	    
-// 	    visited[node]=true;
+	    visited[node]=true;
 	    
-// 	    for(auto neighbours:adj[node])
-// 	    {
-// 	        if(!visited[neighbours])
-// 	        {
-// 	            dfs(neighbours,adj);
-// 	        }
+	    for(auto neighbours:adj[node])
+	    {
+	        if(!visited[neighbours])
+	        {
+	            dfs(neighbours,adj);
+	        }
 	        
-// 	    }
-// 	    st.push(node);
-// 	    return ;
-// 	}
+	    }
+	    st.push(node);
+	    return ;
+	}
 
 
 void bfs(int V,vector<int>adj [],queue<int>&q,vector<int>&ans,vector<int>&indegree)
 {
      
-	    for(int i=0; i<V; i++){
+	    for(int i=0; i<V; i++)
+	    {
 	        if(indegree[i] == 0)
 	        {
 	            q.push(i);
 	        }
 	    }
 	    
-	    while(!q.empty()){
+	    while(!q.empty())
+	    {
 	        int a = q.front();
 	        q.pop();
 	        ans.push_back(a);
 	        
-	        for(auto it: adj[a]){
+	        for(auto it: adj[a])
+	        {
 	            indegree[it]--;
-	            if(indegree[it] == 0) q.push(it);
+	            if(indegree[it] == 0) 
+	               q.push(it);
 	        }
 	    }
 	    
@@ -58,61 +62,46 @@ void bfs(int V,vector<int>adj [],queue<int>&q,vector<int>&ans,vector<int>&indegr
 	    
 	    // METHOD 1 -> TOPOLOGICAL SORT USING DFS 
 	      
-	    // THIS APPROACH IS VERY EASY
+	   // THIS APPROACH IS VERY EASY
 	    
-	   // vector<int>ans;
+	    vector<int>ans;
 	    
-	   // for(int i=0;i<V;i++)
-	   // {
-	   //     if(!visited[i]){
-	   //         dfs(0,adj);
-	   //     }
-	   // }
-	   // while(!st.empty())
-	   // {
-	   //     ans.push_back(st.top());
-	   //     st.pop();
-	   // }
-	   // return ans;
+	    for(int i=0;i<V;i++)
+	    {
+	        if(!visited[i]){
+	            dfs(i,adj);
+	        }
+	    }
+	    while(!st.empty())
+	    {
+	        ans.push_back(st.top());
+	        st.pop();
+	    }
+	    return ans;
 	    
 	    
 	    // METHOD 2 -> TOPOLOGICAL SORT USING BFS USING  (KHAN'S ALGORITHM)
 	   
+	   
 
-	     vector<int> indegree(V);
+	   //  vector<int> indegree(V);
 	    
-	    for(int i=0; i<V; i++){
-	        for(auto it : adj[i]){
-	            indegree[it]++;
-	        }
-	    }
-	    
-	    vector<int> ans;
-	    
-	    queue<int> q;
-	    
-	    
-	   // for(int i=0; i<V; i++){
-	   //     if(indegree[i] == 0)
+	   // for(int i=0; i<V; i++)
+	   // {
+	   //     for(auto it : adj[i])
 	   //     {
-	   //         q.push(i);
+	   //         indegree[it]++;
 	   //     }
 	   // }
 	    
-	   // while(!q.empty()){
-	   //     int a = q.front();
-	   //     q.pop();
-	   //     ans.push_back(a);
-	        
-	   //     for(auto it: adj[a]){
-	   //         indegree[it]--;
-	   //         if(indegree[it] == 0) q.push(it);
-	   //     }
-	   // }
+	   // vector<int> ans;
 	    
-	    bfs(V,adj,q,ans,indegree);
+	   // queue<int> q;
 	
-	    return ans;
+	   // bfs(V,adj,q,ans,indegree);
+	   
+	
+	   // return ans;
 	}
 };
 
