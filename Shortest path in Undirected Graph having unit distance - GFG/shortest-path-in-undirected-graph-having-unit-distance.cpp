@@ -10,13 +10,17 @@ class Solution {
   public:
  
   
-  vector<int>bfs(vector<int>adj[],unordered_map<int,bool>&visit , int node , int dist,int N){
+  vector<int>bfs(unordered_map<int,list<int>>&adj,unordered_map<int,bool>&visit , int node , int dist,int N){
       queue<int>q;
+      
       q.push(node);
+      
       vector<int>ans(N,-1);
+      
       unordered_map<int,int>parent;
-        parent[node] = dist;
-        visit[node] = true;
+      
+       parent[node] = dist;
+       visit[node] = true;
       while(!q.empty()){
           int front = q.front();
           q.pop();
@@ -47,7 +51,7 @@ class Solution {
         // FIRST PREPARE A ADJACENCY LIST 
         
       
-         vector<int>adj[N];
+    unordered_map<int,list<int>>adj;
      for(int i =0 ; i<M;i++){
          int u = edges[i][0];
          int v = edges[i][1];
