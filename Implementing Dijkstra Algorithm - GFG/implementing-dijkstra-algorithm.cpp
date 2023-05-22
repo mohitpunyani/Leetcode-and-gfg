@@ -14,61 +14,43 @@ class Solution
         
         // method 1 using queue
         
-        // vector<int>distance(V,INT_MAX);
+        vector<int>distance(V,INT_MAX);
         
-        // distance[S]=0;
+        distance[S]=0;
         
-        // queue<int>q;
+        queue<int>q;
         
-        // q.push(S);
-        
-        // while(!q.empty())
-        // {
-        //     int front=q.front();
-            
-        //     q.pop();
-            
-            
-        //     for(auto it:adj[front])
-        //     {
-        //         int node=it[0];
-                
-        //         int weight=it[1];
-                
-        //         if(distance[node]>distance[front]+weight)
-        //         {
-        //             distance[node]=distance[front]+weight;
-                
-        //         }
-        //         // else if(distance[node]<=distance[front]+weight)
-        //         // {
-        //         //     continue;
-        //         // }
-        //         q.push(node);
-                
-        //     }
-        // }
-        
-        // return distance;
-        
-           // Code here
-       vector<int>dist(V, INT_MAX);
-       queue<int>q;
         q.push(S);
-       dist[S] = 0;
-       while(!q.empty()){
-           int node = q.front();
+        
+        while(!q.empty())
+        {
+            int top=q.front();
+            
             q.pop();
-           for(auto i : adj[node]){
-               int it = i[0];
-               int dis = i[1];
-               if(dist[it] > dist[node] + dis){
-                   dist[it] = dist[node] + dis;
-                    q.push(it);
-               }
-           }
-       }
-       return dist;
+            
+            
+            for(auto it:adj[top])
+            {
+                int node=it[0];
+                
+                int weight=it[1];
+                
+                if(distance[node]>distance[top]+weight)
+                {
+                    distance[node]=distance[top]+weight;
+                
+                // }
+                // else if(distance[node]<=distance[front]+weight)
+                // {
+                //     continue;
+                // }
+                q.push(node);
+                }
+            }
+        }
+        
+        return distance;
+        
   
         
     }
