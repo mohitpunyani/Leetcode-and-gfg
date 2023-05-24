@@ -56,7 +56,7 @@ class Solution {
        {
            for(int j=0;j<V;j++)
            {
-               if(adj[i][j]==1 && i!=j)
+               if(adj[i][j]==1)
                {
                    // i+1 and j+1 are the indexes or nodes which represent the cities
                    
