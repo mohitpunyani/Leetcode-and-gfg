@@ -33,18 +33,20 @@ class Solution {
 //   }
   
   
-       int x[8]={0,-1,-1,-1,0,1,1,1};
-       int y[8]={-1,-1,0,1,1,1,0,-1};
-       
+    //   int x[8]={0,-1,-1,-1,0,1,1,1};
+    
+    //   int y[8]={-1,-1,0,1,1,1,0,-1};
+    
+    int x[8]={1,-1,0,0,1,-1,1,-1};
+    int y[8]={0,0,1,-1,-1,1,1,-1};
   void dfs_efficient(vector<vector<int>>&visited,vector<vector<char>>&grid,int i,int j,int n,int m)
   {
       // standard method
-      
-     
        
       // make a vector for 8 directions
       
       visited[i][j]=1;
+      
       for(int k=0;k<8;k++)
       {
           int row=i+x[k];
