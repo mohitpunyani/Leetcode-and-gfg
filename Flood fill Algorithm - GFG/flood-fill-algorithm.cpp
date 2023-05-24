@@ -28,14 +28,14 @@ public:
 // }
 
 
-  int x[]={-1,0,1,0};
-//   int y[]={0,-1,0,1};
+  int x[4]={-1,0,1,0};
+  int y[4]={0,-1,0,1};
             
 void efficient_dfs(vector<vector<int>>&visited,vector<vector<int>>&image,int i,int j,int oldColor,int newColor,int rows,int columns)
 {
     visited[i][j]=1;
-    int x[]={-1,0,1,0};
-  int y[]={0,-1,0,1};
+    // int x[]={-1,0,1,0};
+//   int y[]={0,-1,0,1};
       
     image[i][j]=newColor;
     
