@@ -31,6 +31,7 @@ class Solution {
               }
               
           }
+    
           
       }
       return ;
@@ -43,7 +44,6 @@ class Solution {
         //  using bfs algorithm
         
         // here vertices or nodes represent the cities
-       
        
        // make a adjacency liST THROUGH VECTOR
        
@@ -58,20 +58,24 @@ class Solution {
            {
                if(adj[i][j]==1 && i!=j)
                {
-                   // i+1 and j+1 indexes represent the cities
+                   // i+1 and j+1 are the indexes or nodes which represent the cities
                    
                    adjlist[i+1].push_back(j+1);
+                   
                 //   adjlist[j+1].push_back(i+1);
+                
+                
                    
                }
                
            }
        }
+       
        // bfs
        
        unordered_map<int,bool>visited;
       
-        queue<int>q;
+       queue<int>q;
         
        int count=0;
        
