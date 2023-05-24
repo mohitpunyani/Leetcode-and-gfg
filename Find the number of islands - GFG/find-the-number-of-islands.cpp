@@ -67,13 +67,17 @@ class Solution {
     
     
    
-  void bfs(pair<int,int> start, queue<pair<int,int>> &q, vector<vector<int>> &vis, vector<vector<char>>& grid, int mrow, int mcol){
-        q.push(start);
+  void bfs(int i, int j, vector<vector<int>> &vis, vector<vector<char>>& grid, int mrow, int mcol){
+        queue<pair<int,int>>q;
+        
+        q.push({i,j});
         
         vector<int> r = {0, 0, 1, -1, 1, 1, -1, -1};
         vector<int> c = {1, -1, 0, 0, 1, -1, 1, -1};
         
-        while(!q.empty()){
+        while(!q.empty())
+        {
+            
             pair<int,int> node = q.front();
             q.pop();
             
@@ -153,8 +157,7 @@ class Solution {
         // using bfs (developed from dfs)
             int cnt = 0;
         
-        queue<pair<int,int>> q;
-        
+
         int rows = grid.size();
         int columns = grid[0].size();
         
@@ -164,7 +167,7 @@ class Solution {
             for(int j=0; j<columns; j++){
                 if(grid[i][j] == '1' && !vis[i][j]){
                     cnt++;
-                    bfs({i,j}, q, vis, grid, rows, columns);
+                    bfs(i,j, vis, grid, rows, columns);
                 }
             }
         }
