@@ -71,11 +71,9 @@ class Solution {
         queue<pair<int,int>>q;
         
         q.push({i,j});
-        
-        // vector<int> r = {0, 0, 1, -1, 1, 1, -1, -1};
-        // vector<int> c = {1, -1, 0, 0, 1, -1, 1, -1};
-        
+
         vis[i][j]=1;
+        
         while(!q.empty())
         {
             
@@ -156,8 +154,7 @@ class Solution {
         
         // using bfs (developed from dfs)
             int cnt = 0;
-        
-
+    
         int rows = grid.size();
         int columns = grid[0].size();
         
@@ -165,7 +162,7 @@ class Solution {
         
         for(int i=0; i<rows; i++){
             for(int j=0; j<columns; j++){
-                if(grid[i][j] == '1' && !vis[i][j]){
+                if(grid[i][j] == '1' && vis[i][j]==0){
                     cnt++;
                     bfs(i,j, vis, grid, rows, columns);
                 }
