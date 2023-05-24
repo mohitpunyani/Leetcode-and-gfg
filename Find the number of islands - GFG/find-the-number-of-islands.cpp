@@ -75,6 +75,7 @@ class Solution {
         vector<int> r = {0, 0, 1, -1, 1, 1, -1, -1};
         vector<int> c = {1, -1, 0, 0, 1, -1, 1, -1};
         
+        vis[i][j]=1;
         while(!q.empty())
         {
             
@@ -89,9 +90,8 @@ class Solution {
                 for(int i=0; i<8; i++){
                     int nr = r[i] + row;
                     int nc = c[i] + col;
-                    if(nr<mrow && nr>=0  && nc<mcol && nc>=0 && grid[nr][nc]=='1' && vis[nr][nc]==0){
-                        // if(grid[nr][nc] == '1' && !vis[nr][nc])
-                        // {
+                    if(nr<mrow && nr>=0  && nc<mcol && nc>=0 && grid[nr][nc]=='1' && vis[nr][nc]==0)
+                    {
                             vis[nr][nc]=1;
                             q.push({nr,nc});
                         // }
