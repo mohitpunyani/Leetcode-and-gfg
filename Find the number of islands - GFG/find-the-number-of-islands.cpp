@@ -37,8 +37,8 @@ class Solution {
     
 //     //   int y[8]={-1,-1,0,1,1,1,0,-1};
     
-//     // int x[8]={1,-1,0,0,1,-1,1,-1};
-//     // int y[8]={0,0,1,-1,-1,1,1,-1};
+    int r[8]={1,-1,0,0,1,-1,1,-1};
+    int c[8]={0,0,1,-1,-1,1,1,-1};
     
 // //   void dfs_efficient(vector<vector<int>>&visited,vector<vector<char>>&grid,int i,int j,int n,int m)
 // //   {
@@ -72,8 +72,8 @@ class Solution {
         
         q.push({i,j});
         
-        vector<int> r = {0, 0, 1, -1, 1, 1, -1, -1};
-        vector<int> c = {1, -1, 0, 0, 1, -1, 1, -1};
+        // vector<int> r = {0, 0, 1, -1, 1, 1, -1, -1};
+        // vector<int> c = {1, -1, 0, 0, 1, -1, 1, -1};
         
         vis[i][j]=1;
         while(!q.empty())
@@ -85,19 +85,17 @@ class Solution {
             int row = node.first;
             int col = node.second;
             
-            // if(!vis[row][col]){
-                // vis[row][col] = 1;
-                for(int i=0; i<8; i++){
+            for(int i=0; i<8; i++)
+            {
                     int nr = r[i] + row;
                     int nc = c[i] + col;
                     if(nr<mrow && nr>=0  && nc<mcol && nc>=0 && grid[nr][nc]=='1' && vis[nr][nc]==0)
                     {
                             vis[nr][nc]=1;
                             q.push({nr,nc});
-                        // }
+                        
                     }
                 }
-            // }
         }
     }
     int numIslands(vector<vector<char>>& grid) 
