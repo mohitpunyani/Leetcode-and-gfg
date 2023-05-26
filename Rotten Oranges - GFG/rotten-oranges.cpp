@@ -63,7 +63,6 @@ public:
             
             q.pop();
             
-            // tm=max(time,tm);
             tm=time;
             
             for(int i=0;i<4;i++)
@@ -72,8 +71,7 @@ public:
                 
                 int ncol=col+dc[i];
                 
-if(nrow>=0 && ncol>=0 && nrow<n && ncol<m && visited[nrow][ncol]==0 && (grid[nrow][ncol]==1 &&
- grid[nrow][ncol]!=2))
+if(nrow>=0 && ncol>=0 && nrow<n && ncol<m && visited[nrow][ncol]==0 && (grid[nrow][ncol]==1) && grid[nrow][ncol]!=2)
                 {
                     // increase time by one
                     q.push({{nrow,ncol},time+1});
