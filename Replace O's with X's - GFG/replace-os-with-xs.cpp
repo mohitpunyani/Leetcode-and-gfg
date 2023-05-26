@@ -8,24 +8,21 @@ using namespace std;
 // User function Template for C++
 
 class Solution{
-public:
-
-void dfs(vector<vector<int>>&visited,vector<vector<char>>&mat,int i,int j,int row,int col)
-{
-    if(i<0 or j<0 or i>=row or j>=col  or mat[i][j]!='O' )
-    {
-        return ;
-    }
-        // if(mat[i][j]=='O') mat[i][j]='B';
-
-        // visited[i][j]=1;
-        mat[i][j]='B';
-        dfs(visited,mat,i+1,j,row,col);
-        dfs(visited,mat,i-1,j,row,col);
-        dfs(visited,mat,i,j+1,row,col);
-        dfs(visited,mat,i,j-1,row,col);
-        return ;
-}
+    public:
+    
+// void dfs(vector<vector<char>>&mat,int i,int j,int row,int col)
+// {
+//     if(i<0 or j<0 or i>=row or j>=col  or mat[i][j]=='X' or mat[i][j]=='B' )
+//     {
+//         return ;
+//     }
+//         mat[i][j]='B';
+//         dfs(mat,i+1,j,row,col);
+//         dfs(mat,i-1,j,row,col);
+//         dfs(mat,i,j+1,row,col);
+//         dfs(mat,i,j-1,row,col);
+//         return ;
+// }
     vector<vector<char>> fill(int n, int m, vector<vector<char>> mat)
     {
         // code here
@@ -42,69 +39,80 @@ void dfs(vector<vector<int>>&visited,vector<vector<char>>&mat,int i,int j,int ro
 // VERY EASY QUESTION 
 
 
-vector<vector<int>>visited(n,vector<int>(m,0));
 
-for(int i=0;i<n;i++)
-{
-    for(int j=0;j<m;j++)
-    {
-        if((i==0 or j==0 or i==n-1 or j==m-1) && mat[i][j]=='O')
-        {
-            // call for dfs
-            dfs(visited,mat,i,j,n,m);
-        }
-    }
-}
-for(int i=0;i<n;i++){
-    for(int j=0;j<m;j++){
-        if(mat[i][j]=='O'){
-            mat[i][j]='X';
-        }
-        if(mat[i][j]=='B'){
-            mat[i][j]='O';
-        }
-    }
+
+// for(int i=0;i<n;i++)
+// {
+//     for(int j=0;j<m;j++)
+//     {
+//         if((i==0 or j==0 or i==n-1 or j==m-1) && mat[i][j]=='O')
+//         {
+//             // call for dfs
+//             dfs(mat,i,j,n,m);
+//         }
+//         else{
+//             continue;
+//         }
+//     }
+// }
+// for(int i=0;i<n;i++){
+//     for(int j=0;j<m;j++){
+//         if(mat[i][j]=='O'){
+//             mat[i][j]='X';
+//         }
+//         if(mat[i][j]=='B'){
+//             mat[i][j]='O';
+//         }
+//     }
     
-}
-return mat;
+// }
+// return mat;
         
+        
+        // USING BFS
+        
+        
+              vector<vector<char>> ans = mat;
+        vector<vector<int>>vis(n,vector<int>(m,0));
+        queue<pair<int,int>>q;
+        for(int i=0;i<n;i++){
+            for(int j =0;j<m;j++){
+                if(i==0 || j==0 || i==n-1 || j==m-1){
+                    if(ans[i][j]=='O'){
+                        vis[i][j] = 1;
+                        q.push({i,j});
+                    }
+                }
+            }
+        }
+        
+        while(!q.empty()){
+            int x = q.front().first;
+            int y = q.front().second;
+            q.pop();
+            vector<int> dx = {-1,0,1,0};
+            vector<int> dy = {0,-1,0,1};
+            for(int i=0;i<4;i++){
+                int nx = x+dx[i];
+                int ny = y+dy[i];
+                if(nx>=0 && nx<n && ny>=0 && ny<m && !vis[nx][ny] && mat[nx][ny]=='O'){
+                    vis[nx][ny] = 1;
+                    q.push({nx,ny});
+                }
+            }
+        }
+        
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(ans[i][j]=='O' && !vis[i][j]){
+                    ans[i][j] = 'X';
+                }
+            }
+        }
+        return ans;
     }
 };
 
-// class Solution {
-// public:
-//     void dfs(int i,int j,vector<vector<char>>& board){
-//     if(i<0 || i>=board.size() || j<0 || j>=board[0].size() || board[i][j]!='O') return;
-//     // if(board[i][j]=='O') 
-//     board[i][j]='#';
-//     dfs(i+1,j,board);
-//     dfs(i,j+1,board);
-//     dfs(i-1,j,board);
-//     dfs(i,j-1,board);  
-// }
-    
-    
-//     vector<vector<char>> fill(int n,int m,vector<vector<char>>& mat)
-//     {
-//         vector<vector<char>>board=mat;
-//         m=board.size(),n=board[0].size();
-//       for(int i=0;i<m;i++)
-//       {
-//           for(int j=0;j<n;j++){
-//               if((i==0 || i==m-1 || j==0 || j==n-1) && board[i][j]=='O'){
-//                   dfs(i,j,board);
-//               }
-//           }
-//       } 
-//          for(int i=0;i<m;i++){
-//           for(int j=0;j<n;j++){
-//               if(board[i][j]=='O') board[i][j]='X';
-//               if(board[i][j]=='#') board[i][j]='O';
-//               }
-//           }
-//           return board;
-//       }
-// };
 
 //{ Driver Code Starts.
 
