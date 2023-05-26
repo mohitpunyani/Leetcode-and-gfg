@@ -63,7 +63,8 @@ public:
             
             q.pop();
             
-            tm=max(time,tm);
+            // tm=max(time,tm);
+            tm=time;
             
             for(int i=0;i<4;i++)
             {
