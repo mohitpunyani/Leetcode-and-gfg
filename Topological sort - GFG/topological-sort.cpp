@@ -23,6 +23,9 @@ class Solution
 	        {
 	            dfs(neighbours,adj);
 	        }
+	       // else if(visited[neighbours]){
+	       //     return ;
+	       // }
 	        
 	    }
 	    st.push(node);
