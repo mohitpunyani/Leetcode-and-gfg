@@ -1,7 +1,8 @@
 class Solution {
 public:
     
-bool  dfs(int node,vector<int>  adj [],unordered_map<int,bool>& visited,unordered_map<int,bool> &dfs_visited,stack<int>&st)
+    stack<int>st;
+bool  dfs(int node,vector<int>  adj [],unordered_map<int,bool>& visited,unordered_map<int,bool> &dfs_visited)
     
     {
         visited[node]=true;
@@ -11,7 +12,7 @@ bool  dfs(int node,vector<int>  adj [],unordered_map<int,bool>& visited,unordere
         for(auto neighbours:adj[node]){
             if(!visited[neighbours])
             {
-                bool ans=dfs(neighbours,adj,visited,dfs_visited,st);
+                bool ans=dfs(neighbours,adj,visited,dfs_visited);
                 if(ans==true){
                     return true;
                 }
@@ -33,7 +34,7 @@ bool  dfs(int node,vector<int>  adj [],unordered_map<int,bool>& visited,unordere
         
         // making adjacency list 
         
-        stack<int>st;
+    
         vector<int>adj[numCourses];
         for(auto it:prerequisites)
         {
@@ -49,7 +50,7 @@ bool  dfs(int node,vector<int>  adj [],unordered_map<int,bool>& visited,unordere
         {
             if(!visited[i])
             {
-                bool ans=dfs(i,adj,visited,dfs_visited,st);
+                bool ans=dfs(i,adj,visited,dfs_visited);
                 if(ans==true)
                 {
                     // means cycle is present so it means topological sort is not possible
