@@ -23,9 +23,10 @@ class Solution
 	        {
 	            dfs(neighbours,adj);
 	        }
-	       // else if(visited[neighbours]){
-	       //     return ;
-	       // }
+	        else if(visited[neighbours]==true){
+	            continue;
+	        }
+	      
 	        
 	    }
 	    st.push(node);
