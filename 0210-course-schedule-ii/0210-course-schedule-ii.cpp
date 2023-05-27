@@ -48,8 +48,9 @@ class Solution
 		{
 			if (!visited[i])
 			{
-				if (DFSRec(i, visited, currVisited, adj, st))
+				bool ans=DFSRec(i, visited, currVisited, adj, st);
 				{
+                    if(ans==true)
 					return {};
 				}
 			}
