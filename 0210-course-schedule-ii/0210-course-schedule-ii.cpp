@@ -34,7 +34,7 @@ bool  dfs(int node,vector<int>  adj [],unordered_map<int,bool>& visited,unordere
         
         // making adjacency list 
         
-    
+        
         vector<int>adj[numCourses];
         for(auto it:prerequisites)
         {
@@ -55,9 +55,6 @@ bool  dfs(int node,vector<int>  adj [],unordered_map<int,bool>& visited,unordere
                 {
                     // means cycle is present so it means topological sort is not possible
                     return {};
-                }
-                else{
-                    continue;
                 }
                 
             }
