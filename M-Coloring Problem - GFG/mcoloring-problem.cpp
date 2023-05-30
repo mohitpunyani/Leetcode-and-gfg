@@ -10,136 +10,74 @@ public:
     // that no two adjacent vertices of graph are coloured with same colour.
     
     
-    // bool is_safe_to_color(bool graph[101][101],int node,vector<int>&color,int n,int col)
-    // {
-    //     // CHECK FOR THE ADJACENT NODES 
+    bool is_safe_to_color(bool graph[101][101],int node,vector<int>&color,int n,int col)
+    {
+        // CHECK FOR THE ADJACENT NODES 
         
-    //     for(auto neighbours:color)
-    //     {
-    //         if(color[neighbours]==col)
-    //         {
-    //             // it means we can't colored
+        for(int k=0;k<n;k++)
+        {
+            if(color[k]==col && graph[k][node]==1)
+            {
+                // it means we can't colored
                 
-    //             return false;
-    //         }
-            
-    //     }
-    //     return true;
-    // }
-    // bool solve(bool graph[101][101],int m,int n,int node,vector<int>&color)
-    // {
-    //     // we have m choices for each color
-        
-    //     if(node==n){
-    //         return true;
-    //     }
-    //     for(int col=1;col<=m;col++)
-    //     {
-    //         if(is_safe_to_color(graph,node,color,n,col))
-    //         {
-    //             color[node]=col;
-                
-    //             // now apply dfs
-    //             bool ans=solve(graph,m,n,node+1,color);
-    //             if(ans==true)
-    //             {
-    //                 // COLOR SET BAITH GAYA SO WE DID NOT GO FOR MORE COLORS
-    //                 return true;
-    //             }
-    //             color[node]=0; // backtrack (IMP).
-    //             // IT MEANS KI WOH COLOR SET NAHI BAITHA WE HAVE TO TRY FOR DIFFERENT COLOR
-    //         }
-            
-    //     }
-        
-    //     // SAARE COLOR TRY KAR LIYE BUT WE DID N'T GET THE ANSWER
-        
-    //     return false;
-        
-    // }
-    // bool graphColoring(bool graph[101][101], int m, int n) 
-    
-    // {
-    //     // your code here
-        
-    //     // THIS QUESTION CAN BE OF DFS TRAVERSAL OR BACKTRACKING
-        
-    //     // NOTE OR CATCH -> WE HAVE M CHOICES FOR EACH NODE FOR COLORING
-        
-    //     vector<int>color(n,0); // important 
-        
-    //     //  draw recursive tree that will give you a better understanding.
-        
-    //     return solve(graph,m,n,0,color);
-        
-        
-        
-        
-        
-        //function to check if a particular node can be assigned with a color or not. return true or false
-bool check(vector<int> graph[], vector<int>&assign, int node, int color){
-        for(auto adj: graph[node]){
-            if(assign[adj] == color){
                 return false;
             }
+            
         }
         return true;
     }
-//function to color nodes of graph.
-//Takes adjacency list representation of graph, color assign array, //visited nodes array, number of nodes as n, m colors and current //node
-    bool color(vector<int> graph[], vector<int> &assign, vector<int> &visited, int n, int m, int node){
-        //IF LAST NODE IS REACHED
-        if(node == n-1){
-             //CHECK IF A COLOR CAN BE ASSIGNED
-            for(int i=1; i<=m; i++){
-                 //IF IT IS POSSIBLE ASSIGN COLOR AND RETURN TRUE
-                if(check(graph, assign, node, i)){
-                    assign[node] = i;
+    bool solve(bool graph[101][101],int m,int n,int node,vector<int>&color)
+    {
+        // we have m choices for each color
+        
+        if(node==n){
+            return true;
+        }
+        for(int col=1;col<=m;col++)
+        {
+            if(is_safe_to_color(graph,node,color,n,col))
+            {
+                color[node]=col;
+                
+                // now apply dfs
+                bool ans=solve(graph,m,n,node+1,color);
+                if(ans==true)
+                {
+                    // COLOR SET BAITH GAYA SO WE DID NOT GO FOR MORE COLORS
                     return true;
                 }
-            }
-            // ELSE RETURN FALSE IF NOT POSSIBLE
-            return false;
-        };
-         //MARK THE NODE VISITED
-        visited[node] = 1;
-         //CHECK IF A COLOR CAN BE ASSIGNED
-        for(int i=1; i<=m; i++){
-            if(check(graph,assign, node, i)){
-                assign[node] = i;
-                if(color(graph, assign, visited, n, m, node+1))return true;
-                assign[node] = -1;
+                color[node]=0; // backtrack (IMP).
+                // IT MEANS KI WOH COLOR SET NAHI BAITHA WE HAVE TO TRY FOR DIFFERENT COLOR
             }
             
         }
+        
+        // SAARE COLOR TRY KAR LIYE BUT WE DID N'T GET THE ANSWER
+        
         return false;
+        
     }
-    bool graphColoring(bool graphMat[101][101], int m, int n)
+    bool graphColoring(bool graph[101][101], int m, int n) 
     
     {
-        // make a adjacency list
+        // your code here
         
-        vector<int> graph[n];
+        // THIS QUESTION CAN BE OF DFS TRAVERSAL OR BACKTRACKING
         
-        for(int i=0; i<n; i++)
-        {
-            for(int j=0; j<n; j++)
-            {
-                if(graphMat[i][j] == 1)
-                {
-                    graph[i].push_back(j);
-                }
-            }
-        }
-        vector<int> assign(n, -1);
+        // NOTE OR CATCH -> WE HAVE M CHOICES FOR EACH NODE FOR COLORING
         
-        vector<int> visited(n, 0);
+        vector<int>color(n,0); // important 
         
-        return color(graph, assign, visited, n, m, 0);
-
+        //  draw recursive tree that will give you a better understanding.
+        
+        return solve(graph,m,n,0,color);
+        
     }
-    
 };
+        
+        
+        
+
 
 //{ Driver Code Starts.
 
