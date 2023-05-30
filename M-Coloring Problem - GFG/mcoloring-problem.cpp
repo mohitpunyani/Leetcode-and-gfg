@@ -114,23 +114,29 @@ bool check(vector<int> graph[], vector<int>&assign, int node, int color){
         }
         return false;
     }
-    bool graphColoring(bool graphMat[101][101], int m, int n) {
+    bool graphColoring(bool graphMat[101][101], int m, int n)
+    
+    {
+        // make a adjacency list
+        
         vector<int> graph[n];
-        for(int i=0; i<n; i++){
-            for(int j=0; j<n; j++){
-                if(graphMat[i][j] == 1){
+        
+        for(int i=0; i<n; i++)
+        {
+            for(int j=0; j<n; j++)
+            {
+                if(graphMat[i][j] == 1)
+                {
                     graph[i].push_back(j);
                 }
             }
         }
         vector<int> assign(n, -1);
+        
         vector<int> visited(n, 0);
-        if(color(graph, assign, visited, n, m, 0)){
-            // f
+        
+        return color(graph, assign, visited, n, m, 0);
 
-            return true;
-        }
-     return false;   
     }
     
 };
