@@ -15,7 +15,7 @@ public:
         // CHECK FOR THE ADJACENT NODES 
         for(int k=0;k<n;k++)
         {
-            if( graph[k][node]==1 && color[k]==col)
+            if(graph[k][node]==1 && color[k]==col)
             {
                 // it means we can't colored
                 
