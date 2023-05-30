@@ -27,7 +27,7 @@ class Solution {
         for(int i=1;i<=n;i++)
         {
             parent[i]=i;
-        // }
+        }
         vector<pair<int,int>>adj [n+1];
         
         for(auto e:edges)
