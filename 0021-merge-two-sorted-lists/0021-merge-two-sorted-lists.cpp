@@ -19,7 +19,7 @@ public:
     
     while(curr1!=NULL && curr2!=NULL)
     {
-        if(curr1->val<curr2->val)
+        if(curr1->val<=curr2->val)
         {
             temp->next=curr1;
             temp=curr1;
