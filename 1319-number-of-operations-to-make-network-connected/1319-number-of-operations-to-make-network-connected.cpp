@@ -104,7 +104,6 @@ public:
             //If Parent not same, then Union them and increment compo.
             else {
                 parent[y] = x; //union
-                // compo++;
             }
  		}
         int ans = 0;
@@ -115,8 +114,5 @@ public:
         return ans-1;
         
         
-        //We know to connect n computers we need n-1 cables so if connections.size() < n-1 return -1
-		//else required - already connected and i.e. (n-1) - (components)
-        // return connections.size() < n-1 ? -1 : n-1-compo;
     }
 };
