@@ -21,7 +21,7 @@ class Solution {
 	            if(matrix[i][j]==-1) matrix[i][j]=1e9;
 	            
 	            // for diagonal elements
-	            if(i==j) matrix[i][j]=0;
+	           // if(i==j) matrix[i][j]=0;
 	        }
 	    }
 	    
@@ -39,12 +39,12 @@ class Solution {
 	       }
 	    }
 	    
-	   // // FOR NEGATIVE CYCLE
-	   //    for(int i =0; i<n;i++){
-    //         if(matrix[i][i]<0){
+	    // FOR NEGATIVE CYCLE
+	       for(int i =0; i<n;i++){
+            if(matrix[i][i]<0){
                 
-    //         }
-    //     }
+            }
+        }
 
 	    
 	    // do it again 
