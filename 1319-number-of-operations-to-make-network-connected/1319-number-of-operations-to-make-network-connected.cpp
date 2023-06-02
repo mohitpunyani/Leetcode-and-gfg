@@ -89,6 +89,9 @@ public:
         //For counting components
  		int compo = 0;
         
+        if(connections.size()<n-1){
+            return -1;
+        }
         for (auto& it: connections) {
  			int x = find(it[0], parent);
  			int y = find(it[1], parent);
@@ -104,9 +107,14 @@ public:
                 compo++;
             }
  		}
+        int ans = 0;
+        for (int i = 0; i < n; i++)
+            if (parent[i] == i)
+                ans++;
         
+        return ans-1;
         //We know to connect n computers we need n-1 cables so if connections.size() < n-1 return -1
 		//else required - already connected and i.e. (n-1) - (components)
-        return connections.size() < n-1 ? -1 : n-1-compo;
+        // return connections.size() < n-1 ? -1 : n-1-compo;
     }
 };
