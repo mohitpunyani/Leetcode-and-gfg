@@ -71,27 +71,29 @@ void MyQueue :: push(int x)
 {
         // Your Code
         
-        if(rear==100005){
+        // we are here to do so that here to do so that 
+        
+        if(rear==100005)
+        {
             return ;
         }
-        arr[rear]=x;
-        rear++;
+        else{
+            arr[rear]=x;
+            rear++;
+            return ;
+        }
 }
 
 //Function to pop an element from queue and return that element.
 int MyQueue :: pop()
 {
-        // Your Code  
-        
-        
-        if(front==0 && rear==0)
-        {
-            return -1; // because queue is empty
-        }
-        if(front==rear){
+        // Your Code      
+        if(front>rear){
             return -1;
         }
-        int element=arr[front];
-        front++;
-        return element;
+        else{
+            int data=arr[front];
+            front++;
+            return data;
+        }
 }
