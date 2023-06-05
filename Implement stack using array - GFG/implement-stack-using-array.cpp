@@ -63,23 +63,32 @@ public:
 void MyStack :: push(int x)
 {
     // Your Code
+    
     if(top<1000)
     {
         top++;
         arr[top]=x;
+        return ;
         
+    }
+    else if(top==1000)
+    {
+        return ;
     }
 }
 
 //Function to remove an item from top of the stack.
 int MyStack :: pop()
 {
-    // Your Code    
-    if(top>=0)
+    // Your Code      
+    if(top==-1)
     {
-        int element=arr[top];
+        return -1;
         
+    }
+    else{
+        int data=arr[top];
         top--;
-        return element;
+        return data;
     }
 }
