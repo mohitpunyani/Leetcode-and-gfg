@@ -64,18 +64,31 @@ int main()
 //Function to push an integer into the stack1.
 void twoStacks :: push1(int x)
 {
-    if(top1<top2){
+    if(top1<top2)
+    {
         top1++;
         arr[top1]=x;
+        return ;
+        
+    }
+    
+    // WE CAN'T PUSH ELEMENT IF TOP1 >= TOP2
+    
+    else{
+        return ;
     }
 }
    
 //Function to push an integer into the stack2.
 void twoStacks ::push2(int x)
 {
-    if(top2>top1){
+    if(top1<top2){
         top2--;
         arr[top2]=x;
+        return ;
+    }
+    else{
+        return ;
     }
 
 }
@@ -83,26 +96,28 @@ void twoStacks ::push2(int x)
 //Function to remove an element from top of the stack1.
 int twoStacks ::pop1()
 {
-    if(top1>=0){
-        int value=arr[top1];
-        top1--;
-        return value;
-    }
-    else{
+    if(top1==-1){
         return -1;
     }
+    else{
+        int data=arr[top1];
+        top1--;
+        return data;
+    }
+
 }
 
 //Function to remove an element from top of the stack2.
 int twoStacks :: pop2()
 {
-    if(top2<size){
-        int value=arr[top2];
-        top2++;
-        return value;
-    }
-    else{
+    if(top2==100){
         return -1;
     }
+    else{
+        int data=arr[top2];
+        top2++;
+        return data;
+    }
+
 }
 
