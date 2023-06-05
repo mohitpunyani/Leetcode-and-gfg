@@ -5,6 +5,8 @@ A Query <strong>Q</strong> is of 2 Types<br>
 <strong>(i)</strong> 1 x (a query of this type means&nbsp;&nbsp;pushing <strong>'x'</strong> into the queue)<br>
 <strong>(ii)</strong> 2 &nbsp; (a query of this type means to pop&nbsp;element from queue and print the poped element)</span></p>
 
+<p><span style="font-size:18px"><strong>Note :-</strong> If there is no element return -1 as answer while popping.</span></p>
+
 <p><strong><span style="font-size:18px">Example 1:</span></strong></p>
 
 <pre><strong><span style="font-size:18px">Input:
