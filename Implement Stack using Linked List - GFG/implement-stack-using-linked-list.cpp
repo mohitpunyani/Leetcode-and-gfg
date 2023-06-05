@@ -48,25 +48,35 @@ int main() {
 
 
 //Function to push an integer into the stack.
+
+// IMPLEMENT STACK USING INSERTION IN HEAD OF THE LINKED LIST
+
 void MyStack ::push(int x) 
 {
     // Your Code
-    StackNode*newnode=new StackNode(x);
-    newnode->next=top;
-    top=newnode;
+    
+  
+        StackNode*newnode=new StackNode(x);
+        newnode->next=top;
+        top=newnode;
+        return ;
+ 
+    
 }
 
 //Function to remove an item from top of the stack.
 int MyStack ::pop() 
 {
     // Your Code
-    if(top==NULL){
+    if(top==NULL)
+    {
         return -1;
     }
-    StackNode*temp=top;
-    top=top->next;
-    temp->next=NULL;
-    int value=temp->data;
-    delete temp;
-    return value;
+    else{
+        int data=top->data;
+        StackNode*temp=top->next;
+        top->next=NULL;
+        top=temp;
+        return data;
+    }
 }
