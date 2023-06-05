@@ -88,7 +88,7 @@ void MyQueue :: push(int x)
 int MyQueue :: pop()
 {
         // Your Code      
-        if(front>rear){
+        if(front>=rear){
             return -1;
         }
         else{
