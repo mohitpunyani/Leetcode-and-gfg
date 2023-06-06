@@ -31,7 +31,7 @@ class Solution {
         for(auto neighbours:adj[node])
         {
             
-            if(!visited[neighbours])
+            if(!visited[neighbours] && neighbours!=parent[node])
             {
                 parent[neighbours]=node;
                 
@@ -97,13 +97,13 @@ class Solution {
         parent[i]=-1;
     }
     
-    // for(int i=0;i<V;i++)
-    // {
-    //     if(!visited[i])
-    //     {
-            dfs(0,visited,parent,time_of_insertion,low,adj);
-        // }
-    // }
+    for(int i=0;i<V;i++)
+    {
+        if(!visited[i])
+        {
+             dfs(i,visited,parent,time_of_insertion,low,adj);
+        }
+    }
     sort(bridges.begin(),bridges.end());
 
    	 return bridges;
