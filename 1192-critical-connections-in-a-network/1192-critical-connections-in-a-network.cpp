@@ -31,7 +31,7 @@ class Solution {
 			//check just for a single back-edge
             else if(child != parent[node]){
 			    //check and update if the ancestor was discovered before the earliest connected node to our current node
-                low[node] = min(low[node],disc[child]);
+                low[node] = min(low[node],low[child]);
             }
         }
     }
