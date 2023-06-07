@@ -9,44 +9,72 @@ using namespace std;
 class Solution {
     public:
    
-   // STRIVER 
+   // STRIVER  SERTIES
+   
    // SIMILAR TO TARJAN ALGORITHM OR BRIDGE IN A GRAPH ONLY LITTLE BIT CHANGE
     
-    void dfs(int node, int parent, vector<int> &tin, vector<int> &low, vector<int> &vis,
-             vector<int> adj[], int &timer, vector<int> &isArticulation)
+    int timer=1;
+    
+void dfs(int node, int parent, vector<int> &time_of_insertion, vector<int> &low, unordered_map<int,bool>&visited,
+        vector<int> adj[],vector<int> &isArticulation)
             {
-                 vis[node] = 1;
-                 tin[node] = low[node] = timer++;
+                 visited[node] = true;
+                 
+                 time_of_insertion[node] = low[node] = timer;
+                 
+                 timer++;
+                 
+                 
                  int child = 0;
-                 for(auto it: adj[node]){
-                     if(!vis[it]){
-                         dfs(it, node, tin, low, vis, adj, timer, isArticulation);
+                 
+                 for(auto it: adj[node])
+                 {
+                     
+                     if(!visited[it])
+                     {
+                         dfs(it, node, time_of_insertion, low, visited, adj, isArticulation);
+                         
                          low[node] = min(low[it], low[node]);
+                         
                          child++;
-                         if(low[it] >= tin[node] && parent != -1)
+                         
+                         if(low[it] >= time_of_insertion[node] && parent != -1)
+                         
                             isArticulation[node] = 1;
-                        else continue;
+                            
+                         else continue;
                      }
-                     else if(vis[it]==true && parent!=it)
-                        low[node] = min(low[node], tin[it]);
+                     else if(visited[it]==true && parent!=it)
+                        low[node] = min(low[node], time_of_insertion[it]);
                  }
                  
         // IF THE SAME PARENT HAS MULTIPLE CHILDS THEN THAT IS DEFINATELY AN ARTICULATION POINT
                  
-         if(parent == -1 && child > 1)
+             if(parent == -1 && child > 1){
                     isArticulation[node] = 1;
              }
+             return ;
+             }
+             
     vector<int> articulationPoints(int V, vector<int>adj[]) {
         // Code here
-        vector<int> tin(V, -1);
+        vector<int> time_of_insertion(V, -1);
+        
         vector<int> low(V, -1);
-        vector<int> vis(V, 0);
+        
+        unordered_map<int,bool>visited(V);
+        
+        for(int i=0;i<V;i++){
+            visited[i]=false;
+        }
+        // unordered_map<int,int>parent(V,-1);
+        
         vector<int> isArticulation(V, 0);
         
-        int timer = 1;
+        
         for(int i = 0; i < V; i++){
-            if(!vis[i])
-                dfs(i, -1, tin, low, vis, adj, timer, isArticulation);
+            if(!visited[i])
+                dfs(i, -1, time_of_insertion, low, visited, adj, isArticulation);
         }
         vector<int> ans;
         for(int i = 0; i < V; i++){
