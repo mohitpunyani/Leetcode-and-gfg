@@ -35,7 +35,7 @@ class Solution {
         for(auto neighbours:adj[node])
         {
             
-            if(!visited[neighbours] && neighbours!=parent[node])
+            if(!visited[neighbours])
             {
                 parent[neighbours]=node;
                 
