@@ -45,7 +45,7 @@ class Solution {
         }
         vector<int> ans;
         for(int i = 0; i < V; i++){
-            if(isArticulation[i])
+            if(isArticulation[i]==1)
                 ans.push_back(i);
         }
         if(ans.size() == 0) ans.push_back(-1);
