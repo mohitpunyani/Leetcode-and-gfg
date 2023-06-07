@@ -15,7 +15,7 @@ class Solution {
     
     int timer=1;
     
-void dfs(int node, int parent, vector<int> &time_of_insertion, vector<int> &low, unordered_map<int,bool>&visited,
+void dfs(int node, unordered_map<int,int>&parent, vector<int> &time_of_insertion, vector<int> &low, unordered_map<int,bool>&visited,
         vector<int> adj[],vector<int> &isArticulation)
             {
                  visited[node] = true;
@@ -32,25 +32,27 @@ void dfs(int node, int parent, vector<int> &time_of_insertion, vector<int> &low,
                      
                      if(!visited[it])
                      {
-                         dfs(it, node, time_of_insertion, low, visited, adj, isArticulation);
+                         parent[it]=node;
+                         
+                         dfs(it, parent, time_of_insertion, low, visited, adj, isArticulation);
                          
                          low[node] = min(low[it], low[node]);
                          
                          child++;
                          
-                         if(low[it] >= time_of_insertion[node] && parent != -1)
+                         if(low[it] >= time_of_insertion[node] && parent[node]!= -1)
                          
                             isArticulation[node] = 1;
                             
                          else continue;
                      }
-                     else if(visited[it]==true && parent!=it)
+                     else if(visited[it]==true && parent[node]!=it)
                         low[node] = min(low[node], time_of_insertion[it]);
                  }
                  
         // IF THE SAME PARENT HAS MULTIPLE CHILDS THEN THAT IS DEFINATELY AN ARTICULATION POINT
                  
-             if(parent == -1 && child > 1){
+             if(parent[node] == -1 && child > 1){
                     isArticulation[node] = 1;
              }
              return ;
@@ -64,17 +66,18 @@ void dfs(int node, int parent, vector<int> &time_of_insertion, vector<int> &low,
         
         unordered_map<int,bool>visited(V);
         
+        unordered_map<int,int>parent(V);
         for(int i=0;i<V;i++){
             visited[i]=false;
+            parent[i]=-1;
         }
-        // unordered_map<int,int>parent(V,-1);
         
         vector<int> isArticulation(V, 0);
         
         
         for(int i = 0; i < V; i++){
             if(!visited[i])
-                dfs(i, -1, time_of_insertion, low, visited, adj, isArticulation);
+                dfs(i, parent, time_of_insertion, low, visited, adj, isArticulation);
         }
         vector<int> ans;
         for(int i = 0; i < V; i++){
