@@ -47,7 +47,7 @@ class Solution {
             }
             
             // checking cross edge
-            else if(recSt[neighbours]==true )
+            else if(recSt[neighbours]==true)
             {
                 // it means not a part of scc , there are other ways to visit that node 
                 
