@@ -24,7 +24,7 @@ class Solution {
                             isArticulation[node] = 1;
                         child++;
                      }
-                     else
+                     else if(vis[it]==true && parent!=it)
                         low[node] = min(low[node], tin[it]);
                  }
                  
