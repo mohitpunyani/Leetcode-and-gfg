@@ -9,10 +9,12 @@ using namespace std;
 class Solution {
     public:
    
+   // STRIVER 
    // SIMILAR TO TARJAN ALGORITHM OR BRIDGE IN A GRAPH ONLY LITTLE BIT CHANGE
     
     void dfs(int node, int parent, vector<int> &tin, vector<int> &low, vector<int> &vis,
-             vector<int> adj[], int &timer, vector<int> &isArticulation){
+             vector<int> adj[], int &timer, vector<int> &isArticulation)
+            {
                  vis[node] = 1;
                  tin[node] = low[node] = timer++;
                  int child = 0;
@@ -20,15 +22,18 @@ class Solution {
                      if(!vis[it]){
                          dfs(it, node, tin, low, vis, adj, timer, isArticulation);
                          low[node] = min(low[it], low[node]);
+                         child++;
                          if(low[it] >= tin[node] && parent != -1)
                             isArticulation[node] = 1;
-                        child++;
+                        else continue;
                      }
                      else if(vis[it]==true && parent!=it)
                         low[node] = min(low[node], tin[it]);
                  }
                  
-                 if(parent == -1 && child > 1)
+        // IF THE SAME PARENT HAS MULTIPLE CHILDS THEN THAT IS DEFINATELY AN ARTICULATION POINT
+                 
+         if(parent == -1 && child > 1)
                     isArticulation[node] = 1;
              }
     vector<int> articulationPoints(int V, vector<int>adj[]) {
