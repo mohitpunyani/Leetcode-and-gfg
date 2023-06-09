@@ -9,13 +9,14 @@ class Solution
 {
     public:
     
-    void dfs(int i,int j,vector<vector<char>>&grid){
+    void dfs(int i,int j,vector<vector<char>>&grid)
+    {
+        
         if(i<0 or j<0 or i>=grid.size() or j>=grid[0].size() or grid[i][j]=='O')
         {
             return ;
             
         }
-        
         grid[i][j]='O';
         dfs(i,j-1,grid);
         dfs(i,j+1,grid);
@@ -33,9 +34,9 @@ class Solution
             for(int j=0;j<grid[0].size();j++)
             {
                 if(grid[i][j]=='X'){
-                    
-                dfs(i,j,grid);
-                ans++;
+                     
+                  dfs(i,j,grid);
+                  ans++;
                 }
                 
             }
