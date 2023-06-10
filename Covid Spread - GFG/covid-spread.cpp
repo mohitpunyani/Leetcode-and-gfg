@@ -38,7 +38,7 @@ public:
                 int ncol=col+dc[k];
                 
                 if(nrow>=0 && ncol>=0 && nrow<hospital.size() && ncol<hospital[0].size() && hospital[nrow][ncol]==1
-                &&!visited[nrow][ncol])
+                && !visited[nrow][ncol])
                 {
                     q.push({time+1,{nrow,ncol}});
                     
@@ -77,8 +77,9 @@ public:
                     
                     visited[i][j]=1;
                 }
-                else if(hospital[i][j]==0 && !visited[i][j]){
-                    visited[i][j]=0;
+                else if(hospital[i][j]==0 && !visited[i][j])
+                {
+                    visited[i][j]=1;
                 }
             }
         }
