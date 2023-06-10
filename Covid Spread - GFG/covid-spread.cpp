@@ -86,7 +86,7 @@ public:
         bfs(hospital,q,visited);
         for(int i=0;i<hospital.size();i++){
             for(int j=0;j<hospital[0].size();j++){
-                if(visited[i][j]!=1){
+                if(hospital[i][j]==1  or visited[i][j]!=1){
                     return -1;
                 }
             }
