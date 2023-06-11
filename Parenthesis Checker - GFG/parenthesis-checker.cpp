@@ -39,7 +39,8 @@ class Solution
     //     return false;
     
     
-    // ANOTHER APPROACH USING MAP
+    // ANOTHER APPROACH USING MAP (EASY PEASY APPROACH )
+    
     unordered_map<char,int>mp={{'(',1},{')',-1},{'[',2},{']',-2},{'{',3},{'}',-3}};
     
     stack<char>st;
