@@ -7,7 +7,6 @@ using namespace std;
 
 // } Driver Code Ends
 // User function template for C++
-
 class Solution {
   public:
     int binarysearch(int arr[], int n, int k)
