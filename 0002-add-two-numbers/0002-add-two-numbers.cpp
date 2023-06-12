@@ -14,42 +14,14 @@
 class Solution
 {
     public:
-        ListNode* rev(ListNode *head)
-        {
-            ListNode *prev = NULL;
-            ListNode *curr = head;
-            while (curr != NULL)
-            {
+     
 
-                ListNode *temp = curr->next;
-                curr->next = prev;
-                prev = curr;
-                curr = temp;
-            }
-            return prev;
-        }
-    int lengthofll(ListNode *head, int count)
-    {
-        ListNode *temp = head;
-        while (temp->next != NULL)
-        {
-            temp = temp->next;
-            count++;
-        }
-        return count;
-    }
     ListNode* addTwoNumbers(ListNode *l1, ListNode *l2)
     {
-       	// first reverse both the linked list
-
-
+       // digits already stored hai reverse order main so we don't need to reverse the             linked list
+          
         ListNode *head1 = l1;
         ListNode *head2 = l2;
-
-       	// now do traversing to that list which is smaller in size
-       	// we can't do null ka next so handle that
-
-       	// make a dummy node
         int carry = 0;
         ListNode *dummynode = new ListNode(-1);
         ListNode *temp = dummynode;
@@ -112,66 +84,3 @@ class Solution
     }
 };
 
-
-// class Solution {
-// public:
-//     ListNode* add(ListNode* l1, ListNode* l2){
-//         ListNode* ans = new ListNode(INT_MIN);
-//         ListNode* temp = ans;
-//         ListNode*  curr1 = l1;
-//         ListNode*  curr2 = l2;
-
-//         int sum = 0;
-//         int carry = 0;
-
-//         while(curr1 != NULL && curr2!= NULL){
-//             sum = curr1->val + curr2->val + carry;
-//             carry = sum/10;
-
-//             temp->next = new ListNode(INT_MIN);
-//             temp = temp->next;
-//             temp->val = sum%10;
-            
-//             curr1 = curr1->next;
-//             curr2 = curr2->next;
-//         }
-
-//         // add leftover list1
-//         while(curr1 != NULL){
-//             sum = curr1->val + carry;
-//             carry = sum/10;
-
-//             temp->next = new ListNode(INT_MIN);
-//             temp = temp->next;
-//             temp->val = sum%10;
-
-//             curr1 = curr1->next;
-//         }
-
-//         // add leftover list2
-//         while(curr2 != NULL){
-//             sum = curr2->val + carry;
-//             carry = sum/10;
-
-//             temp->next = new ListNode(INT_MIN);
-//             temp = temp->next;
-//             temp->val = sum%10;
-
-//             curr2 = curr2->next;
-//         }
-
-//         // add remaining carry
-//         if (carry > 0){
-//             temp->next = new ListNode(carry);
-//         }
-
-//         return ans->next;
-
-//     }
-
-//     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-//         ListNode* ans = add(l1, l2);
-//         return ans;
-
-//     }
-// };
