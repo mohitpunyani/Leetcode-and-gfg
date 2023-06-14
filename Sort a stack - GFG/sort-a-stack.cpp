@@ -62,9 +62,10 @@ void insert(stack<int> &s,int value)
     s.pop();
     insert(s,value);
     s.push(temp);
+    return ;
 }
 void sortstack(stack<int> &s){
-    if(s.size()==1)
+    if(s.empty())
     {
         return ;
     }
@@ -72,6 +73,8 @@ void sortstack(stack<int> &s){
     s.pop();
     sortstack(s);
     insert(s,top);
+    return ;
+    
     
 }
 
