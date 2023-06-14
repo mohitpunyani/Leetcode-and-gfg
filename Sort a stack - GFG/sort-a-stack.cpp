@@ -54,7 +54,7 @@ public:
 you are required to complete the below method */
 void insert(stack<int> &s,int value)
 {
-    if(s.size()==0 || s.top()<=value){
+    if(s.size()==0 || s.top()<value){
         s.push(value);
         return ;
     }
