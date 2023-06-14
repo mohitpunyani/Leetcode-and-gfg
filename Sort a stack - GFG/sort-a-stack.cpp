@@ -52,15 +52,19 @@ public:
 
 /* The below method sorts the stack s 
 you are required to complete the below method */
-void insert(stack<int> &s,int value)
+
+// SAME APPROACH AS REVERSE OF STACK 
+
+
+void insert(stack<int> &s,int &top)
 {
-    if(s.size()==0 || s.top()<value){
-        s.push(value);
+    if(s.size()==0 || s.top()<top){
+        s.push(top);
         return ;
     }
     int temp=s.top();
     s.pop();
-    insert(s,value);
+    insert(s,top);
     s.push(temp);
     return ;
 }
