@@ -33,18 +33,21 @@ class Solution
     {
         
       
-        stack<int> s;
-        s.push(-1);
-        vector<int> ans(n);
-
-        for(int i= 0; i < n; i++){
-            int  curr = arr[i];
-
-            while(s.top() != -1 && arr[s.top()] >= curr){
-                s.pop();
+        stack<pair<int,int>> st;
+        
+        vector<int> ans(n,-1);
+        
+        st.push({arr[n-1],n-1});
+        
+        for(int i= n-2; i >=0; i--){
+    
+            while(!st.empty() && st.top().first > arr[i])
+            {
+                ans[st.top().second]=i;
+                st.pop();
             }
-            ans[i] = s.top();
-            s.push(i);
+
+            st.push({arr[i],i});
         }
         return ans;
     }
@@ -68,7 +71,8 @@ class Solution
             
             long long l = arr[i];
             
-            if(next[i] == -1){
+            if(next[i] == -1)
+            {
                 next[i] = n;
             }
             
