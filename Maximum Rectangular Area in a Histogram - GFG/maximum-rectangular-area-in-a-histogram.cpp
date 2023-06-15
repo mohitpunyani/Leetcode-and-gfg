@@ -29,7 +29,10 @@ class Solution
         return ans;
     }
 
-    vector<int> prevsmallerelements(long long arr[], int n){
+    vector<int> prevsmallerelements(long long arr[], int n)
+    {
+        
+      
         stack<int> s;
         s.push(-1);
         vector<int> ans(n);
@@ -45,6 +48,7 @@ class Solution
         }
         return ans;
     }
+    
     
     public:
     //Function to find largest rectangular area possible in a given histogram.
