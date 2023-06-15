@@ -25,5 +25,19 @@ public:
         }
         return false;
         
+        // 2ND APPROACH 
+        
+        
+          // int n=nums.size();
+        // int m=nums[0];
+        // for(int j=1;j<n;j++)
+        // {
+        //     for(int k=j+1;k<n;k++)
+        //     {
+        //         if(nums[k]>m && nums[j]>nums[k])return true;
+        //         m=min(m,nums[j]);
+        //     }
+        // }
+        // return false;
     }
 };
