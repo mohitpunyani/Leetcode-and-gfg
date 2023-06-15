@@ -30,28 +30,31 @@ int main() {
 
 // User function Template for C++
 
-// Function to reverse first k elements of a queue.
-
+// Function to reverse first k elements of a queue
+void solve(queue<int>&q,int index,int k)
+{
+    if(index>=k)
+    {
+        return ;
+    }
+    int value=q.front();
+    q.pop();
+    solve(q,index+1,k);
+    q.push(value);
+    return ;
+}
 queue<int> modifyQueue(queue<int> q, int k)
 {
-    // add code here.
-    queue<int>ans;
-    stack<int>temp;
-    int sizel=0;
-    while(sizel!=k)
-    {
-        temp.push(q.front());
-        q.pop();
-        sizel++;
-    }
-    while(temp.size()!=0){
-        ans.push(temp.top());
-        temp.pop();
-    }
-    while(q.size()!=0){
-        ans.push(q.front());
+    // add code here
+    solve(q,0,k);
+    
+    int len=q.size()-k;
+    for(int i=1;i<=len;i++){
+        q.push(q.front());
         q.pop();
     }
-    return ans;
+    return q;
+    
+    
     
 }
