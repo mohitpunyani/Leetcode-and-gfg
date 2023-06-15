@@ -12,6 +12,8 @@ class Solution {
     string removeKdigits(string S, int K) 
     {
         
+        // NN
+        
         if(K>=S.size()){
             return "0";
         }
@@ -21,7 +23,11 @@ class Solution {
         
         string ans="";
         
-        if(st.top()=='0'){
+        
+        // if starting digit is zero 
+        
+        if(st.top()=='0')
+        {
             st.pop();
         }
         for(int i=1;i<S.size();i++){
@@ -48,16 +54,16 @@ class Solution {
             K--;
             st.pop();
         }
-    
+        
+        if(st.size()==0){
+            return "0";
+        }
         while(!st.empty()){
             ans.push_back(st.top());
             st.pop();
         }
         reverse(ans.begin(),ans.end());
         
-        if(ans.size()==0){
-            return "0";
-        }
         return ans;
     }
 };
