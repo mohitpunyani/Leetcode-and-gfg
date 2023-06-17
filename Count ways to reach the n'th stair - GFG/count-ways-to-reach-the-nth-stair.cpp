@@ -9,6 +9,15 @@ class Solution
     //Function to count number of ways to reach the nth stair.
     
     int mod=1000000007;
+    
+    int recursive(int n){
+        if(n==0 or n==1)
+        {
+            return 1;
+        }
+        int ans=recursive(n-1)+recursive(n-2);
+        return ans;
+    }
     int topdowndp(vector<int>&dp,int n)
     {
          if(n==0 or n==1)
@@ -34,13 +43,20 @@ class Solution
         }
         return dp[n];
     }
-    int recursive(int n){
-        if(n==0 or n==1)
-        {
-            return 1;
+    
+    int space_optimization(int n){
+        
+        int prev1=1;
+        int prev2=2;
+        
+        for(int i=2;i<=n;i++){
+            int curr=(prev1+prev2)%mod;
+            
+            prev1=prev2;
+            
+            prev2=curr;
         }
-        int ans=recursive(n-1)+recursive(n-2);
-        return ans;
+        return prev1;
     }
     int countWays(int n)
     {
@@ -51,12 +67,20 @@ class Solution
         // TOPDOWN DP
         
         // vector<int>dp(n+1,-1);
-        
         // return topdowndp(dp,n);
         
         // BOTTOMUP DP
         
-        return bottomupdp(n);
+        
+        // return bottomupdp(n);
+        
+        
+        // SPACE OPTIMIZATION
+        
+        return space_optimization(n);
+        
+        
+        
     }
 };
 
