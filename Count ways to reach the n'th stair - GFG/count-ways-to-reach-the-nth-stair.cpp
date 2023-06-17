@@ -49,7 +49,9 @@ class Solution
         int prev1=1;
         int prev2=2;
         
-        for(int i=2;i<=n;i++){
+        for(int i=2;i<=n;i++)
+        
+        {
             int curr=(prev1+prev2)%mod;
             
             prev1=prev2;
