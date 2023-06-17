@@ -22,16 +22,18 @@ class Solution
         return dp[n];
     }
     
-    // int bottomupdp(int n){
+    int bottomupdp(int n)
+    {
+        vector<int>dp(n+1,0);
         
-    //     dp[0]=1;
-    //     dp[1]=1;
+        dp[0]=1;
+        dp[1]=1;
         
-    //     for(int i=2;i<=n;i++){
-    //         dp[i]=dp[i-1]+dp[i-2];
-    //     }
-    //     return dp[n];
-    // }
+        for(int i=2;i<=n;i++){
+            dp[i]=(dp[i-1]+dp[i-2])%mod;
+        }
+        return dp[n];
+    }
     int recursive(int n){
         if(n==0 or n==1)
         {
@@ -46,11 +48,15 @@ class Solution
         // return recursive(n);
         
         
-        // top down dp
+        // TOPDOWN DP
         
-        vector<int>dp(n+1,-1);
+        // vector<int>dp(n+1,-1);
         
-        return topdowndp(dp,n);
+        // return topdowndp(dp,n);
+        
+        // BOTTOMUP DP
+        
+        return bottomupdp(n);
     }
 };
 
