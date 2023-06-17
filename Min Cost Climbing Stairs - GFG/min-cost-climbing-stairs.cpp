@@ -60,6 +60,25 @@ class Solution {
       }
       return min(dp[N-1],dp[N-2]);
   }
+  int space_optimization(vector<int>&cost,int N)
+  {
+      int prev1=cost[0];
+      int prev2=cost[1];
+      
+      // for size 3 
+      
+      for(int i=2;i<N;i++)
+      {
+          int curr=cost[i]+min(prev1,prev2);
+          
+          prev1=prev2;
+          
+          prev2=curr;
+          
+      }
+      return min(prev1,prev2);
+      
+  }
     int minCostClimbingStairs(vector<int>&cost ,int N) 
     {
         //Write your code here
@@ -74,7 +93,12 @@ class Solution {
         
         // BOTTOMUP DP
         
-        return bottomupdp(cost,N);
+        // return bottomupdp(cost,N);
+        
+        // SPACE OPTIMIZATION 
+        
+        return space_optimization(cost,N);
+        
         
     }
 };
