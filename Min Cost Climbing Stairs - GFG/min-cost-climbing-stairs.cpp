@@ -44,14 +44,14 @@ class Solution {
   int bottomupdp(vector<int>&cost,int N)
   {
       
-      vector<int>dp(N+1,0);
+      vector<int>dp(N,0);
       
       
       dp[0]=cost[0];
       
       dp[1]=cost[1];
       
-      for(int i=2;i<=N;i++){
+      for(int i=2;i<N;i++){
           
           // starting for array of size 3
           
