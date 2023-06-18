@@ -50,7 +50,7 @@ class Solution{
     
     int bottomupdp(int n)
     {
-           vector<int>dp(n+1,INT_MAX);
+          vector<int>dp(n+1,INT_MAX);
         
         if(n==0){
             return 0;
@@ -58,8 +58,8 @@ class Solution{
         if(n==1 or n==2){
             return n;
         }
-        dp[0]=0; // for 1 
-        dp[1]=1;  // for 2
+        dp[0]=0; // for 0 
+        dp[1]=1;  // for 1
         dp[2]=2;   // for 2
         
         // store answer on the basis of one-based indexing 
