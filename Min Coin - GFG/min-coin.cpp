@@ -64,9 +64,40 @@ class Solution{
         return dp[amount];
         
     }
+    
+        int bottomupdp(vector<int>&coins,int amount)
+    {
+        vector<int>dp(amount+1,INT_MAX);
+        dp[0]=0; // ans for zero amount
+        
+        for(int j=1;j<=amount;j++)
+        {
+            for(int i=0;i<coins.size();i++)
+            {
+                // build answer
+                if(j-coins[i]>=0 && dp[j-coins[i]]!=INT_MAX)
+                {
+                     int ans=dp[j-coins[i]];
+                     dp[j]=min(dp[j],1+ans);
+                     
+                }
+                else{
+                    continue;
+                }
+                
+                
+            }
+            
+        }
+        if(dp[amount]==INT_MAX){
+            return -1;
+        }
+        return dp[amount];
+    }
 	int MinCoin(vector<int>nums, int amount)
 	{
 	    // Code here
+	    
 	   // int ans=recursive(nums,amount);
 	   // ans=ans==INT_MAX?-1:ans;
 	   // return ans;
@@ -74,13 +105,19 @@ class Solution{
 	    
 	   //TOPDOWNDP 
         
-        vector<int>dp(amount+1,-1);
+        // vector<int>dp(amount+1,-1);
         
-        int ans=topdowndp(dp,nums,amount);
-        if(ans==INT_MAX){
-            return -1;
-        }
-        return ans;
+        // int ans=topdowndp(dp,nums,amount);
+        // if(ans==INT_MAX){
+        //     return -1;
+        // }
+        // return ans;
+        
+        
+        
+        // BOTTOMUPDP
+        
+         return bottomupdp(nums,amount);
         
 	}
 };
