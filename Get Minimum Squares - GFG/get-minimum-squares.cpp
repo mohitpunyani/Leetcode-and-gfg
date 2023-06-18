@@ -59,7 +59,7 @@ class Solution{
             return n;
         }
         dp[0]=0; // for 1 
-        dp[1]=1;  // for 1
+        dp[1]=1;  // for 2
         dp[2]=2;   // for 2
         
         // store answer on the basis of one-based indexing 
