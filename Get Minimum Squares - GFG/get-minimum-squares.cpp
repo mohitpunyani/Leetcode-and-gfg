@@ -87,13 +87,13 @@ class Solution{
 	    // Code here
 	   //   return recursive(n);
         
-           vector<int>dp(n+1,-1);
+        //   vector<int>dp(n+1,-1);
         
-        return topdowndp(dp,n);
+        // return topdowndp(dp,n);
         
         // bottomupdp
         
-        // return bottomupdp(n);
+        return bottomupdp(n);
         
 	}
 };
