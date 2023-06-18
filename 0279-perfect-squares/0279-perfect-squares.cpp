@@ -49,7 +49,7 @@ public:
         if(n==1 or n==2){
             return n;
         }
-        dp[0]=0; // for 1 
+        dp[0]=0; // for 0 
         dp[1]=1;  // for 1
         dp[2]=2;   // for 2
         
