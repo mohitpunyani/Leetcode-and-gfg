@@ -44,8 +44,10 @@ public:
         dp[0]=nums[0];
         
         dp[1]=max(nums[0],nums[1]);
+        
         for(int i=2;i<n;i++)
         {
+            // for size 3 
             
             int include=dp[i-2]+nums[i];
             
@@ -53,7 +55,8 @@ public:
             
             dp[i]=max(include,exclude);
         }
-        return max(dp[n-1],dp[n-2]);
+        // return max(dp[n-1],dp[n-2]);
+        return dp[n-1];
     }
     int rob(vector<int>& nums)
     {
