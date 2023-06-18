@@ -58,6 +58,36 @@ public:
         return dp[amount];
         
     }
+    
+    int bottomupdp(vector<int>&coins,int amount)
+    {
+        vector<int>dp(amount+1,INT_MAX);
+        dp[0]=0; // ans for zero amount
+        
+        for(int j=1;j<=amount;j++)
+        {
+            for(int i=0;i<coins.size();i++)
+            {
+                // build answer
+                if(j-coins[i]>=0 && dp[j-coins[i]]!=INT_MAX){
+                     int ans=dp[j-coins[i]];
+                     dp[j]=min(dp[j],1+ans);
+                     
+                }
+                else{
+                    continue;
+                }
+                
+                
+            }
+            
+        }
+        if(dp[amount]==INT_MAX){
+            return -1;
+        }
+        return dp[amount];
+        
+    }
     int coinChange(vector<int>& coins, int amount) 
     {
         // int ans=recursive(coins,amount);
@@ -69,13 +99,19 @@ public:
         
         // TOPDOWNDP 
         
-        vector<int>dp(amount+1,-1);
+//         vector<int>dp(amount+1,-1);
         
-        int ans=topdowndp(dp,coins,amount);
-        if(ans==INT_MAX){
-            return -1;
-        }
-        return ans;
+//         int ans=topdowndp(dp,coins,amount);
+//         if(ans==INT_MAX){
+//             return -1;
+//         }
+//         return ans;
+        
+        
+        // BOTTOMUPDP
+        
+        return bottomupdp(coins,amount);
+        
         
         
     }
