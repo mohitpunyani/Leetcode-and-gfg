@@ -80,7 +80,7 @@ public:
             
             prev2=ans;
         }
-        return max(prev1,prev2);
+        return prev2;
         
     }
     int rob(vector<int>& nums)
