@@ -55,8 +55,33 @@ public:
             
             dp[i]=max(include,exclude);
         }
-        // return max(dp[n-1],dp[n-2]);
         return dp[n-1];
+    }
+    
+    int space_optimization(vector<int>&nums)
+    {
+        int n=nums.size();
+         if(n==1){
+            return nums[0];
+        }
+        int prev1=nums[0];
+        
+        int prev2=max(nums[0],nums[1]);
+        
+        for(int i=2;i<n;i++){
+            
+            
+            int include=prev1+nums[i];
+            
+            int exclude=prev2+0;
+            int ans=max(include,exclude);
+            
+            prev1=prev2;
+            
+            prev2=ans;
+        }
+        return max(prev1,prev2);
+        
     }
     int rob(vector<int>& nums)
     {
@@ -68,7 +93,9 @@ public:
         
         // bottomupdp
         
-        return bottomupdp(nums);
+        // return bottomupdp(nums);
+        
+        return space_optimization(nums);
         
     }
 };
