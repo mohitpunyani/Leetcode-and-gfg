@@ -14,8 +14,12 @@ class Solution
     
     int recursive(int wt [],int val [],int n,int max_weight,int index)
     {
+        if(max_weight<=0){
+            return 0;
+        }
         if(index==0)
         {
+            
             if(wt[index]<=max_weight){
                 return val[0];
             }
@@ -60,6 +64,41 @@ class Solution
         dp[index][max_weight]=ans;
         return dp[index][max_weight];
     }
+    
+    int bottomupdp(int wt[],int val[],int n,int max_weight)
+    {
+        vector<vector<int>>dp(n,vector<int>(max_weight+1,0));
+        
+        for(int w=wt[0];w<=max_weight;w++)
+        {
+            if(wt[w]<=max_weight)
+            {
+                dp[0][w]=val[0];
+            }
+            else{
+                dp[0][w]=0;
+            }
+        }
+        // int include=0;
+        for(int index=1;index<n;index++)
+        {
+            for(int w=0;w<=max_weight;w++)
+            {
+                int include=0;
+                  if(wt[index]<=w)
+                  {
+                      include=val[index]+dp[index-1][w-wt[index]];
+                  }
+                 int exclude=dp[index-1][w];
+                 int ans=max(include,exclude);
+                 dp[index][w]=ans;
+            }
+        }
+        return dp[n-1][max_weight];
+        
+        
+    }
+    
     int knapSack(int W, int wt[], int val[], int n) 
     { 
        // Your code here
@@ -69,8 +108,10 @@ class Solution
     //   return recursive(wt,val,n,W,n-1);
     
     vector<vector<int>>dp(n+1,vector<int>(W+1,-1));
-    
     return topdowndp(wt,val,n,W,n-1,dp);
+    
+    // return bottomupdp(wt,val,n,W);
+    
        
     }
 };
