@@ -10,8 +10,8 @@ class Solution
             return 2;
         }
         int ans=0;
-        
         // observe carefully
+        
         for(int i=1;i<=n;i++)
         {
             
@@ -39,7 +39,6 @@ class Solution
         }
         int ans=0;
         
-        // observe carefully
         for(int i=1;i<=n;i++)
         {
             
@@ -52,12 +51,36 @@ class Solution
         return dp[n];
     }
     
+    int bottomupdp(int n)
+    {
+        vector<int>dp(n+1,0);
+        
+        dp[0]=1;
+        dp[1]=1;
+        // dp[2]=2;
+        
+        for(int i=2;i<=n;i++)
+        {
+            // i is the root node
+            for(int j=1;j<=i;j++)
+            {
+                // j is the no .of nodes
+                dp[i]=dp[i]+dp[j-1]*dp[i-j];
+            }
+        }
+        
+        return dp[n];
+    }
+    
         int numTrees(int n)
         {
             // return recursive(n);
         
-            vector<int>dp(n+1,-1);
+            // vector<int>dp(n+1,-1);
             
-            return topdowndp(dp,n);
+            // return topdowndp(dp,n);
+            
+            
+            return bottomupdp(n);
         }
 };
