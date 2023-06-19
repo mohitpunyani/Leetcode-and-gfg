@@ -54,12 +54,15 @@ class Solution
     int bottomupdp(int n)
     {
         vector<int>dp(n+1,0);
+        if(n==1){
+            return 1;
+        }
+        dp[0]=1; // for zero node
+        dp[1]=1;  // for one node
+        dp[2]=2;  // for two node
         
-        dp[0]=1;
-        dp[1]=1;
-        // dp[2]=2;
         
-        for(int i=2;i<=n;i++)
+        for(int i=3;i<=n;i++)
         {
             // i is the root node
             for(int j=1;j<=i;j++)
