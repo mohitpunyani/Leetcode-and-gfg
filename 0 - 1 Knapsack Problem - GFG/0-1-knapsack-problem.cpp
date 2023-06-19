@@ -71,7 +71,7 @@ class Solution
         
         for(int w=wt[0];w<=max_weight;w++)
         {
-            if(wt[w]<=max_weight)
+            if(wt[0]<=max_weight)
             {
                 dp[0][w]=val[0];
             }
@@ -107,10 +107,10 @@ class Solution
        
     //   return recursive(wt,val,n,W,n-1);
     
-    vector<vector<int>>dp(n+1,vector<int>(W+1,-1));
-    return topdowndp(wt,val,n,W,n-1,dp);
+    // vector<vector<int>>dp(n+1,vector<int>(W+1,-1));
+    // return topdowndp(wt,val,n,W,n-1,dp);
     
-    // return bottomupdp(wt,val,n,W);
+    return bottomupdp(wt,val,n,W);
     
        
     }
