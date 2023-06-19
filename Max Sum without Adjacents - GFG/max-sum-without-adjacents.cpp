@@ -86,9 +86,9 @@ public:
 	   // vector<int>dp(n+1,-1);
 	   // return topdowndp(arr,n,0,dp);
 	   
-	   return bottomupdp(arr,n);
+	   //return bottomupdp(arr,n);
 	   
-	   //return space_optimization(arr,n);
+	   return space_optimization(arr,n);
 
 	}
 };
