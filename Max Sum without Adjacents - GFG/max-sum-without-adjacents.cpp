@@ -9,10 +9,7 @@ using namespace std;
 class Solution{
 public:	
 	// calculate the maximum sum with out adjacent
-	
-	// 1-d dp and inclusion exclusion principle
-	
-	int recursive(int *arr,int n,int index)
+	int recursive(vector<int>&arr,int n,int index)
 	{
 	    if(index>=n){
 	        return 0;
@@ -24,7 +21,7 @@ public:
 	    
 	}
 	
-	int topdowndp(int *arr,int n,int index,vector<int>&dp)
+	int topdowndp(vector<int>&arr,int n,int index,vector<int>&dp)
 	{
 	    if(index>=n){
 	        return 0;
@@ -40,7 +37,7 @@ public:
 	    return dp[index];
 	    
 	}
-	int bottomupdp(int *arr,int n)
+	int bottomupdp(vector<int>&arr,int n)
 	{
 	    vector<int>dp(n,0);
 	    dp[0]=arr[0];
@@ -56,7 +53,7 @@ public:
 	    return dp[n-1];
 	    
 	}
-	int space_optimization(int *arr,int n)
+	int space_optimization(vector<int>&arr,int n)
 	{
 	    if(n==1){
 	        return arr[0];
@@ -81,20 +78,18 @@ public:
 	    return prev2;
 	    
 	}
-	int findMaxSum(int *arr, int n) 
-	{
+	int findMaxSum(vector<int>&arr, int n) {
 	    // code here
 	    
-	    // like a house robber 
-	    
-	   // return recursive(arr,n,0);
+	   //   return recursive(arr,n,0);
 	    
 	   // vector<int>dp(n+1,-1);
 	   // return topdowndp(arr,n,0,dp);
 	   
-	   //return bottomupdp(arr,n);
+	   return bottomupdp(arr,n);
 	   
-	   return space_optimization(arr,n);
+	   //return space_optimization(arr,n);
+
 	}
 };
 
@@ -106,7 +101,7 @@ int main() {
     while (t--) {
         int n;
         cin >> n;
-        int arr[n];
+        vector<int>arr(n);
         for (int i = 0; i < n; i++) {
             cin >> arr[i];
         }
