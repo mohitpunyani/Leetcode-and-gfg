@@ -69,6 +69,8 @@ class Solution
     {
         vector<vector<int>>dp(n,vector<int>(max_weight+1,0));
         
+        // initialization for 0 index
+        
         for(int w=wt[0];w<=max_weight;w++)
         {
             if(wt[0]<=max_weight)
@@ -96,6 +98,45 @@ class Solution
         }
         return dp[n-1][max_weight];
         
+    }
+    
+     int space_optimization(int wt[],int val[],int n,int max_weight)
+    {
+        
+        vector<int>prev(max_weight+1,0);
+        
+        vector<int>curr(max_weight+1,0);
+        
+        
+        // initialization for 0 index
+        
+        for(int w=wt[0];w<=max_weight;w++)
+        {
+            if(wt[0]<=max_weight)
+            {
+                prev[w]=val[0];
+            }
+            else{
+                prev[w]=0;
+            }
+        }
+        // int include=0;
+        for(int index=1;index<n;index++)
+        {
+            for(int w=0;w<=max_weight;w++)
+            {
+                int include=0;
+                  if(wt[index]<=w)
+                  {
+                      include=val[index]+prev[w-wt[index]];
+                  }
+                 int exclude=prev[w];
+                 int ans=max(include,exclude);
+                 curr[w]=ans;
+            }
+            prev=curr;
+        }
+        return prev[max_weight];
         
     }
     
@@ -110,7 +151,11 @@ class Solution
     // vector<vector<int>>dp(n+1,vector<int>(W+1,-1));
     // return topdowndp(wt,val,n,W,n-1,dp);
     
-    return bottomupdp(wt,val,n,W);
+    // return bottomupdp(wt,val,n,W);
+    
+    
+    return space_optimization(wt,val,n,W);
+    
     
        
     }
