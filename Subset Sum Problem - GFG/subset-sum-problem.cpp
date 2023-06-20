@@ -41,7 +41,8 @@ public:
    }
     bool topdowndp(vector<int>&arr,int sum,int n,int index,vector<vector<int>>&dp)
    {
-       if(sum==0){
+      if(sum==0)
+       {
            return true;
        }
       if(sum<0){
@@ -73,6 +74,78 @@ public:
        dp[index][sum]=ans;
        return dp[index][sum];
    }
+   
+   bool bottomupdp(vector<int>&arr,int sum,int n)
+   {
+       vector<vector<bool>>dp(n,vector<bool>(sum+1,0));
+       
+       // initialization
+       
+       for(int i=0;i<n;i++){
+           dp[i][0]=true;
+       }
+       
+       for(int target=0;target<=sum;target++)
+       {
+           if(target==arr[0])
+           {
+                dp[0][target]=true;
+           }
+           else{
+            dp[0][target]=false;
+           }
+       }
+       for(int index=1;index<n;index++){
+           for(int s=1;s<=sum;s++)
+           {
+               bool include=false;
+               if(arr[index]<=s){
+                   include=dp[index-1][s-arr[index]];
+               }
+               bool exclude=dp[index-1][s];
+               bool ans=include or exclude;
+               dp[index][s]=ans;
+           }
+           
+       }
+       return dp[n-1][sum];
+   }
+    bool space_optimization(vector<int>&arr,int sum,int n){
+        
+       vector<bool>prev(sum+1,0);
+       
+       vector<bool>curr(sum+1,0);
+       
+       for(int i=0;i<n;i++){
+           curr[0]=true;
+       }
+       
+       for(int target=0;target<=sum;target++)
+       {
+           if(target==arr[0])
+           {
+                prev[target]=true;
+           }
+           else{
+                prev[target]=false;
+           }
+       }
+       for(int index=1;index<n;index++){
+           for(int s=1;s<=sum;s++)
+           {
+               bool include=false;
+               if(arr[index]<=s){
+                   include=prev[s-arr[index]];
+               }
+               bool exclude=prev[s];
+               bool ans=include or exclude;
+               curr[s]=ans;
+           }
+           
+           prev=curr;
+       }
+       return prev[sum];
+   }
     bool isSubsetSum(vector<int>arr, int sum)
     {
         // code here
@@ -80,9 +153,13 @@ public:
         int n=arr.size();
         // return recursive(arr,sum,n,n-1
         
-        vector<vector<int>>dp(n,vector<int>(sum+1,-1));
+        // vector<vector<int>>dp(n,vector<int>(sum+1,-1));
+        // return topdowndp(arr,sum,n,n-1,dp);
         
-        return topdowndp(arr,sum,n,n-1,dp);
+        // return bottomupdp(arr,sum,n);
+        
+        
+        return space_optimization(arr,sum,n);
     }
 };
 
