@@ -139,7 +139,44 @@ class Solution
         return prev[max_weight];
         
     }
-    
+      int more_space_optimization(int wt[],int val[],int n,int max_weight)
+    {
+        
+        
+        vector<int>curr(max_weight+1,0);
+        
+        
+        // initialization for 0 index
+        
+        for(int w=wt[0];w<=max_weight;w++)
+        {
+            if(wt[0]<=max_weight)
+            {
+                curr[w]=val[0];
+            }
+            else{
+                curr[w]=0;
+            }
+        }
+        // int include=0;
+        for(int index=1;index<n;index++)
+        {
+            // catch -> reverse the loop
+            for(int w=max_weight;w>=0;w--)
+            {
+                int include=0;
+                  if(wt[index]<=w)
+                  {
+                      include=val[index]+curr[w-wt[index]];
+                  }
+                 int exclude=curr[w];
+                 int ans=max(include,exclude);
+                 curr[w]=ans;
+            }
+        }
+        return curr[max_weight];
+        
+    }
     int knapSack(int W, int wt[], int val[], int n) 
     { 
        // Your code here
@@ -154,7 +191,9 @@ class Solution
     // return bottomupdp(wt,val,n,W);
     
     
-    return space_optimization(wt,val,n,W);
+    // return space_optimization(wt,val,n,W);
+    
+    return more_space_optimization(wt,val,n,W);
     
     
        
