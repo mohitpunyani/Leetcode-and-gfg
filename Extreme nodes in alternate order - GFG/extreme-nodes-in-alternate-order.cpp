@@ -115,18 +115,18 @@ class Solution{
         {
             int a=q.size();
             
-            for(int i=0;i<a;i++)
+            for(int i=1;i<=a;i++)
             {
                 root=q.front();
                 
                 q.pop();
                 
                 
-                if(flag==true && i==a-1)
+                if(flag==true && i==a)
                 {
                     ans.push_back(root->data);
                 }
-                else if(!flag && i==0)
+                else if(!flag && i==1)
                 {
                     ans.push_back(root->data);
                 }
