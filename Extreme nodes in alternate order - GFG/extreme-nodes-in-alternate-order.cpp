@@ -99,8 +99,6 @@ class Solution{
     
     vector<int>ans;
     
-    // play with even and odd levels
-    
     void solve(Node*root)
     {
         
@@ -110,7 +108,8 @@ class Solution{
         
         bool flag=true;
         
-        
+        // play with even and odd levels
+    
         while(!q.empty())
         {
             int a=q.size();
@@ -126,7 +125,7 @@ class Solution{
                 {
                     ans.push_back(root->data);
                 }
-                else if(!flag && i==1)
+                else if(flag==false && i==1)
                 {
                     ans.push_back(root->data);
                 }
