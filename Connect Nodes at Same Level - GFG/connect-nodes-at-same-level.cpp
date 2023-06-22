@@ -148,13 +148,15 @@ class Solution
         {
             
             int size=q.size();
+            
             for(int i=1;i<=size;i++)
             {
                 auto node=q.front();
                 
                 q.pop();
                 
-                if(i<size){
+                if(i<size)
+                {
                     node->nextRight=q.front();
                 }
                 else if(i==size)
