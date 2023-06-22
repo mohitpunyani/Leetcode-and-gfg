@@ -58,14 +58,45 @@ class Solution{
       return dp[index][rod_length];
       
   }
+  
+  int bottomupdp(int price[],int n){
+      
+      int length=n;
+      vector<vector<int>>dp(n+2,vector<int>(length+1,0));
+      
+      for(int i=0;i<=n;i++)
+      {
+          dp[i][0]=0;
+          
+      }
+      for(int i=n;i>=0;i--){
+          for(int length=1;length<=n;length++)
+          {
+              int pick=INT_MIN;
+              if(length>=i)
+              {
+                  pick=price[i-1]+dp[i][length-i];
+                  
+              }
+              int not_pick=dp[i+1][length];
+              dp[i][length]=max(pick,not_pick);
+          }
+          
+      }
+      return dp[0][n];
+     
+  }
     int cutRod(int price[], int n)
     {
         //code here
         
-        // return recursive(price,n,n,1);
+        int length=n;
+        // return recursive(price,length,n,1);
         
-        vector<vector<int>>dp(n+1,vector<int>(n+1,-1));
-        return topdowndp(price,n,n,1,dp);
+        // vector<vector<int>>dp(n+1,vector<int>(length+1,-1));
+        // return topdowndp(price,length,n,1,dp);
+        
+        return bottomupdp(price,n);
     }
 };
 
