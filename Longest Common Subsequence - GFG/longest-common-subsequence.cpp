@@ -118,6 +118,30 @@ class Solution
         return next[0];
         
     }
+    
+       int more_space_optimization(int x,int y,string s1,string s2)
+    {
+        vector<int>curr(y+1,0);
+        
+        for(int i=x-1;i>=0;i--)
+        {
+            for(int j=y-1;j>=0;j--)
+            {
+                int ans=0;
+                if(s1[i]==s2[j]){
+                    ans=1+curr[j+1];
+                }
+                else{
+                    ans=max(curr[j+1],curr[j]);
+                }
+                curr[j]=ans;
+            }
+    
+        }
+        
+        return curr[0];
+        
+    }
     int lcs(int x, int y, string s1, string s2)
     {
         // your code here
@@ -129,7 +153,9 @@ class Solution
         
         // return bottomupdp(x,y,s1,s2);
         
-        return space_optimization(x,y,s1,s2);
+        // return space_optimization(x,y,s1,s2);
+        
+        // return more_space_optimization(x,y,s1,s2);
     }
 };
 
