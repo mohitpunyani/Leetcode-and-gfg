@@ -153,9 +153,9 @@ class Solution
         
         // return bottomupdp(x,y,s1,s2);
         
-        // return space_optimization(x,y,s1,s2);
+        return space_optimization(x,y,s1,s2);
         
-        // return more_space_optimization(x,y,s1,s2);
+        // return more_space_optimization(x,y,s1,s2);  // giving error
     }
 };
 
