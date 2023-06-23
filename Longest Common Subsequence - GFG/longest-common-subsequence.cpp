@@ -68,14 +68,22 @@ class Solution
         dp[i][j]=ans;
         return dp[i][j];
     }
+    
+    int bottomupdp(int x,int y,string s1,string s2)
+    {
+        
+        
+    }
     int lcs(int x, int y, string s1, string s2)
     {
         // your code here
         
         // return recursive(x,y,s1,s2,0,0);
         
-        vector<vector<int>>dp(x+1,vector<int>(y+1,-1));
+        vector<vector<int>>dp(x,vector<int>(y,-1));
         return topdowndp(x,y,s1,s2,0,0,dp);
+        
+        // return bottomupdp(x,y,s1,s2);
     }
 };
 
