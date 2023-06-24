@@ -85,8 +85,9 @@ class Solution
                     ans=1+dp[i+1][j+1];
                 }
                 else{
-                    
-                    ans=max(dp[i][j+1],dp[i+1][j]);
+                    int opt1=dp[i][j+1];
+                    int opt2=dp[i+1][j];
+                    ans=max(opt1,opt2);
                 }
                 dp[i][j]=ans;
             }
@@ -153,12 +154,12 @@ class Solution
         
         // return recursive(x,y,s1,s2,0,0);
         
-        vector<vector<int>>dp(x,vector<int>(y,-1));
-        return topdowndp(x,y,s1,s2,0,0,dp);
+        // vector<vector<int>>dp(x,vector<int>(y,-1));
+        // return topdowndp(x,y,s1,s2,0,0,dp);
         
         // return bottomupdp(x,y,s1,s2);
         
-        // return space_optimization(x,y,s1,s2);
+        return space_optimization(x,y,s1,s2);
         
         // return more_space_optimization(x,y,s1,s2);  // giving error
     }
