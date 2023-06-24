@@ -140,9 +140,9 @@ class Solution{
         // vector<vector<int>>dp(x,vector<int>(y,-1));
         // return topdowndp(x,y,s1,s2,0,0,dp);
         
-        return bottomupdp(x,y,s1,s2);
+        // return bottomupdp(x,y,s1,s2);
         
-        // return space_optimization(x,y,s1,s2);
+        return space_optimization(x,y,s1,s2);
         
         
     }
