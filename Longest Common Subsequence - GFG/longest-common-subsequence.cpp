@@ -113,7 +113,9 @@ class Solution
                     ans=1+next[j+1];
                 }
                 else{
-                    ans=max(curr[j+1],next[j]);
+                    int opt1=curr[j+1];
+                    int opt2=next[j];
+                    ans=max(opt1,opt2);
                 }
                 curr[j]=ans;
             }
