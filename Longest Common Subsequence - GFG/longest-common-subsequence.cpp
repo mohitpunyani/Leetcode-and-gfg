@@ -35,7 +35,9 @@ class Solution
         
         else{
             // not equal or character not match
-            ans=max(recursive(x,y,s1,s2,i,j+1),recursive(x,y,s1,s2,i+1,j));
+            int opt1=recursive(x,y,s1,s2,i,j+1);
+            int opt2=recursive(x,y,s1,s2,i+1,j);
+            ans=max(opt1,opt2);
         }
         return ans;
     }
@@ -63,7 +65,9 @@ class Solution
         
         else{
             // not equal or character not match
-            ans=max(topdowndp(x,y,s1,s2,i,j+1,dp),topdowndp(x,y,s1,s2,i+1,j,dp));
+            int opt1=topdowndp(x,y,s1,s2,i,j+1,dp);
+            int opt2=topdowndp(x,y,s1,s2,i+1,j,dp);
+            ans=max(opt1,opt2);
         }
         dp[i][j]=ans;
         return dp[i][j];
@@ -81,6 +85,7 @@ class Solution
                     ans=1+dp[i+1][j+1];
                 }
                 else{
+                    
                     ans=max(dp[i][j+1],dp[i+1][j]);
                 }
                 dp[i][j]=ans;
@@ -148,12 +153,12 @@ class Solution
         
         // return recursive(x,y,s1,s2,0,0);
         
-        // vector<vector<int>>dp(x,vector<int>(y,-1));
-        // return topdowndp(x,y,s1,s2,0,0,dp);
+        vector<vector<int>>dp(x,vector<int>(y,-1));
+        return topdowndp(x,y,s1,s2,0,0,dp);
         
         // return bottomupdp(x,y,s1,s2);
         
-        return space_optimization(x,y,s1,s2);
+        // return space_optimization(x,y,s1,s2);
         
         // return more_space_optimization(x,y,s1,s2);  // giving error
     }
