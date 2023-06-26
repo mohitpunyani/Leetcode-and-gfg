@@ -97,52 +97,51 @@ class Solution{
     /*You are required to complete below method */
     
     int mx=INT_MIN;
-
-    int solve(Node*root)
+    
+    void solve(Node*root)
     {
         queue<Node*>q;
         
+        int sum=0;
+
+        int level=1;
+        
         q.push(root);
         
-        int sum=0;
-        
-        while(!q.empty())
-        {
+        while(!q.empty()){
             
             int size=q.size();
             
-            for(int i=1;i<=size;i++)
-            {
+            for(int i=1;i<=size;i++){
                 
                 Node*temp=q.front();
                 
-                q.pop();
-                
                 sum+=temp->data;
+                
+                q.pop();
                 
                 if(temp->left!=NULL){
                     q.push(temp->left);
                 }
                 if(temp->right!=NULL){
                     q.push(temp->right);
-                    
                 }
             }
             if(sum>mx)
             {
                 mx=sum;
             }
+            level++;
             sum=0;
         }
-        return mx;
-        
+        return ;
     }
-    int maxLevelSum(Node* root)
-    {
+    
+    int maxLevelSum(Node* root) {
         // Your code here
         
-        return solve(root);
-        
+        solve(root);
+        return mx;
     }
 };
 
