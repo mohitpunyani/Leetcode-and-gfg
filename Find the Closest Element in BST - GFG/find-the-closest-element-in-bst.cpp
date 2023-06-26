@@ -39,7 +39,7 @@ class Solution
     //Function to find the least absolute difference between any node
 	//value of the BST and the given integer.
 	
-	int value=INT_MAX;
+	int diff=INT_MAX;
 	void solve(Node*root,int K)
 	{
 	    if(root==NULL){
@@ -47,17 +47,17 @@ class Solution
 	    }
 	    if(K==root->data)
 	    {
-	        value=0;
+	        diff=0;
 	        return ;
 	    }
 	    if(K>root->data)
 	    {
-	        value=min(K-root->data,value);
+	        diff=min(K-root->data,diff);
 	        solve(root->right,K);
 	    }
 	    if(K<root->data)
 	    {
-	        value=min(root->data-K,value);
+	        diff=min(root->data-K,diff);
 	        solve(root->left,K);
 	    }
 	    return ;
@@ -68,7 +68,7 @@ class Solution
         //Your code here
         
         solve(root,K);
-        return value;
+        return diff;
     }
 };
 
