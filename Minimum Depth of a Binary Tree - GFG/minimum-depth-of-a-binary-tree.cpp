@@ -97,7 +97,10 @@ class Solution{
         if(root==NULL){
             return INT_MAX;
         }
-        if(root->left==NULL && root->right==NULL){
+        if(root->left==NULL && root->right==NULL)
+        {
+            // for leaf node
+            
             return 1;
         }
         int left=solve(root->left);
