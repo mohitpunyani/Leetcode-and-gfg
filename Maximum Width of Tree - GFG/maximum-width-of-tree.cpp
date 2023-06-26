@@ -120,6 +120,7 @@ class Solution {
             {
                 mx=size;
             }
+            
             for(int i=1;i<=size;i++){
                 
                 Node*temp=q.front();
