@@ -91,7 +91,7 @@ int check_loop(struct Node*head,int &count)
         {
             // ab ek ko rok de
             
-            count++;
+            count=1;
             while(fast->next!=slow)
             {
                 count++;
