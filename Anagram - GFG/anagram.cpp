@@ -33,20 +33,30 @@ class Solution
         
         // constant space
         
-        int sum1=0;
-        int sum2=0;
-        long long pr1=1;
-        long long pr2=1;
+        // int sum1=0;
+        // int sum2=0;
+        // long long pr1=1;
+        // long long pr2=1;
         
-        for(int i=0;i<a.size();i++){
-            sum1=sum1+(int)a[i];
-            pr1=pr1*a[i];
+        // for(int i=0;i<a.size();i++){
+        //     sum1=sum1+(int)a[i];
+        //     pr1=pr1*a[i];
+        // }
+        // for(int i=0;i<b.size();i++){
+        //     sum2=sum2+(int)b[i];
+        //     pr2=pr2*b[i];
+        // }
+        // return (sum1==sum2 && pr1==pr2);
+        
+        
+        // using vector
+        vector<int> v(26, 0);
+        for(auto &c : a)v[c-'a']++;
+        for(auto &c : b)v[c-'a']--;
+        for(auto &freq : v){
+            if(freq != 0)return false;
         }
-        for(int i=0;i<b.size();i++){
-            sum2=sum2+(int)b[i];
-            pr2=pr2*b[i];
-        }
-        return (sum1==sum2 && pr1==pr2);
+        return true;
     }
 
 };
