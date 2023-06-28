@@ -125,10 +125,28 @@ class Solution{
         return level;
         
     }
+    
+    int recursive(Node*root)
+    
+    {
+        if(root==NULL){
+            return 0;
+        }
+        int left=recursive(root->left);
+        int right=recursive(root->right);
+        int ans=1+max(left,right);
+        return ans;
+    }
     int maxDepth(Node *root) {
         // Your code here
         
-        return solve(root);
+        // return solve(root);
+        
+        // recursive
+        
+        return recursive(root);
+        
+        
     }
 };
 
