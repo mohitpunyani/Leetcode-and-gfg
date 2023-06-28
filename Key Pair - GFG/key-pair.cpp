@@ -14,25 +14,46 @@ public:
 	{
 	    // code here
 	    
-	    sort(arr,arr+n);
-	    int low=0;
+	   // sort(arr,arr+n);
+	   // int low=0;
 	    
-	    int high=n-1;
-	    while(low<high){
-	        if(arr[low]+arr[high]==x)
+	   // int high=n-1;
+	   // while(low<high){
+	   //     if(arr[low]+arr[high]==x)
+	   //     {
+	   //         return true;
+	   //     }
+	   //     else if(arr[low]+arr[high]>x)
+	   //     {
+	   //         high--;
+	            
+	   //     }
+	   //     else{
+	   //         low++;
+	   //     }
+	   // }
+	   // return false;
+	    
+	    
+	    //  optimized
+	    
+	    unordered_set<int>s;
+	    
+	
+	    for(int i=0;i<n;i++){
+	        
+	        int value=x-arr[i];
+	        if(s.find(value)!=s.end())
 	        {
 	            return true;
-	        }
-	        else if(arr[low]+arr[high]>x)
-	        {
-	            high--;
 	            
 	        }
 	        else{
-	            low++;
+	            s.insert(arr[i]);
 	        }
 	    }
 	    return false;
+	    
 	}
 };
 
