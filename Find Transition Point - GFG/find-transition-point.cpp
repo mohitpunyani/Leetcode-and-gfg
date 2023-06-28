@@ -35,7 +35,9 @@ int first(int arr[],int n,int x,int &ans){
             // equal to case
             
             // mid==0 denotes that we reach at first index so we can't compare mid-1 with mid that's
+            
             // why i use or mid==0
+            
             if((arr[mid-1]!=arr[mid] && mid>0) or mid==0){
                 ans=mid;
                 return ans;
