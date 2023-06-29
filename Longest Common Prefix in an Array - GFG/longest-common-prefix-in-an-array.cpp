@@ -42,7 +42,7 @@ class Solution{
             for(int j=1;j<N;j++)
             {
                 // not match 
-                if(arr[j][i]!=ch || arr[j].size()<i)
+                if(arr[j][i]!=ch || i>=arr[j].size())
                 {
                     match=false;
                     break;
