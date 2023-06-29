@@ -22,6 +22,7 @@ class Solution
        for(int i=0;i<S.size();i++)
        {
            int count=mp[S[i]];
+           
            if(count==1)
            {
                ans=S[i];
