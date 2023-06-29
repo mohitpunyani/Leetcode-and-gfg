@@ -139,9 +139,13 @@ int longestSubstrDistinctChars (string S)
     //     }
     //     return ans;
    
-         unordered_map<char,int>mp;
+   
+   
+       // NOTE -> THIS IS ALSO A GOOD APPROACH 
+       
+        unordered_map<char,int>mp;
 
-            int i=0,j=0,len=INT_MIN;
+      int i=0,j=0,len=INT_MIN;
 
        while(j<S.length())
 
@@ -155,9 +159,9 @@ int longestSubstrDistinctChars (string S)
 
                 mp[S[j]]++;
 
-              len=max(len,(j-i+1));
+                len=max(len,(j-i+1));
 
-               j++;
+                j++;
 
            }
 
