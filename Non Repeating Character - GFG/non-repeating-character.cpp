@@ -19,8 +19,10 @@ class Solution
        for(int i=0;i<S.size();i++){
            mp[S[i]]++;
        }
-       for(int i=0;i<S.size();i++){
-           if(mp[S[i]]==1)
+       for(int i=0;i<S.size();i++)
+       {
+           int count=mp[S[i]];
+           if(count==1)
            {
                ans=S[i];
                break;
