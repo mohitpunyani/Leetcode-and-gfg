@@ -45,9 +45,9 @@ class Solution{
                     match=false;
                     break;
                 }
-                // else{
-                //     continue;
-                // }
+                else{
+                    continue;
+                }
                 
             }
             if(match==false)
