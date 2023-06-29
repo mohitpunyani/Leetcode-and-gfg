@@ -120,21 +120,64 @@ int longestSubstrDistinctChars (string S)
 //   }
 //   res= max(j-i,res);
 //   return res;
-       int mp[26]={0};
-        int i=0;
-        int j=0;
-        int ans=0;
-        while(i<S.size()){
-            if(mp[S[i]-'a']!=0){
-                mp[S[j]-'a']--;
-                j++;
-            }
-            else{
-                mp[S[i]-'a']++;
-                ans=max(ans,i-j+1);
-                i++;
-            }
-        }
-        return ans;
+
+
+    //   int mp[26]={0};
+    //     int i=0;
+    //     int j=0;
+    //     int ans=0;
+    //     while(i<S.size()){
+    //         if(mp[S[i]-'a']!=0){
+    //             mp[S[j]-'a']--;
+    //             j++;
+    //         }
+    //         else{
+    //             mp[S[i]-'a']++;
+    //             ans=max(ans,i-j+1);
+    //             i++;
+    //         }
+    //     }
+    //     return ans;
    
+         unordered_map<char,int>mp;
+
+            int i=0,j=0,len=INT_MIN;
+
+       while(j<S.length())
+
+       {
+
+          
+
+           if(mp.find(S[j])==mp.end())
+
+           {
+
+                mp[S[j]]++;
+
+              len=max(len,(j-i+1));
+
+               j++;
+
+           }
+
+           else
+
+           {
+
+               mp.erase(S[i]);
+
+               i++;
+
+           }
+
+         //  if(len>(S.length()-i))
+
+       //    break;
+
+          
+
+       }
+
+       return len;
 }
