@@ -10,6 +10,8 @@ using namespace std;
 class Solution
 {
     public:
+    
+    // NOTE -> IT'S A GOOD QUESTION
     //Function to find most frequent word in an array of strings.
     string mostFrequentWord(string arr[], int n) 
     {
