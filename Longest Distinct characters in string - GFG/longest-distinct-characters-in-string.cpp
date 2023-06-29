@@ -62,6 +62,9 @@ int longestSubstrDistinctChars (string S)
     
     
     // another way to write code
+    
+    // NOTE -> THIS IS A WRONG APPROACH OR WRONG THINKING 
+    
        
     //   unordered_map<char,int>mp;
        
@@ -79,7 +82,6 @@ int longestSubstrDistinctChars (string S)
     //           mp[S[i]]++;
     //           i++;
     //       }
-    //     //   else
     //       if(mp.find(S[i])!=mp.end() )
     //       {
     //           num=mp.size();
@@ -91,35 +93,37 @@ int longestSubstrDistinctChars (string S)
     //   }
     //   return ans;
        
+       
     // NOTE -> THIS APPROACH COMES 
     
-//     unordered_map<char,int>mp;
-//   for(char c='a'; c<='z';c++)
-//   {
-//       mp[c]=0;
-//   }
+    unordered_map<char,int>mp;
+  for(char c='a'; c<='z';c++)
+  {
+      mp[c]=0;
+  }
    
-//   int res=0;
-//   int i=0;
-//   int j=0;
-//   while(j<S.size())
-//   {
-//       if(mp[S[j]]==0)
-//       {
-//           mp[S[j]]++;
-//           j++;
-//       }
+  int res=0;
+  int i=0;
+  int j=0;
+  while(j<S.size())
+  {
+      if(mp[S[j]]==0)
+      {
+          mp[S[j]]++;
+          res=max(j-i+1,res);
+          j++;
+      }
        
-//       else
-//       {
+      else
+      {
            
-//           mp[S[i]]--;
-//           i++;
-//           res=max(j-i+1,res);
-//       }
-//   }
-//   res= max(j-i,res);
-//   return res;
+          mp[S[i]]--;
+          i++;
+        
+      }
+  }
+  
+  return res;
 
 
     //   int mp[26]={0};
@@ -143,45 +147,43 @@ int longestSubstrDistinctChars (string S)
    
        // NOTE -> THIS IS ALSO A GOOD APPROACH 
        
-        unordered_map<char,int>mp;
+    //     unordered_map<char,int>mp;
 
-      int i=0,j=0,len=INT_MIN;
+    //   int i=0,j=0,len=INT_MIN;
 
-       while(j<S.length())
+    //   while(j<S.length())
 
-       {
-
-          
-
-           if(mp.find(S[j])==mp.end())
-
-           {
-
-                mp[S[j]]++;
-
-                len=max(len,(j-i+1));
-
-                j++;
-
-           }
-
-           else
-
-           {
-
-               mp.erase(S[i]);
-
-               i++;
-
-           }
-
-         //  if(len>(S.length()-i))
-
-       //    break;
+    //   {
 
           
 
-       }
+    //       if(mp.find(S[j])==mp.end())
 
-       return len;
+    //       {
+
+    //             mp[S[j]]++;
+
+    //             len=max(len,(j-i+1));
+
+    //             j++;
+
+    //       }
+
+    //       else
+
+    //       {
+
+    //           mp.erase(S[i]);
+
+    //           i++;
+
+    //       }
+
+       
+
+          
+
+    //   }
+
+    //   return len;
 }
