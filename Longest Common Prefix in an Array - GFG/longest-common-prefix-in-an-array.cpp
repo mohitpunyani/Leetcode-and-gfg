@@ -13,6 +13,8 @@ class Solution{
      
      // LOVE BABBAR
      
+     // A GOOD QUESTION 
+     
     string longestCommonPrefix (string arr[], int N)
     {
         // your code here
@@ -52,7 +54,7 @@ class Solution{
             }
             if(match==false)
             {
-                break;
+                continue;
             }
             else{
                 ans.push_back(ch);
