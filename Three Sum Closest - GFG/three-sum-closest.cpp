@@ -12,7 +12,9 @@ using namespace std;
 // target : given sum value
 
 
-// IT'S A GOOD QUESTION 
+// IT'S A GOOD QUESTION AND EASY QUESTION 
+
+
 class Solution{
   public:
     int threeSumClosest(vector<int> arr, int target)
