@@ -45,7 +45,7 @@ public:
                 
                 break;
             }
-            if(abs(sum-x)<diff)
+            else if(abs(sum-x)<diff)
             {
                 diff=abs(sum-x);
                 first=arr[low];
