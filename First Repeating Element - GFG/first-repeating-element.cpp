@@ -13,10 +13,9 @@ class Solution {
     int firstRepeated(int arr[], int n)
     {
         // code here
-        
-        int mx=0;
-        
+    
         int ans=-1;
+        
         unordered_map<int,int>mp;
         for(int i=0;i<n;i++)
         {
