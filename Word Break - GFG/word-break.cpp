@@ -107,9 +107,10 @@ class Solution
                 if(s.find(temp)!=s.end() && dp[j+1])
                 {
                     dp[i]=true;
+                    break;
                 }
+                
             }
-            
         }
         return dp[0];
     }
