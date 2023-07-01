@@ -11,7 +11,9 @@ using namespace std;
 // A : given string to search
 // B : vector of available strings
 
-// IT'S A GOOD QUESTION 
+// IT'S A GOOD QUESTION  (leetcode par code hai)
+
+//  DO DRY RUN FOR BETTER UNDERSTANDING
 
 class Solution
 {
@@ -39,6 +41,8 @@ class Solution
             string temp=A.substr(i,j-i+1);
             if(check(temp,B) && solve(A,B,j+1,a,b))
             {
+                // if both are true that means ki word find ho gaya
+                
                 return true;
                 
             }
@@ -47,7 +51,8 @@ class Solution
         
     }
     
-    bool solve1(string A,set<string>&s,int i){
+    bool solve1(string A,set<string>&s,int i)
+    {
         
         if(i>=A.size())
         {
@@ -63,12 +68,37 @@ class Solution
         }
         return false;
     }
+    bool topdowndp(string A,set<string>&s,int i,vector<int>&dp)
+    {
+       if(i>=A.size())
+        {
+            return true;
+        }
+        if(dp[i]!=-1)
+        {
+            return dp[i];
+        }
+        for(int j=i;j<A.size();j++)
+        {
+            string temp=A.substr(i,j-i+1);
+            if(s.find(temp)!=s.end() && topdowndp(A,s,j+1,dp))
+            {
+                dp[i]=1;
+                return dp[i];
+            }
+        }
+        dp[i]=false;
+        return dp[i]; 
+    }
 
 public:
    
     int wordBreak(string A, vector<string> &B)
     {
         //code here
+        
+        // RECURSIVE SOLUTION
+        
         
         // int a=A.size();
         // int b=B.size();
@@ -85,7 +115,15 @@ public:
             s.insert(it);
         }
         
-        return solve1(A,s,0);
+        // return solve1(A,s,0);
+        
+        // TOP DOWN DP (BECAUSE SUBPROBLEMS ARE OVERLAPPING)
+        
+        // 1d dp
+        
+        vector<int>dp(A.size()+1,-1);
+        
+        return topdowndp(A,s,0,dp);
     }
 };
 
