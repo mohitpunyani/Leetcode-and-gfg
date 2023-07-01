@@ -87,7 +87,7 @@ class Solution
                 return dp[i];
             }
         }
-        dp[i]=false;
+        dp[i]=0;
         return dp[i]; 
     }
 
