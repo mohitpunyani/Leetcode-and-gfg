@@ -90,6 +90,29 @@ class Solution
         dp[i]=0;
         return dp[i]; 
     }
+    bool bottomupdp(string A,set<string>&s)
+    {
+        
+        int n=A.size();
+        
+        vector<bool>dp(n+1,false);
+        
+        dp[n]=true;
+        
+        for(int i=n-1;i>=0;i--)
+        {
+            for(int j=i;j<n;j++)
+            {
+                string temp=A.substr(i,j-i+1);
+                if(s.find(temp)!=s.end() && dp[j+1])
+                {
+                    dp[i]=true;
+                }
+            }
+            
+        }
+        return dp[0];
+    }
 
 public:
    
@@ -121,9 +144,11 @@ public:
         
         // 1d dp
         
-        vector<int>dp(A.size()+1,-1);
+        // vector<int>dp(A.size()+1,-1);
         
-        return topdowndp(A,s,0,dp);
+        // return topdowndp(A,s,0,dp);
+        
+        return bottomupdp(A,s);
     }
 };
 
