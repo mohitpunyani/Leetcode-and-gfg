@@ -8,6 +8,8 @@ using namespace std;
 // } Driver Code Ends
 class Solution {
 public:
+
+// A WORD SHOULD NOT INCLUDE MULTIPLE INSTANCES OF THE SAME CELL 
 bool solve(int i,int j,vector<vector<bool>>&visited,vector<vector<char>>&board,vector<string>&dictionary,string temp,int n,int m)
 {
     
@@ -37,6 +39,7 @@ bool solve(int i,int j,vector<vector<bool>>&visited,vector<vector<char>>&board,v
     
     visited[i][j]=false;
     
+    // backtracking done , because board can have  different cells have same character     
     return ans1 or ans2 or ans3 or ans4 or ans5 or ans6 or ans7 or ans8;
 }
 
