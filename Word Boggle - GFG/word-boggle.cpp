@@ -39,6 +39,9 @@ bool solve(int i,int j,vector<vector<bool>>&visited,vector<vector<char>>&board,v
     
     return ans1 or ans2 or ans3 or ans4 or ans5 or ans6 or ans7 or ans8;
 }
+
+//  THERE IS ALSO A ANOTHER WAY TO WRITE DFS
+
 	vector<string> wordBoggle(vector<vector<char> >& board, vector<string>& dictionary)
 	{
 	    // Code here
@@ -60,9 +63,11 @@ bool solve(int i,int j,vector<vector<bool>>&visited,vector<vector<char>>&board,v
 	                    if(solve(i,j,visited,board,dictionary,temp,n,m))
 	                    {
 	                        s.insert(temp);
+	                        break;
 	                        
 	                    }
 	                }
+	               // break;
 	            }
 	        }
 	    }
