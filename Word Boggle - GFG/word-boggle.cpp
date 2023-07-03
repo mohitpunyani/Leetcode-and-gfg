@@ -57,7 +57,8 @@ bool solve(int i,int j,vector<vector<bool>>&visited,vector<vector<char>>&board,v
 	        string temp=dictionary[i];
 	        vector<vector<bool>>visited(n,vector<bool>(m,false));
 	        for(int i=0;i<n;i++){
-	            for(int j=0;j<m;j++){
+	            for(int j=0;j<m;j++)
+	            {
 	                if(board[i][j]==temp[0])
 	                {
 	                    if(solve(i,j,visited,board,dictionary,temp,n,m))
@@ -67,8 +68,8 @@ bool solve(int i,int j,vector<vector<bool>>&visited,vector<vector<char>>&board,v
 	                        
 	                    }
 	                }
-	               // break;
 	            }
+	
 	        }
 	    }
 	    vector<string>v(s.begin(),s.end());
