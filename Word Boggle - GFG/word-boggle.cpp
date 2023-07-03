@@ -59,16 +59,17 @@ bool solve(int i,int j,vector<vector<bool>>&visited,vector<vector<char>>&board,v
 	        for(int i=0;i<n;i++){
 	            for(int j=0;j<m;j++)
 	            {
-	                if(board[i][j]==temp[0])
-	                {
+	               // if(board[i][j]==temp[0])
+	               // {
 	                    if(solve(i,j,visited,board,dictionary,temp,n,m))
 	                    {
 	                        s.insert(temp);
 	                        break;
 	                        
-	                    }
+	                   // }
 	                }
 	            }
+	            
 	
 	        }
 	    }
