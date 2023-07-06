@@ -72,8 +72,39 @@ class Solution {
       int n=s.size();
       int m=t.size();
       
-      vector<vector<int>>dp(n+1,vector<int>(m+1,0));
       
+      vector<vector<int>>dp(n+1,vector<int>(m+1,0));
+     
+       // initialization 
+       
+        for(int j=0;j<t.length();j++){
+           dp[s.length()][j]=t.length()-j;
+       }
+       for(int i=0;i<s.length();i++){
+           dp[i][t.length()]=s.length()-i;
+       }
+      for(int i=n-1;i>=0;i--)
+      {
+          for(int j=m-1;j>=0;j--)
+          {
+              int ans=INT_MAX;
+              
+              if(s[i]==t[j])
+              {
+                  ans=dp[i+1][j+1];
+              }
+              else{
+                  int insert_ans=1+dp[i][j+1];
+                  int remove_ans=1+dp[i+1][j];
+                  int replace_ans=1+dp[i+1][j+1];
+                  int temp=min({insert_ans,remove_ans,replace_ans});
+                  ans=min(ans,temp);
+              }
+              dp[i][j]=ans;
+          }
+      }
+      
+      return dp[0][0];
   }
     int editDistance(string s, string t)
     {
@@ -86,10 +117,13 @@ class Solution {
         
         // topdowndp
         
-        vector<vector<int>>dp(s.size()+1,vector<int>(t.size()+1,-1));
+        // vector<vector<int>>dp(s.size()+1,vector<int>(t.size()+1,-1));
+        // return topdowndp(s,t,0,0,dp);
         
-        return topdowndp(s,t,0,0,dp);
         
+        // bottomupdp
+        
+        return bottomupdp(s,t);
         
         
     }
