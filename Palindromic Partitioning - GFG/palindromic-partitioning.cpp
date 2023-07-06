@@ -109,13 +109,15 @@ int bottomupdp(string str)
     {
         // code here
         
-        // DFS ON STRING (IMP) 
+        // DFS ON STRING (IMP)  or RECURSIVE 
+        
         
         // return dfs(str,0);
         
         // topdowndp
         
-        if(is_palindrome(str)){
+        if(is_palindrome(str))
+        {
             return 0;
         }
         
@@ -124,6 +126,7 @@ int bottomupdp(string str)
         
         // bottomupdp
         
+        //  1D DP 
         
         return bottomupdp(str);
         
