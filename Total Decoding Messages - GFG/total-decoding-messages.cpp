@@ -17,7 +17,9 @@ class Solution {
     {
         
         
-        if(idx < n && s[idx] == '0') return 0;
+        if(idx < n && s[idx] == '0')
+        
+        return 0;
         if(idx >= n)
             return 1;
         
@@ -25,7 +27,6 @@ class Solution {
         
         // Pick single
         
-        if(s[idx] != '0')
         ways += recursive(s, idx+1, n);
             
         // Pick couple
@@ -50,12 +51,12 @@ class Solution {
         
         // Pick single
         
-        if(s[idx] != '0')
+        // if(s[idx] != '0')
         ways += topdowndp(s, idx+1, n,dp);
             
         // Pick couple
         if(idx+1 < n && ((s[idx] == '1' && s[idx+1] <= '9') || (s[idx]=='2' && s[idx+1] < '7')))
-           ways += topdowndp(s, idx+2, n,dp);
+          ways += topdowndp(s, idx+2, n,dp);
          
         dp[idx]=ways%MOD;  
         return dp[idx];
