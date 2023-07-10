@@ -34,7 +34,9 @@ int topdowndp(int N,vector<vector<int>>&Matrix,int i,int j,vector<vector<int>>&d
     {
         return 0;
     }
-    
+     // if(i==Matrix.size()){
+    //     return Matrix[i][j];
+    // }
     if(dp[i][j]!=-1){
         return dp[i][j];
     }
@@ -48,28 +50,48 @@ int topdowndp(int N,vector<vector<int>>&Matrix,int i,int j,vector<vector<int>>&d
     return dp[i][j];
 }
 
-// int bottomupdp(int N,vector<vector<int>>&Matrix)
-// {
+int bottomupdp(int N,vector<vector<int>>&Matrix)
+{
   
    
-//     vector<vector<int>>dp(N+1,vector<int>(N+1,0));
+    vector<vector<int>>dp(N+1,vector<int>(N+1,0));
     
-//     for(int i=N-1;i>=0;i--){
-//         for(int j=N-1;j>=0;j--)
-//         {
-//             int ans=INT_MIN;
-//             int path_1=Matrix[i][j]+dp[i+1][j];
-//             int path_2=Matrix[i][j]+dp[i+1][j-1];
-//             int path_3=Matrix[i][j]+dp[i+1][j+1];
-//             ans=max({path_1,path_2,path_3});
-//             dp[i][j]=ans;
-//         }
-//         // dp[i][j]=ans;
+    // base case analysis
+    
+    for(int j=0;j<N;j++)
+    {
+        dp[N-1][j]=Matrix[N-1][j];
+    }
+ 
         
-//     }
-//     return dp[0][0];
-// }
-    int maximumPath(int N, vector<vector<int>> Matrix)
+        for(int i=N-2;i>=0;i--)
+        {
+            for(int j=N-1;j>=0;j--)
+            {
+                int ans=INT_MIN;
+                
+                int path_2=-1e8;
+    
+                int path_1=Matrix[i][j]+dp[i+1][j];
+                
+                if(j-1>=0) path_2=Matrix[i][j]+dp[i+1][j-1];
+                
+                int path_3=Matrix[i][j]+dp[i+1][j+1];
+                
+                int temp=max({path_1,path_2,path_3});
+                
+                dp[i][j]=max(temp,ans);
+            }
+        }
+        int ans=-1e8;
+        
+        for(int i=0;i<N;i++)
+            
+            ans=max(ans,dp[0][i]);
+            
+        return ans;
+}
+    int maximumPath(int N, vector<vector<int>>Matrix)
     {
         // code here
         
@@ -95,14 +117,8 @@ int topdowndp(int N,vector<vector<int>>&Matrix,int i,int j,vector<vector<int>>&d
         // return temp;
         
         // BOTTOMUPDP
-          
-        // int temp=0;
-        // for(int col=0;col<N;col++)
-        // {
-        //     temp=max(temp,bottomupdp(N,Matrix));
-            
-        // }
-        // return temp;
+      
+        return bottomupdp(N,Matrix);
         
         
     }
