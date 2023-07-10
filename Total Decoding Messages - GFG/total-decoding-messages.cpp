@@ -20,7 +20,7 @@ class Solution {
     {
         
         
-        if(idx < n && s[idx] == '0')
+        if(s[idx] == '0')
         
         return 0;
         if(idx >= n)
@@ -49,7 +49,7 @@ class Solution {
     {
         
         
-        if(idx < n && s[idx] == '0') return 0;
+        if(s[idx] == '0') return 0;
         
         if(idx >= n)
             return 1;
@@ -123,10 +123,10 @@ class Solution {
 		    
 		  //  return recursive(str,0,n);
 		    
-		  //  vector<int>dp(n+1,-1);
-		  //  return  topdowndp(str,0,n,dp);
+		    vector<int>dp(n+1,-1);
+		    return  topdowndp(str,0,n,dp);
 		    
-		    return bottomupdp(str,n);
+		  //  return bottomupdp(str,n);
 		    
 		}
 
