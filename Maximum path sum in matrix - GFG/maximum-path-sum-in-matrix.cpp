@@ -27,18 +27,17 @@ int recursive(int N,vector<vector<int>>&Matrix,int i,int j)
     ans=max({path_1,path_2,path_3});
     return ans;
 }
+
 int topdowndp(int N,vector<vector<int>>&Matrix,int i,int j,vector<vector<int>>&dp)
 {
     if(i>=N or j>=N or i<0 or j<0)
     {
         return 0;
     }
+    
     if(dp[i][j]!=-1){
         return dp[i][j];
     }
-    // if(i==Matrix.size()){
-    //     return Matrix[i][j];
-    // }
     int ans=INT_MIN;
     int path_1=Matrix[i][j]+topdowndp(N,Matrix,i+1,j,dp);
     int path_2=Matrix[i][j]+topdowndp(N,Matrix,i+1,j-1,dp);
@@ -47,6 +46,25 @@ int topdowndp(int N,vector<vector<int>>&Matrix,int i,int j,vector<vector<int>>&d
     ans=max({path_1,path_2,path_3});
     dp[i][j]=ans;
     return dp[i][j];
+}
+
+// int bottomupdp(int N,vector<vector<int>>&Matrix,int i,int j,vector<vector<int>>&dp)
+// {
+  
+   
+//     vector<vector<int>>dp(N+1,vector<int>(N+1,0));
+    
+//     for(int i=N-1;i>=0;i--){
+//         for(int j=N-1;j>=0;j--)
+//         {
+//             int ans=INT_MIN;
+//             int path_1=Matrix[i][j]+dp[i+1][j];
+//             int path_2=Matrix[i][j]+dp[i+1][j-1];
+//             int path_3=Matrix[i][j]+dp[i+1][j+1];
+            
+//         }
+//     }
+//     return dp[0][0];
 }
     int maximumPath(int N, vector<vector<int>> Matrix)
     {
