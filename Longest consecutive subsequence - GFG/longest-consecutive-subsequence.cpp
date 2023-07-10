@@ -45,7 +45,8 @@ class Solution{
       
       // USING SET DATA STRUCTURE (REDUCE TIME COMPLEXITY)
       
-        set<int> ss;
+       
+       set<int> ss;
         for (int i=0; i < N; i++)
             ss.insert(arr[i]);
 
@@ -58,7 +59,7 @@ class Solution{
                 curr++;
             }
     
-            else
+            else if(ss.find(i-1)==ss.end())
                 curr = 1;
     
             ans = max(curr, ans);
