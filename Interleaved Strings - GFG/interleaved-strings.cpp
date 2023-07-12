@@ -16,9 +16,9 @@ class Solution{
         if(A.size()+B.size()!=C.size()){
             return false;
         }
-        // if(k==C.size() && (i<A.size() or j<B.size())){
-        //     return false;
-        // }
+        if(k==C.size() && (i<A.size() or j<B.size())){
+            return false;
+        }
         if(i==A.size() && j==B.size() && k==C.size())
         {
             return true;
@@ -46,9 +46,9 @@ class Solution{
         {
             return true;
         }
-        //  if(k==C.size() && (i<A.size() or j<B.size())){
-        //     return false;
-        // }
+         if(k==C.size() && (i<A.size() or j<B.size())){
+            return false;
+        }
         if(dp[i][j]!=-1){
             return dp[i][j];
         }
@@ -71,15 +71,57 @@ class Solution{
         dp[i][j]=a or b;
         return dp[i][j];
     }
+    
+    bool bottomupdp(string A,string B,string C)
+    {
+        int n=A.size();
+        int m=B.size();
+        
+        if(n+m!=C.size()){
+            return false;
+        }
+        vector<vector<int>>dp(n+1,vector<int>(m+1,0));
+        
+        dp[n][m]=1;
+        for(int i=n;i>=0;i--){
+            for(int j=m;j>=0;j--)
+            {
+                if(i==n && j==m)
+                {
+                      continue;
+                }
+                bool a=0;
+                bool b=0;
+                int k=i+j;
+                if(i!=n)
+                {
+                    if(A[i]==C[k])
+                    {
+                        a=dp[i+1][j];
+                    }
+                }
+                if(j!=m){
+                    
+                    if(B[j]==C[k])
+                    {
+                        b=dp[i][j+1];
+                    }
+                }
+                dp[i][j]=a or b;    
+            }
+        }
+        return dp[0][0];
+    }
     bool isInterleave(string A, string B, string C) 
     {
         //Your code here
         
         // return recursive(A,B,C,0,0,0);
         
-        vector<vector<int>>dp(A.size()+1,vector<int>(B.size()+1,-1));
-        return topdowndp(A,B,C,0,0,0,dp);
+        // vector<vector<int>>dp(A.size()+1,vector<int>(B.size()+1,-1));
+        // return topdowndp(A,B,C,0,0,0,dp);
         
+        return bottomupdp(A,B,C);
     }
 
 };
