@@ -46,6 +46,8 @@ int topdowndp(int i,int j,int arr[],vector<vector<int>>&dp)
     dp[i][j]=mn;
     return dp[i][j];
 }
+
+int bottomup
     int matrixMultiplication(int N, int arr[])
     {
         // code here
