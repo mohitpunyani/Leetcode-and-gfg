@@ -100,7 +100,7 @@ class Solution{
         {
             for(int j=y-1;j>=0;j--)
             {
-                int ans=0;
+                int ans=INT_MIN;
                 if(s1[i]==s2[j]){
                     ans=1+dp[i+1][j+1];
                 }
@@ -129,14 +129,17 @@ class Solution{
         {
             for(int j=y-1;j>=0;j--)
             {
-                int ans=0;
+                int ans=INT_MIN;
                 if(s1[i]==s2[j]){
                     ans=1+next[j+1];
                 }
                 else{
                     int opt1=curr[j+1];
                     int opt2=next[j];
-                    ans=max(opt1,opt2);
+                    
+                    int temp=max(opt1,opt2);
+                    
+                    ans=max(ans,temp);
                 }
                 curr[j]=ans;
             }
@@ -167,9 +170,9 @@ class Solution{
         // vector<vector<int>>dp(x,vector<int>(y,-1));
         // return x-topdowndp(x,y,s1,s2,0,0,dp);
         
-        return x-bottomupdp(x,y,s1,s2);
+        // return x-bottomupdp(x,y,s1,s2);
         
-        // return space_optimization(x,y,s1,s2);
+        return x-space_optimization(x,y,s1,s2);
         
     }
 };
