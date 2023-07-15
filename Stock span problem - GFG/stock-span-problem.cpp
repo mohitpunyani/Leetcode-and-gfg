@@ -5,11 +5,11 @@ using namespace std;
 
 // } Driver Code Ends
 
-#include<bits/stdc++.h>
-using namespace std;
+
 class Solution
 {
     public:
+ 
     //Function to calculate the span of stockâ€™s price for all n days.
     vector <int> calculateSpan(int price[], int n)
     {
