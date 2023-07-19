@@ -82,14 +82,14 @@ class Solution {
             for(int buy=1;buy>=0;buy--)
             {
                 int profit=0;
-            if(buy==1)
+               if(buy==1)
                 {
             // two choice hai buy karo yah ignore karo
                 int buykaro=-prices[index]+next[0];
                 int ignorekaro=next[1];
                 profit=max(buykaro,ignorekaro);
                 }
-            if(buy==0){
+              if(buy==0){
                 int sellkaro=prices[index]+next[1];
                 int ignorekaro=next[0];
                 profit=max(sellkaro,ignorekaro);
@@ -101,6 +101,20 @@ class Solution {
         }
         return curr[1];
     }
+    
+   int space_optimization_1(vector<int>&prices)
+   {
+       int max_profit=0;
+       for(int i=0;i<prices.size()-1;i++)
+       {
+           if(prices[i+1]>prices[i]){
+               int diff=prices[i+1]-prices[i];
+               max_profit=max_profit+diff;
+           }
+               
+       }
+    return max_profit;
+   }
 public:
     int maxProfit(vector<int>& prices)
     {
@@ -119,7 +133,9 @@ public:
 
         // return bottomupdp(prices);
         
-        return space_optimization(prices);
+        // return space_optimization(prices);
+        
+        return space_optimization_1(prices);
     }
     
 };
