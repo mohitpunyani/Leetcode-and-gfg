@@ -46,7 +46,6 @@ class Solution {
         int n=prices.size();
         vector<vector<int>>dp(n+1,vector<int>(2,0));
         
-        // dp[n][0] = dp[n][1] = 0 ;
         for(int index=n-1;index>=0;index--)
         {
             for(int buy=1;buy>=0;buy--)
@@ -70,9 +69,38 @@ class Solution {
         return dp[0][1];
     }
     
-//     int space_optimization(vector<int>&prices){
+    int space_optimization(vector<int>&prices)
+    {
+         int n=prices.size();
         
-//     }
+        vector<int>curr(n+1,0);
+        
+        vector<int>next(n+1,0);
+        
+        for(int index=n-1;index>=0;index--)
+        {
+            for(int buy=1;buy>=0;buy--)
+            {
+                int profit=0;
+            if(buy==1)
+                {
+            // two choice hai buy karo yah ignore karo
+                int buykaro=-prices[index]+next[0];
+                int ignorekaro=next[1];
+                profit=max(buykaro,ignorekaro);
+                }
+            if(buy==0){
+                int sellkaro=prices[index]+next[1];
+                int ignorekaro=next[0];
+                profit=max(sellkaro,ignorekaro);
+            }
+            curr[buy]=profit;
+            }
+            next=curr;
+            
+        }
+        return curr[1];
+    }
 public:
     int maxProfit(vector<int>& prices)
     {
@@ -89,7 +117,9 @@ public:
 
         // bottomupdp
 
-        return bottomupdp(prices);
+        // return bottomupdp(prices);
+        
+        return space_optimization(prices);
     }
     
 };
