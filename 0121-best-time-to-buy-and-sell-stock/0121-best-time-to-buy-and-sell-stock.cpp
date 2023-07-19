@@ -134,7 +134,22 @@ int bottomupdp(int k,bool buy,vector<int>&prices,int n)
         return max_profit;
     }
     
-    
+    int solve3(vector<int>&prices,int n)
+    {
+        // using max and min concept
+        int mx=INT_MAX;
+        
+        //  basically sabse minimum aur maximum ka difference nikalna hai
+        
+        int max_profit=0;
+        for(int i=0;i<n-1;i++)
+        {
+            mx=min(mx,prices[i]);
+            int diff=prices[i+1]-mx;
+            max_profit=max(max_profit,diff);
+        }
+        return max_profit;
+    }
     
     int maxProfit(vector<int>& prices)
     {
@@ -160,6 +175,8 @@ int bottomupdp(int k,bool buy,vector<int>&prices,int n)
         
         // return solve1(prices,n);
         
-        return solve2(prices,n);
+        // return solve2(prices,n);
+        
+        return solve3(prices,n);
     }
 };
