@@ -45,10 +45,10 @@ class Solution {
     int bottomupdp(vector<int> &prices)
     {
         int n=prices.size();
-        vector<vector<int>>dp(n+1,vector<int>(2,-1));
+        vector<vector<int>>dp(n+1,vector<int>(2,0));
         for(int index=n-1;index>=0;index--)
         {
-            for(int buy=1;buy>=0;buy--)
+            for(int buy=0;buy<2;buy++)
             {
                 int profit=0;
                 if(buy==1)
@@ -59,7 +59,6 @@ class Solution {
                 profit=max(buykaro,ignorekaro);
                 }
                 else{
-                    
                 int sellkaro=prices[index]+dp[index+1][1];
                 int ignorekaro=dp[index+1][0];
                 profit=max(sellkaro,ignorekaro);
@@ -80,13 +79,13 @@ public:
         // topdowndp 2d dp
 
         //we have 2 columns
-
-        vector<vector<int>>dp(n+1,vector<int>(2,-1));
-        return topdowndp(0,1,prices,n,dp);
+ 
+       // vector<vector<int>>dp(n+1,vector<int>(2,-1));
+        // return topdowndp(0,1,prices,n,dp);
 
         // bottomupdp
 
-        // return bottomupdp(prices);
+        return bottomupdp(prices);
     }
     
 };
