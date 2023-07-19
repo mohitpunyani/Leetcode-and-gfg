@@ -48,17 +48,18 @@ class Solution {
         vector<vector<int>>dp(n+1,vector<int>(2,-1));
         for(int index=n-1;index>=0;index--)
         {
-            for(int buy=0;buy<2;buy++)
+            for(int buy=1;buy>=0;buy--)
             {
                 int profit=0;
-            if(buy==1)
+                if(buy==1)
                 {
             // two choice hai buy karo yah ignore karo
                 int buykaro=-prices[index]+dp[index+1][0];
                 int ignorekaro=dp[index+1][1];
                 profit=max(buykaro,ignorekaro);
                 }
-            if(buy==0){
+                else{
+                    
                 int sellkaro=prices[index]+dp[index+1][1];
                 int ignorekaro=dp[index+1][0];
                 profit=max(sellkaro,ignorekaro);
