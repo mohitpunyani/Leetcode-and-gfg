@@ -40,7 +40,13 @@ public:
         if(n==2){
             return 1;
         }
-        
+        if(n==3)
+        {
+            return 2;
+        }
+        if(n==4){
+            return n;
+        }
         if(dp[n]!=-1){
             return dp[n];
         }
