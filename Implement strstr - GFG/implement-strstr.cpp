@@ -44,9 +44,6 @@ int strstr(string s, string x)
                  if(s[i]==x[j])
                  {
                      i++;
-                    //  if(j==x.size()-1){
-                    //      return ans;
-                    //  }
                      j++;
                      if(j==x.size())
                      {
@@ -54,9 +51,13 @@ int strstr(string s, string x)
                      }
                  }
                  else{
-                     i=ans;
+                     i=ans; // update the i is also important
+                     
                      break;
                  }
+             }
+             if(i==s.size()){
+                 return -1;
              }
              
          }
