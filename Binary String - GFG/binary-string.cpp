@@ -15,18 +15,26 @@ class Solution
         
         // 1 ki position par depend nahi kar raha no.of substrings
         
-        long long ans=0;
-        long long count=0;
+        // long long ans=0;
+        // long long count=0;
         
-        for(int i=0;i<n;i++)
-        {
-            if(a[i]=='1')
-            {
-                ans=ans+count;
-                count++;
-            }
+        // for(int i=0;i<n;i++)
+        // {
+        //     if(a[i]=='1')
+        //     {
+        //         ans=ans+count;
+        //         count++;
+        //     }
             
-        }
+        // }
+        // return ans;
+        
+        //  DEVELOPED FORMULA BY OBSERVING
+        
+        long long temp=count(a.begin(),a.end(),'1');
+        
+        long long ans=(temp*(temp-1))/2;
+        
         return ans;
     }
 
