@@ -44,14 +44,14 @@ int strstr(string s, string x)
                  if(s[i]==x[j])
                  {
                      i++;
-                     if(j==x.size()-1){
+                    //  if(j==x.size()-1){
+                    //      return ans;
+                    //  }
+                     j++;
+                     if(j==x.size())
+                     {
                          return ans;
                      }
-                     j++;
-                    //  if(j==x.size())
-                    //  {
-                        //  return ans;
-                    //  }
                  }
                  else{
                      i=ans;
