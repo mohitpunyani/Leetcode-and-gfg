@@ -51,12 +51,12 @@ int strstr(string s, string x)
                      }
                  }
                  else{
-                     i=ans; // update the i is also important
-                     
+                     i=ans; // update the i is also important when you do dry run
                      break;
                  }
              }
-             if(i==s.size()){
+             if(i==s.size())
+             {
                  return -1;
              }
              
