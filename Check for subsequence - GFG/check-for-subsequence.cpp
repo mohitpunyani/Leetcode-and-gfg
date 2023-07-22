@@ -12,6 +12,9 @@ class Solution{
         
         // subsequence order matters
         
+        if(A.size()>B.size()){
+            return false;
+        }
         int i=0;
         int j=0;
         while(i<A.size() && j<B.size())
