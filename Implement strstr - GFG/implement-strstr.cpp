@@ -65,6 +65,6 @@ int strstr(string s, string x)
          }
          
      }
-     return ans;
+     return -1;
      
 }
