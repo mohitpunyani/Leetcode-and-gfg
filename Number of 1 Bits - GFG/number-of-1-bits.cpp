@@ -24,14 +24,26 @@ class Solution {
         
         // another way
         
+        // int res=0;
+        // while(N>0)
+        // {
+        //     // CHECK BIT SET OR NOT 
+            
+        //     if(N&1!=0)
+        //     {
+        //         res++;
+        //     }
+        //     N=N>>1;
+        // }
+        // return res;
+        
+        
+        // BRIAN KERRINGAM'S ALGORITHM 
+        
         int res=0;
-        while(N>0)
-        {
-            // check last bit is set or not
-            if(N&1!=0){
-                res++;
-            }
-            N=N>>1;
+        while(N>0){
+            N=(N&(N-1));
+            res++;
         }
         return res;
     }
