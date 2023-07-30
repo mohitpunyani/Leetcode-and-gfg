@@ -25,7 +25,9 @@ class Solution
         int mask=1<<k;
         
         bool ans=n&mask;
-        if(ans==1){
+        
+        if(ans==1)
+        {
             return true;
         }
         return false;
