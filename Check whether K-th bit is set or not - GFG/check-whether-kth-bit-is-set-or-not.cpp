@@ -20,11 +20,15 @@ class Solution
         
         //  1<<i (GIVES THE ith set bit)
         
+        //  bit start from 0th index from the last (lsb)
+        
         int mask=1<<k;
         
         bool ans=n&mask;
-        
-        return ans;
+        if(ans==1){
+            return true;
+        }
+        return false;
     }
 };
 
