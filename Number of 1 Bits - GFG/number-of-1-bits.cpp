@@ -9,19 +9,31 @@ class Solution {
     {
         // Write Your Code here
         
-        // 2 ki power ke last bit hamesha zero hoti hai
+        // 2 ki se divisible ki last bit hamesha zero hoti hai
         
-        if(N==pow(2,N)){
-            return 1;
-        }
-        int count=0;
-        while(N>0){
-            if(N%2!=0){
-                count++;
+        
+        // int count=0;
+        // while(N>0){
+        //     if(N%2!=0){
+        //         count++;
+        //     }
+        //     N=N/2;
+        // }
+        // return count;
+        
+        
+        // another way
+        
+        int res=0;
+        while(N>0)
+        {
+            // check last bit is set or not
+            if(N&1!=0){
+                res++;
             }
-            N=N/2;
+            N=N>>1;
         }
-        return count;
+        return res;
     }
 };
 
