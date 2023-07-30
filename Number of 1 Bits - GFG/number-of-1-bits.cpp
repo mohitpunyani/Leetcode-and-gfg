@@ -5,18 +5,23 @@ using namespace std;
 // } Driver Code Ends
 class Solution {
   public:
-    int setBits(int N) {
+    int setBits(int N) 
+    {
         // Write Your Code here
-        int count=0;
         
-        while(N>0)
-        {
-            count++;
-            N=N&(N-1);
+        // 2 ki power ke last bit hamesha zero hoti hai
+        
+        if(N==pow(2,N)){
+            return 1;
         }
-        
+        int count=0;
+        while(N>0){
+            if(N%2!=0){
+                count++;
+            }
+            N=N/2;
+        }
         return count;
-
     }
 };
 
