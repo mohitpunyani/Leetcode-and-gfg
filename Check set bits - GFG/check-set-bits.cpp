@@ -10,22 +10,33 @@ public:
     {
         // code here 
         
-        int ans=0;
+        // int ans=0;
+        
+        // if(N==0){
+        //     return false;
+        // }
+        
+        // while(N!=0){
+            
+        //     if((N&1)==0)
+        //     {
+        //         return false;
+        //     }
+        //     N=N>>1;
+        // }
+        
+        // return true;
+        
+        // OPTIMIZED APPROACH 
         
         if(N==0){
             return false;
         }
         
-        while(N!=0){
-            
-            if((N&1)==0)
-            {
-                return false;
-            }
-            N=N>>1;
+        if((N&(N+1))==0){
+            return true;
         }
-        
-        return true;
+        return false;
     }
 };
 
