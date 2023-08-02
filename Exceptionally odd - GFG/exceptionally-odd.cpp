@@ -11,10 +11,11 @@ class Solution{
 public:
     int getOddOccurrence(int arr[], int n)
     {
-        // code here
         
+
+        // NOTE -> OUTPUT OF XOR IS ALWAYS ZERO WHEN EVEN NUMBER OF INPUTS OR 1'S ARE THERE
         
-        // sort(arr,arr+n);
+        // OUTPUT OF XOR IS HIGH WHEN ODD NO OF 1'S ARE THERE
         
         int res=0;
         
