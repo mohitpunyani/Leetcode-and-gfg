@@ -41,7 +41,7 @@ class Solution {
         // }
         
         
-        // method 3 -> more optimization 
+        // method 3 -> more optimization  or more efficient
         
         int i;
         for(i=1;i<sqrt(n);i++)
@@ -52,12 +52,12 @@ class Solution {
             }
             
         }
-          if(i>sqrt(n))  // if i > sqrt(n)
+         if(i>sqrt(n))  // if i > sqrt(n)
            i--;
-        for(i;i*i<=n&&i>=1;i--)
+        for(int k=sqrt(n);k>=1;k--)
         {
-            if(n%i==0)
-                cout<<n/i<<" ";
+            if(n%k==0)
+                cout<<n/k<<" ";
         }
     }
 };
