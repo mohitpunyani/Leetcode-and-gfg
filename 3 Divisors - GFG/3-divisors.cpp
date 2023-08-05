@@ -39,14 +39,7 @@ public:
         for(int i=2;i<=sqrt(n);i++){
 
             if(prime[i])
-            {
-
-               
-                    cnt++;
-
-                
-
-            }
+                cnt++;
 
         }
 
