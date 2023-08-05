@@ -17,7 +17,7 @@ public:
     {
         
 
-        vector<bool> prime(n+1,true);
+        vector<bool> prime(sqrt(n)+1,true);
 
         long long cnt=0;
 
@@ -41,15 +41,10 @@ public:
             if(prime[i])
             {
 
-                // if(i*i<=n)
-
+               
                     cnt++;
 
-                // else{
-
-                    // break;
-
-                // }
+                
 
             }
 
