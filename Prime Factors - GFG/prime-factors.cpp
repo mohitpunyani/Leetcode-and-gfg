@@ -11,8 +11,10 @@ class Solution{
 	public:
 	
 	vector<int>ans;
-	
-
+     
+     
+     // using seive algorithm
+     
 	 void prime_factor(int N)
         {
             
@@ -37,11 +39,11 @@ class Solution{
        if(prime[i] && N%i == 0)
        {
           ans.push_back(i);
-           while(N%i == 0)
-           {
+          while(N%i == 0)
+          {
             //   ans.push_back(i);
               N = N/i;
-           }
+          }
        }
 	    
     }
