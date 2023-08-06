@@ -10,123 +10,50 @@ using namespace std;
 class Solution{
 	public:
 	
-	// METHOD 1 -> normal approach 
-	 
-	 vector<int>v;
-	 
-// 	 bool isPrime(int N)
-//      {
-// 	    for(int i=2;i<N;i++)
-// 	    {
-// 	        if(N%i==0)
-// 	        {
-// 	            return false;
-// 	        }
-// 	    }
-// 	    return true;
-// 	}
+	vector<int>ans;
+	
 
-//   METHOD 2 (NOTE -> A NUMBER CAN BE WRITTEN AS MULTIPLICATIONS OF POWER OF PRIME FACTORS)
-	
-// 	bool isprime_2(int N){
-	   
-//         for(int i=2;i<=N;i++)
-//         {
-//             if(N%i==0)
-//             {
-//                 v.push_back(i);
-//                 while(N%i==0)
-//                 N=N/i;
-//             }
-//         }
-       
-// 	}
-	
-	// METHOD 3 -> MORE EFFECTIVE SOLUTIONS
-	
-		bool isprime_3(int N){
-	    
-	   
-        for(int i=2;i<=sqrt(N);i++)
+	 void prime_factor(int N)
         {
-            if(N%i==0)
-            {
-                v.push_back(i);
-                while(N%i==0)
-                N=N/i;
-            }
-        }
-        // if  n was a prime number 
-        // if(N==2 or N==3 or N==5 or N==7 or N==11 or N==13 or N==17 ...... so on){
-            // v.push_back(N);
-        // }
-        
-        if(N>=2)
-        {
-            v.push_back(N);
-        }
-       
-	}
-// 	vector<int>ans;
-	
-// 	void seive(int N)
-// 	{
-// 	    vector<bool>prime(N+1,true);
+            
+        vector<bool>prime(N+1,true);
 	    
-// 	    for(int i=2;i<=N;i++)
-// 	    {
-// 	        if(prime[i]==true)
-// 	        {
-// 	            for(int j=i*i;j<=N;j=j+i)
-// 	            {
-// 	                prime[j]=false;
-// 	            }
+	    for(long long i=2;i<=sqrt(N);i++)
+	    {
+	        if(prime[i]==true)
+	        {
+	            for(long long j=(long long) i*i;j<=sqrt(N);j+=i)
+	            {
+	                prime[j]=false;
+	            }
 	            
-// 	        }
+	        }
 	        
-// 	    }
+	    }
 	    
-// 	    for(int i=2;i<=N;i++){
-// 	        if(prime[i]==true){
-// 	            ans.push_back(i);
-// 	        }
-// 	    }
+	
+    for(long long int i = 2; i<=N; i++)
+   {
+       if(prime[i] && N%i == 0)
+       {
+          ans.push_back(i);
+           while(N%i == 0)
+           {
+            //   ans.push_back(i);
+              N = N/i;
+           }
+       }
 	    
-	    
-// 	}
-
-
-    
+    }
+}
 	vector<int>AllPrimeFactors(int N)
 	{
 	    // Code here
 	    
-	   // method 1 ->
-	   
-	   
-	   // vector<int>ans;
-	   // for(int i=2;i<=N;i++)
-	   // {
-	   //     if(N%i==0 && isPrime(i)){
-	   //         ans.push_back(i);
-	   //     }
-	   // }
-	   // return ans;
 	    
+	    prime_factor(N);
+	    return ans;
 	    
-	    // method 2 ->
-	    
-	   // isprime_2(N);
-	   // return v;
-	   
-	   
-	   // METHOD 3 ->
-	   
-	   isprime_3(N);
-	   return v;
-	   
-	     // seive(N);
-	   // return ans;
 	    
 	}
 };
