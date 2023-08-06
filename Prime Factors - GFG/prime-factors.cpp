@@ -56,7 +56,7 @@ class Solution{
                 N=N/i;
             }
         }
-        if(N>2){
+        if(N>1){
             v.push_back(N);
         }
        
@@ -116,12 +116,12 @@ class Solution{
 	   
 	   // METHOD 3 ->
 	   
-	    if(N==2 or N==3)
-	    {
-	        v.push_back(N);
-	        return v;
+	   // if(N==2 or N==3)
+	   // {
+	   //     v.push_back(N);
+	   //     return v;
 	        
-	    }
+	   // }
 	   isprime_3(N);
 	   return v;
 	   
