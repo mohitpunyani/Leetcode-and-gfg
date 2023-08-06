@@ -56,7 +56,13 @@ class Solution{
                 N=N/i;
             }
         }
-        if(N>1){
+        // if  n was a prime number 
+        // if(N==2 or N==3 or N==5 or N==7 or N==11 or N==13 or N==17 ...... so on){
+            // v.push_back(N);
+        // }
+        
+        if(N>=2)
+        {
             v.push_back(N);
         }
        
@@ -116,12 +122,6 @@ class Solution{
 	   
 	   // METHOD 3 ->
 	   
-	   // if(N==2 or N==3)
-	   // {
-	   //     v.push_back(N);
-	   //     return v;
-	        
-	   // }
 	   isprime_3(N);
 	   return v;
 	   
