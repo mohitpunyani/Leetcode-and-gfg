@@ -4,25 +4,25 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) 
     {
-        // map me store kar liya first element and difference of target and first element 
-        // which will give you the second element target we get
-        unordered_map<int,int> mp;
-        vector<int> ans;
+        unordered_map<int,int>mp;
+        
+        vector<int>ans;
+        
         for(int i=0;i<nums.size();i++)
         {
-            int  y=target-nums[i];
+            int y=target-nums[i];
             if(mp.find(y)!=mp.end())
             {
+                int index=mp[y];
+                ans.push_back(index);
                 ans.push_back(i);
-                ans.push_back(mp[y]);
-                break;
             }
             else{
-                mp[nums[i]]=i;
+                mp.insert({nums[i],i});
             }
             
         }
-        return ans;
         
+    return ans;
     }
 };
