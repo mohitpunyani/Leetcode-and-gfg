@@ -1,30 +1,29 @@
-class Solution
-{
-    public:
-        vector<vector < int>> ans;
-    vector<int> temp;
-    void solve(vector<int> &nums, int index)
+class Solution {
+public:
+    
+    
+    vector<vector<int>>ans;
+    vector<int>temp;
+    void subsets(vector<int>&nums,int index,int size)
     {
-
-        if (index >= nums.size())
+        
+        if(index>=size)
         {
             ans.push_back(temp);
-           	return;
+            return ;
         }
-
-       	// inclusion or pick
+        // include
         temp.push_back(nums[index]);
-        solve(nums, index + 1);
-       	// exclusion or not pick
+        subsets(nums,index+1,size);
         temp.pop_back();
-        solve(nums,index+1);
-        return ;
+        subsets(nums,index+1,size);
+        return;
+        
     }
-
-vector<vector < int>> subsets(vector<int> &nums)
-{
-   	// solve using choice diagram using inclusion exclusion principle
-    solve(nums, 0);
-    return ans;
-}
+    vector<vector<int>> subsets(vector<int>& nums)
+    {
+        int n=nums.size();
+        subsets(nums,0,n);
+        return ans;
+    }
 };
