@@ -5,7 +5,9 @@ public:
    
     void dfs(vector<int> &nums, int index, vector<int>&curr, vector<vector<int>>&res)
     {
-        
+        if(index>nums.size()){
+            return ;
+        }
         res.push_back(curr);
         for(int i=index; i<nums.size();i++)
         {
