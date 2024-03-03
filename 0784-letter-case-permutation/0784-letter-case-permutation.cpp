@@ -1,6 +1,11 @@
 class Solution {
 public:
     
+    
+    // MY APPROACH  OR MY WAY TO SOLVE CODE
+    
+    
+    
     vector<string>ans;
     
     void solve(string S,string op,int index)
@@ -22,6 +27,7 @@ public:
             op.push_back(toupper(S[index]));
             
             solve(S,op,index+1);
+            op.pop_back();
         }
         else if(isdigit(S[index]))
         {
