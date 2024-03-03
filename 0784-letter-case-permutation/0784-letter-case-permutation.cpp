@@ -3,36 +3,41 @@ public:
     
     vector<string>ans;
     
-    void solve(string S,string op,int i){
-        if(i==S.size()){
+    void solve(string S,string op,int index)
+    {
+        if(index>=S.size()){
             ans.push_back(op);
             return ;
         }
-        if(isalpha(S[i]))
+        
+        if(isalpha(S[index]))
         {
-            string op1=op;
-            op1.push_back(tolower(S[i]));
-            solve(S,op1,i+1);
+            // lower case
             
-            string op2=op;
-            op2.push_back(toupper(S[i]));
-            solve(S,op2,i+1);
-            return ;
-        }
-        else{
-            // when we have digit
+            op.push_back(tolower(S[index]));
+            solve(S,op,index+1);
+            op.pop_back();
             
-            string op3=op;
-            op3.push_back(S[i]);
-            solve(S,op3,i+1);
-            return ;
+            //  upper case
+            op.push_back(toupper(S[index]));
+            
+            solve(S,op,index+1);
         }
+        else if(isdigit(S[index]))
+        {
+            op.push_back(S[index]);
+            solve(S,op,index+1);
+            op.pop_back();
+            
+        }
+        return ;
+        
     }
     vector<string> letterCasePermutation(string s) 
     {
-        
         string op="";
         solve(s,op,0);
         return ans;
+    
     }
 };
