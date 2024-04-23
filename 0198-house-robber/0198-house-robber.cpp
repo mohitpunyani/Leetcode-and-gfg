@@ -46,9 +46,10 @@ class Solution {
     {
         int n=nums.size();
         
-         if(n==1){
+         if(n==1)
+         {
             return nums[0];
-        }
+         }
         vector<int>dp(n,0);
             
         dp[0]=nums[0];
@@ -70,6 +71,40 @@ class Solution {
         return dp[n-1];
         
     }
+    
+    int space_optimization(vector<int>&nums)
+    {
+        int n=nums.size();
+        
+        if(n==1){
+            return nums[0];
+        }
+        if(n==2)
+        {
+            return max(nums[0],nums[1]);
+        }
+        
+        int prev_1=nums[0];  // works like include
+        
+        int prev_2=max(nums[0],nums[1]);  // works like exclude
+        
+        int ans;
+        
+        
+        for(int i=2;i<n;i++)
+        {
+            int include=prev_1+nums[i];
+            
+            int exclude=prev_2;
+            
+            ans=max(include,exclude);
+        
+            prev_1=prev_2;
+            
+            prev_2=ans;        
+        }
+        return ans;
+    }
     int rob(vector<int>& nums) 
     {
         // RECURSIVE
@@ -85,7 +120,10 @@ class Solution {
         // return topdowndp(nums,0,dp);
     
         
-        return bottomupdp(nums);
+        // return bottomupdp(nums);
+        
+        
+        return space_optimization(nums);
         
         
     }
