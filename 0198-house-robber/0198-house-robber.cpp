@@ -46,6 +46,9 @@ class Solution {
     {
         int n=nums.size();
         
+         if(n==1){
+            return nums[0];
+        }
         vector<int>dp(n,0);
             
         dp[0]=nums[0];
@@ -54,7 +57,7 @@ class Solution {
     
         for(int i=2;i<n;i++)
         {
-            int include=dp[i-2]+nums[0];
+            int include=dp[i-2]+nums[i];
             
             int exclude=dp[i-1]+0;
             
@@ -63,7 +66,7 @@ class Solution {
             dp[i]=ans;
         }
         
-        
+        // dp[n-1]=max(dp[n-2],dp[n-3]);
         return dp[n-1];
         
     }
@@ -75,12 +78,14 @@ class Solution {
         
         // TOPDOWN
         
-        int n=nums.size();
+        // int n=nums.size();
         
-        vector<int>dp(n,-1);
+        // vector<int>dp(n,-1);
             
-        return topdowndp(nums,0,dp);
+        // return topdowndp(nums,0,dp);
     
+        
+        return bottomupdp(nums);
         
         
     }
