@@ -1,5 +1,6 @@
 class Solution {
-public:
+
+    public:
     
     int solve(vector<int>&nums,int index)
     {
@@ -41,6 +42,31 @@ public:
         return dp[index];
     }
     
+    int bottomupdp(vector<int>&nums)
+    {
+        int n=nums.size();
+        
+        vector<int>dp(n,0);
+            
+        dp[0]=nums[0];
+        
+        dp[1]=max(nums[0],nums[1]);
+    
+        for(int i=2;i<n;i++)
+        {
+            int include=dp[i-2]+nums[0];
+            
+            int exclude=dp[i-1]+0;
+            
+            int ans=max(include,exclude);
+            
+            dp[i]=ans;
+        }
+        
+        
+        return dp[n-1];
+        
+    }
     int rob(vector<int>& nums) 
     {
         // RECURSIVE
