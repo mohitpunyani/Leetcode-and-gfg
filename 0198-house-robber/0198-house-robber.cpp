@@ -51,7 +51,7 @@ public:
         
         int n=nums.size();
         
-        vector<int>dp(n+1,-1);
+        vector<int>dp(n,-1);
             
         return topdowndp(nums,0,dp);
     
