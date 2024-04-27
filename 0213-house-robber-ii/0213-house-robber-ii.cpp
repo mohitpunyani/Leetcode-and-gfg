@@ -42,10 +42,10 @@ public:
     {
         
         int n=temp.size();
-        if(n==0)
-          {
-            return 0;
-        }
+        // if(n==0)
+        //   {
+        //     return 0;
+        // }
         if(n==1){
             return temp[0];
         }
