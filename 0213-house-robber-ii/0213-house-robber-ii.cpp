@@ -46,7 +46,9 @@ public:
         //   {
         //     return 0;
         // }
-        if(n==1){
+        
+        if(n==1)
+        {
             return temp[0];
         }
     
