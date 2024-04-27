@@ -42,7 +42,7 @@ public:
     {
         
         int n=temp.size();
-         if(n==0)
+        if(n==0)
           {
             return 0;
         }
@@ -67,7 +67,7 @@ public:
             
         }
         
-        return dp[n-1];
+        return max(dp[n-1],dp[n-2]);
     }
     int rob(vector<int>& nums)
     {
