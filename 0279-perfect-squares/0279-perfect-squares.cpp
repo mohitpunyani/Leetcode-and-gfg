@@ -53,10 +53,37 @@ public:
         dp[n]=mx;
         
         return dp[n];
-        
-        
-        
+           
     }
+    
+    int bottomupdp(int n){
+        
+        vector<int>dp(n+1,0);
+        
+        dp[0]=0;
+        
+        dp[1]=1;
+        
+        for(int i=2;i<=n;i++)
+        {
+            int mx=INT_MAX;
+            
+            for(int j=1;j<=sqrt(n);j++)
+            {
+                if(i-j*j>=0)
+                {
+                    int ans=dp[i-j*j];
+                    mx=min(mx,1+ans);
+                }
+                
+            }
+            dp[i]=mx;
+            
+        }
+        return dp[n];
+
+    }
+    
     int numSquares(int n) 
     {
         
@@ -64,9 +91,11 @@ public:
         
         // return recur(n);
         
-        vector<int>dp(n+1,-1);
+        // vector<int>dp(n+1,-1);
         
-        return topdowndp(n,dp);
+        // return topdowndp(n,dp);
+        
+        return bottomupdp(n);
         
     }
 };
