@@ -17,11 +17,8 @@ public:
     {
         
         int n=nums.size();
-        // if(k==0){
-            // return ;
-        // }
         k=k%n;
-        if(k>n){
+        if(k>=n){
             return ;
         }
         reverse(nums,0,n-1);
