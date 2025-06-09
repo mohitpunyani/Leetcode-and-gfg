@@ -2,6 +2,7 @@ class Solution {
 public:
     int eraseOverlapIntervals(vector<vector<int>>& intervals)
      {
+        sort(intervals.begin(),intervals.end());
         int count=0;
         int first=intervals[0][0];
         int second=intervals[0][1];
