@@ -25,6 +25,7 @@ Available All my solved Leetcode Questions with comments
 | [0015-3sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0015-3sum) |
 | [0016-3sum-closest](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0016-3sum-closest) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0056-merge-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0056-merge-intervals) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0189-rotate-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0189-rotate-array) |
 ## Math
@@ -59,4 +60,5 @@ Available All my solved Leetcode Questions with comments
 | ------- |
 | [0015-3sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0015-3sum) |
 | [0016-3sum-closest](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0016-3sum-closest) |
+| [0056-merge-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0056-merge-intervals) |
 <!---LeetCode Topics End-->
