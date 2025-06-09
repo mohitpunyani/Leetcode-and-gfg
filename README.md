@@ -8,6 +8,7 @@ Available All my solved Leetcode Questions with comments
 | ------- |
 | [0015-3sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0015-3sum) |
 | [0016-3sum-closest](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0016-3sum-closest) |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0189-rotate-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0189-rotate-array) |
 | [0345-reverse-vowels-of-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0345-reverse-vowels-of-a-string) |
@@ -23,6 +24,7 @@ Available All my solved Leetcode Questions with comments
 | [0001-two-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0001-two-sum) |
 | [0015-3sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0015-3sum) |
 | [0016-3sum-closest](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0016-3sum-closest) |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0189-rotate-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0189-rotate-array) |
 ## Math
