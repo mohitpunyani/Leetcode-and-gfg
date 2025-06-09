@@ -3,7 +3,6 @@ public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) 
     {
         vector<vector<int>>ans;
-        vector<int>temp;
         int n=intervals.size();
         sort(intervals.begin(),intervals.end());
         int first=intervals[0][0];
@@ -16,20 +15,14 @@ public:
                 second=max(second,curr_second);
             }
             else{
-                temp.push_back(first);
-                temp.push_back(second);
-                ans.push_back(temp);
-                temp.clear();
+                ans.push_back({first,second});
                 first=curr_first;
                 second=curr_second;
 
             }
 
         }
-        temp.clear();
-        temp.push_back(first);
-        temp.push_back(second);
-        ans.push_back(temp);
+        ans.push_back({first,second});
         return ans;
         
     }
