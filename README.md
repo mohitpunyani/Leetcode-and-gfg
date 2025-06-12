@@ -32,6 +32,7 @@ Available All my solved Leetcode Questions with comments
 | [0189-rotate-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0189-rotate-array) |
 | [0283-move-zeroes](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0283-move-zeroes) |
 | [0435-non-overlapping-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0435-non-overlapping-intervals) |
+| [1231-replace-elements-with-greatest-element-on-right-side](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1231-replace-elements-with-greatest-element-on-right-side) |
 ## Math
 |  |
 | ------- |
