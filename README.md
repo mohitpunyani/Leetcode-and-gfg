@@ -11,6 +11,7 @@ Available All my solved Leetcode Questions with comments
 | [0026-remove-duplicates-from-sorted-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0189-rotate-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0189-rotate-array) |
+| [0283-move-zeroes](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0283-move-zeroes) |
 | [0345-reverse-vowels-of-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0345-reverse-vowels-of-a-string) |
 ## String
 |  |
@@ -29,6 +30,7 @@ Available All my solved Leetcode Questions with comments
 | [0057-insert-interval](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0057-insert-interval) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0189-rotate-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0189-rotate-array) |
+| [0283-move-zeroes](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0283-move-zeroes) |
 | [0435-non-overlapping-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0435-non-overlapping-intervals) |
 ## Math
 |  |
