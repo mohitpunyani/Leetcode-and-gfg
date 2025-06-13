@@ -16,6 +16,7 @@ Available All my solved Leetcode Questions with comments
 ## String
 |  |
 | ------- |
+| [0012-integer-to-roman](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0013-roman-to-integer) |
 | [0345-reverse-vowels-of-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0345-reverse-vowels-of-a-string) |
 | [0387-first-unique-character-in-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0387-first-unique-character-in-a-string) |
@@ -39,6 +40,7 @@ Available All my solved Leetcode Questions with comments
 ## Math
 |  |
 | ------- |
+| [0012-integer-to-roman](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0013-roman-to-integer) |
 | [0189-rotate-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0189-rotate-array) |
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
@@ -46,6 +48,7 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0001-two-sum) |
+| [0012-integer-to-roman](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0013-roman-to-integer) |
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
 | [0387-first-unique-character-in-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0387-first-unique-character-in-a-string) |
