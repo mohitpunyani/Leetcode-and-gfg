@@ -2,9 +2,8 @@ class Solution {
 public:
     string intToRoman(int num) 
     {
-        
-        int n=num;
-        map<int,string> mp;
+        string ans="";
+        map<int,string>mp;
         mp.insert({1,"I"});
         mp.insert({4,"IV"});
         mp.insert({5,"V"});
@@ -18,25 +17,22 @@ public:
         mp.insert({500,"D"});
         mp.insert({900,"CM"});
         mp.insert({1000,"M"});
-        
-        string result="";
-        while(n!=0)
+        while(num>0)
         {
             for(auto it=mp.rbegin();it!=mp.rend();it++)
             {
-                // we do use this loop from rbegin to rend because in roman 
-                // we will ascending order
-                
-                int value=it->first;
-                if(n>=value)
+                if(num>=it->first)
                 {
-                    result=result+it->second;
-                    n=n-value;
+                    num=num-it->first;
+                    ans=ans+it->second;
                     break;
                 }
+                else{
+                    continue;
+                }
+
             }
         }
-        return result;
-    
+        return ans;
     }
 };
