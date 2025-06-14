@@ -3,7 +3,7 @@ class Solution
     public:
         vector<int> rearrangeArray(vector<int> &nums)
         {
-           	// brute force
+           	//  APPROACH 1 - brute force
 
            	//     vector < int>pos;
            	//     vector < int>neg;
@@ -29,31 +29,50 @@ class Solution
            	//     return ans;
            	// }
 
-           	// use only one array
+           	// APPROACH 2-  use only one array
 
-            int sz = nums.size();
-            int j = 0;
-            int k = sz - 1;
-            vector<int> posneg(sz);
-            vector<int> temp;
-            for (int i = 0; i < sz; i++)
-            {
-                if (nums[i] >= 0)
+            // int sz = nums.size();
+            // int j = 0;
+            // int k = sz - 1;
+            // vector<int> posneg(sz);
+            // vector<int> temp;
+            // for (int i = 0; i < sz; i++)
+            // {
+            //     if (nums[i] >= 0)
+            //     {
+            //         posneg[j] = nums[i];
+            //         j++;
+            //     }
+            //     else
+            //     {
+            //         posneg[k] = nums[i];
+            //         k--;
+            //     }
+            // }
+            // for (int i = 0; i < sz/2; i++)
+            // {
+            //     temp.push_back(posneg[i]);
+            //     temp.push_back(posneg[sz - i - 1]);
+            // }
+            // return temp;
+
+            // APPROACH 3 - NO EXTRA SPACE
+
+            int n=nums.size();
+            int pos_idx=0;
+            int neg_idx=1;
+            vector<int>ans(n);
+            for(int i=0;i<n;i++){
+                if(nums[i]>=0)
                 {
-                    posneg[j] = nums[i];
-                    j++;
+                    ans[pos_idx]=nums[i];
+                    pos_idx=pos_idx+2;
                 }
-                else
-                {
-                    posneg[k] = nums[i];
-                    k--;
+                else{
+                    ans[neg_idx]=nums[i];
+                    neg_idx=neg_idx+2;
                 }
             }
-            for (int i = 0; i < sz/2; i++)
-            {
-                temp.push_back(posneg[i]);
-                temp.push_back(posneg[sz - i - 1]);
-            }
-            return temp;
+            return ans;
         }
     };
