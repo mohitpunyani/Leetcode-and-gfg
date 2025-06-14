@@ -32,6 +32,7 @@ Available All my solved Leetcode Questions with comments
 | [0015-3sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0015-3sum) |
 | [0016-3sum-closest](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0016-3sum-closest) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0041-first-missing-positive](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0041-first-missing-positive) |
 | [0056-merge-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0057-insert-interval) |
 | [0088-merge-sorted-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0088-merge-sorted-array) |
@@ -58,6 +59,7 @@ Available All my solved Leetcode Questions with comments
 | [0001-two-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0001-two-sum) |
 | [0012-integer-to-roman](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0013-roman-to-integer) |
+| [0041-first-missing-positive](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0041-first-missing-positive) |
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
