@@ -2,25 +2,37 @@ class Solution {
 public:
     void wiggleSort(vector<int>& nums)
     {
-        sort(nums.begin(),nums.end());
         int n=nums.size();
-        int i=1;
-        int j=n-1;
         vector<int>ans(n);
-        
-        while(i<n)
+        int j=1;
+        sort(nums.begin(),nums.end());
+        int mid=n/2;
+        if(n%2!=0)
         {
-            // first fill maximum values.
-            ans[i]=nums[j];
-            i=i+2;
-            j--;
+            mid=mid+1;
+            
         }
-        i=0;
-        while(i<n){
-            ans[i]=nums[j];
-            i=i+2;
-            j--;
+
+        for(int i=n-1;i>=mid;i--)
+        {
+            
+            ans[j]=nums[i];
+            j=j+2;
         }
-        nums=ans;
+       j=0;
+        for(int i=mid-1;i>=0;i--)
+        {
+            if(j>=n){
+             return ;
+            }
+            ans[j]=nums[i];
+            j=j+2;
+
+        }
+        j=1;
+        for(int i=0;i<n;i++){
+            nums[i]=ans[i];
+        }
+        
     }
 };
