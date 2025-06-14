@@ -44,6 +44,7 @@ Available All my solved Leetcode Questions with comments
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
 | [0435-non-overlapping-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0435-non-overlapping-intervals) |
+| [0560-subarray-sum-equals-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0560-subarray-sum-equals-k) |
 | [1231-replace-elements-with-greatest-element-on-right-side](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1231-replace-elements-with-greatest-element-on-right-side) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2271-rearrange-array-elements-by-sign) |
 ## Math
@@ -64,6 +65,7 @@ Available All my solved Leetcode Questions with comments
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
 | [0387-first-unique-character-in-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0387-first-unique-character-in-a-string) |
+| [0560-subarray-sum-equals-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0560-subarray-sum-equals-k) |
 | [2427-first-letter-to-appear-twice](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2427-first-letter-to-appear-twice) |
 ## Binary Search
 |  |
@@ -119,4 +121,8 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [2271-rearrange-array-elements-by-sign](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2271-rearrange-array-elements-by-sign) |
+## Prefix Sum
+|  |
+| ------- |
+| [0560-subarray-sum-equals-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0560-subarray-sum-equals-k) |
 <!---LeetCode Topics End-->
