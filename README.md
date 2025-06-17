@@ -40,6 +40,7 @@ Available All my solved Leetcode Questions with comments
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0189-rotate-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0189-rotate-array) |
 | [0209-minimum-size-subarray-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0209-minimum-size-subarray-sum) |
+| [0239-sliding-window-maximum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0239-sliding-window-maximum) |
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
 | [0283-move-zeroes](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0283-move-zeroes) |
 | [0324-wiggle-sort-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0324-wiggle-sort-ii) |
@@ -80,6 +81,7 @@ Available All my solved Leetcode Questions with comments
 ## Queue
 |  |
 | ------- |
+| [0239-sliding-window-maximum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0239-sliding-window-maximum) |
 | [0387-first-unique-character-in-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0387-first-unique-character-in-a-string) |
 ## Counting
 |  |
@@ -135,4 +137,13 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [0209-minimum-size-subarray-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0209-minimum-size-subarray-sum) |
+| [0239-sliding-window-maximum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0239-sliding-window-maximum) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [0239-sliding-window-maximum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0239-sliding-window-maximum) |
+## Monotonic Queue
+|  |
+| ------- |
+| [0239-sliding-window-maximum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0239-sliding-window-maximum) |
 <!---LeetCode Topics End-->
