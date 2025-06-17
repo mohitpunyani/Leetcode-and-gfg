@@ -52,6 +52,7 @@ Available All my solved Leetcode Questions with comments
 | [1231-replace-elements-with-greatest-element-on-right-side](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1231-replace-elements-with-greatest-element-on-right-side) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2271-rearrange-array-elements-by-sign) |
 | [2432-number-of-zero-filled-subarrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2432-number-of-zero-filled-subarrays) |
+| [2856-count-complete-subarrays-in-an-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2856-count-complete-subarrays-in-an-array) |
 ## Math
 |  |
 | ------- |
@@ -74,6 +75,7 @@ Available All my solved Leetcode Questions with comments
 | [0560-subarray-sum-equals-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0560-subarray-sum-equals-k) |
 | [1034-subarrays-with-k-different-integers](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1034-subarrays-with-k-different-integers) |
 | [2427-first-letter-to-appear-twice](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2427-first-letter-to-appear-twice) |
+| [2856-count-complete-subarrays-in-an-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2856-count-complete-subarrays-in-an-array) |
 ## Binary Search
 |  |
 | ------- |
@@ -144,6 +146,7 @@ Available All my solved Leetcode Questions with comments
 | [0209-minimum-size-subarray-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0209-minimum-size-subarray-sum) |
 | [0239-sliding-window-maximum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0239-sliding-window-maximum) |
 | [1034-subarrays-with-k-different-integers](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1034-subarrays-with-k-different-integers) |
+| [2856-count-complete-subarrays-in-an-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2856-count-complete-subarrays-in-an-array) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
