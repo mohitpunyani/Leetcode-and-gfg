@@ -47,6 +47,7 @@ Available All my solved Leetcode Questions with comments
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
 | [0435-non-overlapping-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0435-non-overlapping-intervals) |
+| [0525-contiguous-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0560-subarray-sum-equals-k) |
 | [1034-subarrays-with-k-different-integers](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1034-subarrays-with-k-different-integers) |
 | [1231-replace-elements-with-greatest-element-on-right-side](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1231-replace-elements-with-greatest-element-on-right-side) |
@@ -72,6 +73,7 @@ Available All my solved Leetcode Questions with comments
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
 | [0387-first-unique-character-in-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0387-first-unique-character-in-a-string) |
+| [0525-contiguous-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0560-subarray-sum-equals-k) |
 | [1034-subarrays-with-k-different-integers](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1034-subarrays-with-k-different-integers) |
 | [2427-first-letter-to-appear-twice](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2427-first-letter-to-appear-twice) |
@@ -139,6 +141,7 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [0209-minimum-size-subarray-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0209-minimum-size-subarray-sum) |
+| [0525-contiguous-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0560-subarray-sum-equals-k) |
 ## Sliding Window
 |  |
