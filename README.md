@@ -51,6 +51,7 @@ Available All my solved Leetcode Questions with comments
 | [1034-subarrays-with-k-different-integers](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1034-subarrays-with-k-different-integers) |
 | [1231-replace-elements-with-greatest-element-on-right-side](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1231-replace-elements-with-greatest-element-on-right-side) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2271-rearrange-array-elements-by-sign) |
+| [2432-number-of-zero-filled-subarrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2432-number-of-zero-filled-subarrays) |
 ## Math
 |  |
 | ------- |
@@ -58,6 +59,7 @@ Available All my solved Leetcode Questions with comments
 | [0013-roman-to-integer](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0013-roman-to-integer) |
 | [0189-rotate-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0189-rotate-array) |
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
+| [2432-number-of-zero-filled-subarrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2432-number-of-zero-filled-subarrays) |
 ## Hash Table
 |  |
 | ------- |
