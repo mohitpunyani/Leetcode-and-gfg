@@ -24,9 +24,6 @@ public:
                 {
                     prod=prod/nums[i];
                     i++;
-                    // if(prod<=k){
-                    //     count=count+(j-i+1);
-                    // }
                 }
                 count=count+(j-i+1);
                 j++;
