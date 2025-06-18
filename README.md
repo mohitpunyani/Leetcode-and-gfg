@@ -37,6 +37,7 @@ Available All my solved Leetcode Questions with comments
 | [0056-merge-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0057-insert-interval) |
 | [0088-merge-sorted-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0088-merge-sorted-array) |
+| [0152-maximum-product-subarray](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0152-maximum-product-subarray) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0189-rotate-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0189-rotate-array) |
 | [0209-minimum-size-subarray-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0209-minimum-size-subarray-sum) |
@@ -118,6 +119,7 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [0053-maximum-subarray](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0053-maximum-subarray) |
+| [0152-maximum-product-subarray](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0152-maximum-product-subarray) |
 | [0435-non-overlapping-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0435-non-overlapping-intervals) |
 ## Greedy
 |  |
