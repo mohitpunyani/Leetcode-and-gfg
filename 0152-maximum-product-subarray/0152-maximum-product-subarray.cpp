@@ -22,7 +22,7 @@ public:
             suff=suff*nums[i];
             mx2=max(mx2,suff);
         }
-        int ans=INT_MIN;
+        int ans;
         ans=max(mx1,mx2);
         return ans;
       
