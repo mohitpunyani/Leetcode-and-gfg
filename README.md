@@ -23,6 +23,7 @@ Available All my solved Leetcode Questions with comments
 | [0012-integer-to-roman](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0013-roman-to-integer) |
 | [0076-minimum-window-substring](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0076-minimum-window-substring) |
+| [0242-valid-anagram](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0242-valid-anagram) |
 | [0345-reverse-vowels-of-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0345-reverse-vowels-of-a-string) |
 | [0387-first-unique-character-in-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0387-first-unique-character-in-a-string) |
 | [2427-first-letter-to-appear-twice](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2427-first-letter-to-appear-twice) |
@@ -73,6 +74,7 @@ Available All my solved Leetcode Questions with comments
 | [0013-roman-to-integer](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0013-roman-to-integer) |
 | [0041-first-missing-positive](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0041-first-missing-positive) |
 | [0076-minimum-window-substring](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0076-minimum-window-substring) |
+| [0242-valid-anagram](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0242-valid-anagram) |
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
@@ -114,6 +116,7 @@ Available All my solved Leetcode Questions with comments
 | [0016-3sum-closest](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0016-3sum-closest) |
 | [0056-merge-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0056-merge-intervals) |
 | [0088-merge-sorted-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0088-merge-sorted-array) |
+| [0242-valid-anagram](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0242-valid-anagram) |
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
 | [0324-wiggle-sort-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0324-wiggle-sort-ii) |
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
