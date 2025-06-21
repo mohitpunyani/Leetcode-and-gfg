@@ -1,42 +1,44 @@
 class Solution {
 public:
-    vector<vector<int>>ans;
-    void solve(vector<int>&candidates,vector<int>temp,int target,int idx)
-    {
-        if(target<0){
-            return ;
-        }
-        if(target==0){
-            ans.push_back(temp);
-            return ;
-        }
-        for(int i=idx;i<candidates.size();i++)
-        {
-             if(i > idx && candidates[i] == candidates[i-1]) continue;
-            temp.push_back(candidates[i]);
-            solve(candidates,temp,target-candidates[i],i+1);
-            temp.pop_back();
-
-        }
+    
+    void solve(int index,int k,vector<int>&arr,vector<int>&temp,vector<vector<int>>&ans)
+{
+    if(k<0){
+        return ;
+        
+    }
+    if(k==0){
+        ans.push_back(temp);
         return ;
     }
-    vector<vector<int>> combinationSum2(vector<int>& candidates, int target) 
+    for(int i=index;i<arr.size();i++)
     {
-        sort(candidates.begin(),candidates.end());
+        if(i>index && arr[i]==arr[i-1]) 
+            continue;
+
+        if(arr[i]>k){
+            break;
+            // iska matlab hai ki aage wali values ke liye bhi solution nahi hai 
+        }
+        else{
+        temp.push_back(arr[i]);
+        solve(i+1,k-arr[i],arr,temp,ans);
+        temp.pop_back();
+    }
+    }
+    return ;
+    
+}
+    vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
+        vector<vector<int>>ans;
+        int k=target;
         vector<int>temp;
-        solve(candidates,temp,target,0);
-        // set<vector<int>>st;
-        // for(auto it:ans)
-        // {
-        //     st.insert(it);
-        // }
-        // ans.resize(0);
-        // for(auto it:st){
-        //     ans.push_back(it);
-        // }     
-        // ans.erase(unique(ans.begin(), ans.end()), ans.end()); // remove duplicate elements
+        sort(candidates.begin(),candidates.end());
+        solve(0,k,candidates,temp,ans);
+        // ans.erase(unique(ans.begin(),ans.end()),ans.end());
+        // ans.resize(unique(ans.begin(),ans.end())-ans.begin());
+        // A.erase(unique(A.begin(), A.end()), A.end()); // remove duplicate elements
 
         return ans;
-        
     }
 };
