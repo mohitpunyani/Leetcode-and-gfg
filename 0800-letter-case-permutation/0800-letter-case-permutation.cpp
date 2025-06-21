@@ -11,6 +11,7 @@ void solve(string s,string temp,int idx )
     {
         // we have only one choice
         solve(s,temp+s[idx],idx+1);
+        return ;
 
     }
     if(isalpha(s[idx]))
