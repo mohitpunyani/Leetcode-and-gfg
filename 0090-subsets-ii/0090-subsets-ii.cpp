@@ -22,7 +22,7 @@ public:
         vector<int>op;
         sort(nums.begin(),nums.end());
         vector<vector<int>>ans;
-            solve(nums,op,0);
+        solve(nums,op,0);
         for(auto it:st)
         {
             ans.push_back(it);
