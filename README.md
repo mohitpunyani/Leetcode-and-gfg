@@ -39,6 +39,7 @@ Available All my solved Leetcode Questions with comments
 | [0053-maximum-subarray](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0053-maximum-subarray) |
 | [0056-merge-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0057-insert-interval) |
+| [0078-subsets](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0078-subsets) |
 | [0088-merge-sorted-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0088-merge-sorted-array) |
 | [0152-maximum-product-subarray](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0152-maximum-product-subarray) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0167-two-sum-ii-input-array-is-sorted) |
@@ -109,6 +110,7 @@ Available All my solved Leetcode Questions with comments
 ## Bit Manipulation
 |  |
 | ------- |
+| [0078-subsets](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0078-subsets) |
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
 | [2427-first-letter-to-appear-twice](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2427-first-letter-to-appear-twice) |
 ## Sorting
@@ -173,4 +175,8 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [0239-sliding-window-maximum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0239-sliding-window-maximum) |
+## Backtracking
+|  |
+| ------- |
+| [0078-subsets](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0078-subsets) |
 <!---LeetCode Topics End-->
