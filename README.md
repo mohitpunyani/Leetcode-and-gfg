@@ -27,6 +27,7 @@ Available All my solved Leetcode Questions with comments
 | [0345-reverse-vowels-of-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0345-reverse-vowels-of-a-string) |
 | [0387-first-unique-character-in-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0387-first-unique-character-in-a-string) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0438-find-all-anagrams-in-a-string) |
+| [0800-letter-case-permutation](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0800-letter-case-permutation) |
 | [2427-first-letter-to-appear-twice](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2427-first-letter-to-appear-twice) |
 ## Array
 |  |
@@ -116,6 +117,7 @@ Available All my solved Leetcode Questions with comments
 | [0078-subsets](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0090-subsets-ii) |
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
+| [0800-letter-case-permutation](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0800-letter-case-permutation) |
 | [2427-first-letter-to-appear-twice](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2427-first-letter-to-appear-twice) |
 ## Sorting
 |  |
@@ -187,4 +189,5 @@ Available All my solved Leetcode Questions with comments
 | [0047-permutations-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0047-permutations-ii) |
 | [0078-subsets](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0090-subsets-ii) |
+| [0800-letter-case-permutation](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0800-letter-case-permutation) |
 <!---LeetCode Topics End-->
