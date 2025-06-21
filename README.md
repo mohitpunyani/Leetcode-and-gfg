@@ -22,6 +22,7 @@ Available All my solved Leetcode Questions with comments
 | ------- |
 | [0012-integer-to-roman](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0013-roman-to-integer) |
+| [0076-minimum-window-substring](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0076-minimum-window-substring) |
 | [0345-reverse-vowels-of-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0345-reverse-vowels-of-a-string) |
 | [0387-first-unique-character-in-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0387-first-unique-character-in-a-string) |
 | [2427-first-letter-to-appear-twice](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2427-first-letter-to-appear-twice) |
@@ -71,6 +72,7 @@ Available All my solved Leetcode Questions with comments
 | [0012-integer-to-roman](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0013-roman-to-integer) |
 | [0041-first-missing-positive](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0041-first-missing-positive) |
+| [0076-minimum-window-substring](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0076-minimum-window-substring) |
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
@@ -151,6 +153,7 @@ Available All my solved Leetcode Questions with comments
 ## Sliding Window
 |  |
 | ------- |
+| [0076-minimum-window-substring](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0076-minimum-window-substring) |
 | [0209-minimum-size-subarray-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0209-minimum-size-subarray-sum) |
 | [0239-sliding-window-maximum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0239-sliding-window-maximum) |
 | [0713-subarray-product-less-than-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0713-subarray-product-less-than-k) |
