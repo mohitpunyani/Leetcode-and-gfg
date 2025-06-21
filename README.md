@@ -36,6 +36,7 @@ Available All my solved Leetcode Questions with comments
 | [0016-3sum-closest](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0016-3sum-closest) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0041-first-missing-positive](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0041-first-missing-positive) |
+| [0046-permutations](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0046-permutations) |
 | [0053-maximum-subarray](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0053-maximum-subarray) |
 | [0056-merge-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0057-insert-interval) |
@@ -180,6 +181,7 @@ Available All my solved Leetcode Questions with comments
 ## Backtracking
 |  |
 | ------- |
+| [0046-permutations](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0046-permutations) |
 | [0078-subsets](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0090-subsets-ii) |
 <!---LeetCode Topics End-->
