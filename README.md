@@ -37,6 +37,7 @@ Available All my solved Leetcode Questions with comments
 | [0015-3sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0015-3sum) |
 | [0016-3sum-closest](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0016-3sum-closest) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0037-sudoku-solver](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0037-sudoku-solver) |
 | [0039-combination-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0040-combination-sum-ii) |
 | [0041-first-missing-positive](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0041-first-missing-positive) |
@@ -83,6 +84,7 @@ Available All my solved Leetcode Questions with comments
 | [0012-integer-to-roman](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0013-roman-to-integer) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0037-sudoku-solver](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0037-sudoku-solver) |
 | [0041-first-missing-positive](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0041-first-missing-positive) |
 | [0076-minimum-window-substring](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0076-minimum-window-substring) |
 | [0242-valid-anagram](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0242-valid-anagram) |
@@ -191,6 +193,7 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0037-sudoku-solver](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0037-sudoku-solver) |
 | [0039-combination-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0040-combination-sum-ii) |
 | [0046-permutations](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0046-permutations) |
@@ -199,4 +202,8 @@ Available All my solved Leetcode Questions with comments
 | [0090-subsets-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0090-subsets-ii) |
 | [0216-combination-sum-iii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0216-combination-sum-iii) |
 | [0800-letter-case-permutation](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0800-letter-case-permutation) |
+## Matrix
+|  |
+| ------- |
+| [0037-sudoku-solver](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0037-sudoku-solver) |
 <!---LeetCode Topics End-->
