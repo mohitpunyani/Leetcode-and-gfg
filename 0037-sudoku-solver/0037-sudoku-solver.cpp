@@ -11,7 +11,7 @@ bool isvalid(vector<vector<char>>&board,int row,int col,char val){
         if(board[i][col]==val){
             return false;
         }
-         if(board[3*(row/3)+i/3][3*(col/3)+i%3] == val)
+        if(board[3*(row/3)+i/3][3*(col/3)+i%3] == val) // 3*3 grid
          {
                 return false;
         }
