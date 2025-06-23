@@ -3,7 +3,8 @@ public:
     vector<vector<int>>ans;
     void solve(int k,int tar,vector<int>temp,int idx)
     {
-        if(tar<0){
+
+        if(tar<0 or k<0){
             return ;
         }
 
@@ -17,8 +18,7 @@ public:
         {
             temp.push_back(i);
             solve(k-1,tar-i,temp,i+1);
-            temp.pop_back();
-            // solve(k,tar,temp,i+1);  // backtrack
+            temp.pop_back(); // backtrack;
 
         }
         return ;
