@@ -47,7 +47,8 @@ int  second_occurence(vector<int>&nums,int target)
             low=mid+1;
         }
         else{
-            if(mid+1!=nums.size()&& nums[mid]==nums[mid+1]){
+            if(mid+1!=nums.size() && nums[mid]==nums[mid+1])
+            {
                 low=mid+1;
             }
             else{
