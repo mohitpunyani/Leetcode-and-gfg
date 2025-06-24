@@ -67,6 +67,7 @@ Available All my solved Leetcode Questions with comments
 | [0560-subarray-sum-equals-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0560-subarray-sum-equals-k) |
 | [0713-subarray-product-less-than-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0713-subarray-product-less-than-k) |
 | [0792-binary-search](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0792-binary-search) |
+| [0882-peak-index-in-a-mountain-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0882-peak-index-in-a-mountain-array) |
 | [1034-subarrays-with-k-different-integers](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1034-subarrays-with-k-different-integers) |
 | [1231-replace-elements-with-greatest-element-on-right-side](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1231-replace-elements-with-greatest-element-on-right-side) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2271-rearrange-array-elements-by-sign) |
@@ -113,6 +114,7 @@ Available All my solved Leetcode Questions with comments
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
 | [0713-subarray-product-less-than-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0713-subarray-product-less-than-k) |
 | [0792-binary-search](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0792-binary-search) |
+| [0882-peak-index-in-a-mountain-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0882-peak-index-in-a-mountain-array) |
 ## Queue
 |  |
 | ------- |
