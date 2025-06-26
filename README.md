@@ -118,6 +118,7 @@ Available All my solved Leetcode Questions with comments
 ## Queue
 |  |
 | ------- |
+| [0232-implement-queue-using-stacks](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0232-implement-queue-using-stacks) |
 | [0239-sliding-window-maximum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0239-sliding-window-maximum) |
 | [0387-first-unique-character-in-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0387-first-unique-character-in-a-string) |
 ## Counting
@@ -214,4 +215,12 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [0037-sudoku-solver](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0037-sudoku-solver) |
+## Stack
+|  |
+| ------- |
+| [0232-implement-queue-using-stacks](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0232-implement-queue-using-stacks) |
+## Design
+|  |
+| ------- |
+| [0232-implement-queue-using-stacks](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0232-implement-queue-using-stacks) |
 <!---LeetCode Topics End-->
