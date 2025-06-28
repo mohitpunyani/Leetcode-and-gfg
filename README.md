@@ -63,6 +63,7 @@ Available All my solved Leetcode Questions with comments
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
 | [0435-non-overlapping-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0435-non-overlapping-intervals) |
+| [0496-next-greater-element-i](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0496-next-greater-element-i) |
 | [0525-contiguous-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0560-subarray-sum-equals-k) |
 | [0713-subarray-product-less-than-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0713-subarray-product-less-than-k) |
@@ -97,6 +98,7 @@ Available All my solved Leetcode Questions with comments
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
 | [0387-first-unique-character-in-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0387-first-unique-character-in-a-string) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0438-find-all-anagrams-in-a-string) |
+| [0496-next-greater-element-i](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0496-next-greater-element-i) |
 | [0525-contiguous-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0560-subarray-sum-equals-k) |
 | [1034-subarrays-with-k-different-integers](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1034-subarrays-with-k-different-integers) |
@@ -219,8 +221,13 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [0232-implement-queue-using-stacks](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0232-implement-queue-using-stacks) |
+| [0496-next-greater-element-i](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0496-next-greater-element-i) |
 ## Design
 |  |
 | ------- |
 | [0232-implement-queue-using-stacks](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0232-implement-queue-using-stacks) |
+## Monotonic Stack
+|  |
+| ------- |
+| [0496-next-greater-element-i](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0496-next-greater-element-i) |
 <!---LeetCode Topics End-->
