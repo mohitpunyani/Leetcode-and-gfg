@@ -68,6 +68,7 @@ Available All my solved Leetcode Questions with comments
 | [0525-contiguous-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0560-subarray-sum-equals-k) |
 | [0713-subarray-product-less-than-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0713-subarray-product-less-than-k) |
+| [0739-daily-temperatures](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0739-daily-temperatures) |
 | [0792-binary-search](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0792-binary-search) |
 | [0882-peak-index-in-a-mountain-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0882-peak-index-in-a-mountain-array) |
 | [1034-subarrays-with-k-different-integers](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1034-subarrays-with-k-different-integers) |
@@ -224,6 +225,7 @@ Available All my solved Leetcode Questions with comments
 | [0232-implement-queue-using-stacks](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0232-implement-queue-using-stacks) |
 | [0496-next-greater-element-i](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0503-next-greater-element-ii) |
+| [0739-daily-temperatures](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0739-daily-temperatures) |
 | [0937-online-stock-span](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0937-online-stock-span) |
 ## Design
 |  |
@@ -235,6 +237,7 @@ Available All my solved Leetcode Questions with comments
 | ------- |
 | [0496-next-greater-element-i](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0503-next-greater-element-ii) |
+| [0739-daily-temperatures](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0739-daily-temperatures) |
 | [0937-online-stock-span](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0937-online-stock-span) |
 ## Data Stream
 |  |
