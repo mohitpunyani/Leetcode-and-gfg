@@ -64,6 +64,7 @@ Available All my solved Leetcode Questions with comments
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
 | [0435-non-overlapping-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0435-non-overlapping-intervals) |
 | [0496-next-greater-element-i](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0496-next-greater-element-i) |
+| [0503-next-greater-element-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0503-next-greater-element-ii) |
 | [0525-contiguous-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0560-subarray-sum-equals-k) |
 | [0713-subarray-product-less-than-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0713-subarray-product-less-than-k) |
@@ -222,6 +223,7 @@ Available All my solved Leetcode Questions with comments
 | ------- |
 | [0232-implement-queue-using-stacks](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0232-implement-queue-using-stacks) |
 | [0496-next-greater-element-i](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0496-next-greater-element-i) |
+| [0503-next-greater-element-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0503-next-greater-element-ii) |
 ## Design
 |  |
 | ------- |
@@ -230,4 +232,5 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [0496-next-greater-element-i](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0496-next-greater-element-i) |
+| [0503-next-greater-element-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0503-next-greater-element-ii) |
 <!---LeetCode Topics End-->
