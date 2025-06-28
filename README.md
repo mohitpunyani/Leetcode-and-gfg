@@ -224,13 +224,20 @@ Available All my solved Leetcode Questions with comments
 | [0232-implement-queue-using-stacks](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0232-implement-queue-using-stacks) |
 | [0496-next-greater-element-i](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0503-next-greater-element-ii) |
+| [0937-online-stock-span](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0937-online-stock-span) |
 ## Design
 |  |
 | ------- |
 | [0232-implement-queue-using-stacks](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0232-implement-queue-using-stacks) |
+| [0937-online-stock-span](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0937-online-stock-span) |
 ## Monotonic Stack
 |  |
 | ------- |
 | [0496-next-greater-element-i](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0503-next-greater-element-ii) |
+| [0937-online-stock-span](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0937-online-stock-span) |
+## Data Stream
+|  |
+| ------- |
+| [0937-online-stock-span](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0937-online-stock-span) |
 <!---LeetCode Topics End-->
