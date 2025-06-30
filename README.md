@@ -243,4 +243,12 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [0937-online-stock-span](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0937-online-stock-span) |
+## Linked List
+|  |
+| ------- |
+| [0206-reverse-linked-list](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0206-reverse-linked-list) |
+## Recursion
+|  |
+| ------- |
+| [0206-reverse-linked-list](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0206-reverse-linked-list) |
 <!---LeetCode Topics End-->
