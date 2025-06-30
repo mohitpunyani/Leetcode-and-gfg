@@ -24,29 +24,21 @@ public:
     {
         ListNode *prev=NULL;
         ListNode*curr=head;
-        if(n==1 && curr->next==NULL){
-            return NULL;
-        }
-        ListNode *temp=head;
         int ll=length_of_ll(head);
-        int deleted_node_index=ll-n; // DELETED NODE Index from start
-        deleted_node_index+=1;
+        int deleted_node_index=ll-n+1; // DELETED NODE Index from start
+        if(deleted_node_index==1)
+        {
+            head=curr->next;
+            return head;
+        }
         int count=1;
         while(true)
         {
-            if(prev==NULL && count==deleted_node_index){
-                prev=curr;
-                curr=curr->next;
-                temp=curr;
-                delete prev;
-                break;
-            }
 
             if(count==deleted_node_index)
             {
 
-                // prev=curr;
-                // curr=curr->next;
+               
                 prev->next=curr->next;
                 break;
             }
@@ -54,6 +46,6 @@ public:
             prev=curr;
             curr=curr->next;
         }
-        return temp;
+        return head;
     }
 };
