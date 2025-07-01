@@ -64,6 +64,7 @@ Available All my solved Leetcode Questions with comments
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
 | [0283-move-zeroes](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0283-move-zeroes) |
 | [0324-wiggle-sort-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0324-wiggle-sort-ii) |
+| [0347-top-k-frequent-elements](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0347-top-k-frequent-elements) |
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
 | [0435-non-overlapping-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0435-non-overlapping-intervals) |
@@ -104,6 +105,7 @@ Available All my solved Leetcode Questions with comments
 | [0142-linked-list-cycle-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0142-linked-list-cycle-ii) |
 | [0242-valid-anagram](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0242-valid-anagram) |
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
+| [0347-top-k-frequent-elements](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0347-top-k-frequent-elements) |
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
 | [0387-first-unique-character-in-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0387-first-unique-character-in-a-string) |
@@ -136,6 +138,7 @@ Available All my solved Leetcode Questions with comments
 ## Counting
 |  |
 | ------- |
+| [0347-top-k-frequent-elements](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0347-top-k-frequent-elements) |
 | [0387-first-unique-character-in-a-string](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0387-first-unique-character-in-a-string) |
 | [1034-subarrays-with-k-different-integers](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1034-subarrays-with-k-different-integers) |
 | [2427-first-letter-to-appear-twice](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2427-first-letter-to-appear-twice) |
@@ -158,6 +161,7 @@ Available All my solved Leetcode Questions with comments
 | [0242-valid-anagram](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0242-valid-anagram) |
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
 | [0324-wiggle-sort-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0324-wiggle-sort-ii) |
+| [0347-top-k-frequent-elements](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0347-top-k-frequent-elements) |
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
 | [0435-non-overlapping-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0435-non-overlapping-intervals) |
@@ -178,11 +182,13 @@ Available All my solved Leetcode Questions with comments
 | ------- |
 | [0053-maximum-subarray](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0053-maximum-subarray) |
 | [0324-wiggle-sort-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0324-wiggle-sort-ii) |
+| [0347-top-k-frequent-elements](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0347-top-k-frequent-elements) |
 | [1014-k-closest-points-to-origin](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1014-k-closest-points-to-origin) |
 ## Quickselect
 |  |
 | ------- |
 | [0324-wiggle-sort-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0324-wiggle-sort-ii) |
+| [0347-top-k-frequent-elements](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0347-top-k-frequent-elements) |
 | [1014-k-closest-points-to-origin](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1014-k-closest-points-to-origin) |
 ## Simulation
 |  |
@@ -209,6 +215,7 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [0239-sliding-window-maximum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0239-sliding-window-maximum) |
+| [0347-top-k-frequent-elements](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0347-top-k-frequent-elements) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0789-kth-largest-element-in-a-stream) |
 | [1014-k-closest-points-to-origin](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1014-k-closest-points-to-origin) |
 ## Monotonic Queue
@@ -286,4 +293,8 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [1014-k-closest-points-to-origin](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1014-k-closest-points-to-origin) |
+## Bucket Sort
+|  |
+| ------- |
+| [0347-top-k-frequent-elements](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0347-top-k-frequent-elements) |
 <!---LeetCode Topics End-->
