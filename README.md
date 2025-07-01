@@ -75,6 +75,7 @@ Available All my solved Leetcode Questions with comments
 | [0739-daily-temperatures](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0739-daily-temperatures) |
 | [0792-binary-search](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0792-binary-search) |
 | [0882-peak-index-in-a-mountain-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0882-peak-index-in-a-mountain-array) |
+| [1014-k-closest-points-to-origin](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1014-k-closest-points-to-origin) |
 | [1034-subarrays-with-k-different-integers](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1034-subarrays-with-k-different-integers) |
 | [1231-replace-elements-with-greatest-element-on-right-side](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1231-replace-elements-with-greatest-element-on-right-side) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2271-rearrange-array-elements-by-sign) |
@@ -87,6 +88,7 @@ Available All my solved Leetcode Questions with comments
 | [0013-roman-to-integer](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0013-roman-to-integer) |
 | [0189-rotate-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0189-rotate-array) |
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
+| [1014-k-closest-points-to-origin](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1014-k-closest-points-to-origin) |
 | [2432-number-of-zero-filled-subarrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/2432-number-of-zero-filled-subarrays) |
 ## Hash Table
 |  |
@@ -159,6 +161,7 @@ Available All my solved Leetcode Questions with comments
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
 | [0435-non-overlapping-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0435-non-overlapping-intervals) |
+| [1014-k-closest-points-to-origin](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1014-k-closest-points-to-origin) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -175,10 +178,12 @@ Available All my solved Leetcode Questions with comments
 | ------- |
 | [0053-maximum-subarray](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0053-maximum-subarray) |
 | [0324-wiggle-sort-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0324-wiggle-sort-ii) |
+| [1014-k-closest-points-to-origin](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1014-k-closest-points-to-origin) |
 ## Quickselect
 |  |
 | ------- |
 | [0324-wiggle-sort-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0324-wiggle-sort-ii) |
+| [1014-k-closest-points-to-origin](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1014-k-closest-points-to-origin) |
 ## Simulation
 |  |
 | ------- |
@@ -205,6 +210,7 @@ Available All my solved Leetcode Questions with comments
 | ------- |
 | [0239-sliding-window-maximum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0239-sliding-window-maximum) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0789-kth-largest-element-in-a-stream) |
+| [1014-k-closest-points-to-origin](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1014-k-closest-points-to-origin) |
 ## Monotonic Queue
 |  |
 | ------- |
@@ -276,4 +282,8 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [0789-kth-largest-element-in-a-stream](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0789-kth-largest-element-in-a-stream) |
+## Geometry
+|  |
+| ------- |
+| [1014-k-closest-points-to-origin](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1014-k-closest-points-to-origin) |
 <!---LeetCode Topics End-->
