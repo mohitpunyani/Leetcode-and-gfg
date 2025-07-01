@@ -69,6 +69,7 @@ Available All my solved Leetcode Questions with comments
 | [0347-top-k-frequent-elements](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0347-top-k-frequent-elements) |
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
+| [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
 | [0435-non-overlapping-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0435-non-overlapping-intervals) |
 | [0496-next-greater-element-i](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0503-next-greater-element-ii) |
@@ -130,6 +131,7 @@ Available All my solved Leetcode Questions with comments
 | [0268-missing-number](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0268-missing-number) |
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
+| [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
 | [0713-subarray-product-less-than-k](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0713-subarray-product-less-than-k) |
 | [0792-binary-search](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0792-binary-search) |
 | [0882-peak-index-in-a-mountain-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0882-peak-index-in-a-mountain-array) |
@@ -170,6 +172,7 @@ Available All my solved Leetcode Questions with comments
 | [0347-top-k-frequent-elements](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0347-top-k-frequent-elements) |
 | [0349-intersection-of-two-arrays](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0350-intersection-of-two-arrays-ii) |
+| [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
 | [0435-non-overlapping-intervals](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0435-non-overlapping-intervals) |
 | [0692-top-k-frequent-words](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0692-top-k-frequent-words) |
 | [1014-k-closest-points-to-origin](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1014-k-closest-points-to-origin) |
@@ -226,6 +229,7 @@ Available All my solved Leetcode Questions with comments
 | [0215-kth-largest-element-in-an-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0215-kth-largest-element-in-an-array) |
 | [0239-sliding-window-maximum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0239-sliding-window-maximum) |
 | [0347-top-k-frequent-elements](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0347-top-k-frequent-elements) |
+| [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
 | [0692-top-k-frequent-words](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0692-top-k-frequent-words) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0789-kth-largest-element-in-a-stream) |
 | [1014-k-closest-points-to-origin](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/1014-k-closest-points-to-origin) |
@@ -250,6 +254,7 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [0037-sudoku-solver](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0037-sudoku-solver) |
+| [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
 ## Stack
 |  |
 | ------- |
