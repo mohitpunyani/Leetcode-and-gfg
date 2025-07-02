@@ -258,6 +258,7 @@ Available All my solved Leetcode Questions with comments
 ## Stack
 |  |
 | ------- |
+| [0094-binary-tree-inorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0094-binary-tree-inorder-traversal) |
 | [0232-implement-queue-using-stacks](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0232-implement-queue-using-stacks) |
 | [0496-next-greater-element-i](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0503-next-greater-element-ii) |
@@ -296,6 +297,7 @@ Available All my solved Leetcode Questions with comments
 ## Tree
 |  |
 | ------- |
+| [0094-binary-tree-inorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0094-binary-tree-inorder-traversal) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0789-kth-largest-element-in-a-stream) |
 ## Binary Search Tree
 |  |
@@ -304,6 +306,7 @@ Available All my solved Leetcode Questions with comments
 ## Binary Tree
 |  |
 | ------- |
+| [0094-binary-tree-inorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0094-binary-tree-inorder-traversal) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0789-kth-largest-element-in-a-stream) |
 ## Geometry
 |  |
@@ -318,4 +321,8 @@ Available All my solved Leetcode Questions with comments
 |  |
 | ------- |
 | [0692-top-k-frequent-words](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0692-top-k-frequent-words) |
+## Depth-First Search
+|  |
+| ------- |
+| [0094-binary-tree-inorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0094-binary-tree-inorder-traversal) |
 <!---LeetCode Topics End-->
