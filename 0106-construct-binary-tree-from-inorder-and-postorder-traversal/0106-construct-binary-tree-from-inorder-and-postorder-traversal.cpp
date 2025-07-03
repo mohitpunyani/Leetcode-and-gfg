@@ -9,33 +9,41 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-
 class Solution {
 public:
-    TreeNode* solve(vector<int>& postorder, vector<int>& inorder,int& postIndex,int i,int j,unordered_map<int,int>& m){
-          if(i>j || postIndex<0 ){
-              ++postIndex;
-              return NULL;
-          }
-                
-        TreeNode* curr=new TreeNode(postorder[postIndex]);
-        int ix=m[postorder[postIndex]]; 
-        
-        curr->right=solve(postorder,inorder,--postIndex,ix+1,j,m);
-        curr->left=solve(postorder,inorder,--postIndex,i,ix-1,m);
-        
-        
-        return curr;
-    }
-    
-    TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
-        unordered_map<int,int> m;
-        int s=inorder.size();
-        for(int i=0;i<s;i++){
-            m[inorder[i]]=i;
+
+   int is_find(int element,vector<int>&inorder,int start,int end)
+   {
+        for(int i=start;i<=end;i++)
+        {
+            if(element==inorder[i])
+            {
+                return i;
+            }
         }
+        return -1;
+   }
+
+    TreeNode*solve(vector<int>&inorder, vector<int>&postorder, int &post_index,int start,int end)
+    { 
+        if(post_index<0 || start>end){
+            return NULL;
+        }
+
+        int element=postorder[post_index];
+        TreeNode*root=new TreeNode(element);
+        int index=is_find(element, inorder, start,end);
+        post_index-=1;
+        root->right=solve(inorder,postorder,post_index,index+1,end);
+        root->left=solve(inorder,postorder,post_index,start,index-1);
+        return root;
+    }
+    TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder)
+    {
+        int post_index=postorder.size()-1;
+        int start=0;
+        int end=inorder.size()-1;
+        return solve(inorder,postorder,post_index,start,end);
         
-        int postIndex=s-1;
-        return solve(postorder,inorder,postIndex,0,s-1,m);
     }
 };
