@@ -40,7 +40,7 @@ public:
         }     
         bool left=recur(p->left,q->left);
         bool right=recur(p->right,q->right);
-        if(left && right && p->val==q->val)
+        if(left && right)
         {
             return true;
         }
