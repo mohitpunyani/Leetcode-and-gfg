@@ -1,26 +1,31 @@
 class Solution {
 public:
-    void solution(TreeNode* root,vector<vector<int>>&ans,vector<int>&path,int k){
-        if(!root) return ;
-
-        path.push_back(root->val);
-        if(root->left == NULL && root->right == NULL && k-root->val == 0){ 
-            ans.push_back(path);
+   
+    vector<vector<int>>ans;
+    // vector<int>temp;
+    void solve(TreeNode*root,int targetSum,vector<int>&temp)
+    {
+        if(root==NULL)
+        {
+            return ;
+        }
+        temp.push_back(root->val);
+        if(root->left==NULL && root->right==NULL && targetSum-root->val==0)
+        {
+            // temp.push_back(root->val);
+            ans.push_back(temp);
+            // temp.pop_back(); // backtrack;
             // return ;
         }
-        // if(root->left) 
-        solution(root->left,ans,path,k - root->val);
-        // if(root->right) 
-        solution(root->right,ans,path,k - root->val);
-
-        path.pop_back();
-        return; 
+        solve(root->left,targetSum-root->val,temp);
+        solve(root->right,targetSum-root->val,temp);
+        temp.pop_back(); // backtrack
+        return ;
     }
-
-    vector<vector<int>> pathSum(TreeNode* root, int k) {
-        vector<vector<int>> ans;
-        vector<int>path;
-        solution(root,ans,path,k);
+    vector<vector<int>> pathSum(TreeNode* root, int targetSum)
+    {
+        vector<int>temp;
+        solve(root,targetSum,temp);
         return ans;
     }
 };
