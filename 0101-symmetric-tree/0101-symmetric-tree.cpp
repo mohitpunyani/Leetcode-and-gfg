@@ -9,36 +9,53 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-
 class Solution {
-public:
-    bool isSymmetric(TreeNode *root) {
-        TreeNode *left, *right;
-        if (!root)
-            return true;
-        
-        queue<TreeNode*> q1, q2;
-        q1.push(root->left);
-        q2.push(root->right);
-        while (!q1.empty() && !q2.empty()){
-            left = q1.front();
-            q1.pop();
-            right = q2.front();
-            q2.pop();
-            if (NULL == left && NULL == right)
-                continue;
-            if (NULL == left && right!=NULL)
-                return false;
-            if(right==NULL && left!=NULL){
-                return false;
-            }
-            if (left->val != right->val)
-                return false;
-            q1.push(left->left);
-            q1.push(left->right);
-            q2.push(right->right);
-            q2.push(right->left);
+public: 
+    void invert(TreeNode*root)
+    {
+        if(root==NULL){
+            return ;
         }
-        return true;
+        if(root->left==NULL && root->right==NULL){
+            return ;
+        }
+        swap(root->left,root->right);
+        invert(root->left);
+        invert(root->right);
+        return ;
+    }
+    bool recur(TreeNode*p,TreeNode*q)
+    {
+        if(p==NULL && q!=NULL){
+            return false;
+        }
+        if(p!=NULL && q==NULL){
+            return false;
+        }
+        if(p==NULL && q==NULL){
+            return true;
+        }
+        if(p->val!=q->val){
+            return false;
+        }     
+        bool left=recur(p->left,q->left);
+        bool right=recur(p->right,q->right);
+        if(left && right && p->val==q->val)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+    bool isSymmetric(TreeNode* root) 
+    {
+        // RECURSIVE
+        // first invert whole left tree and then match with left and right tree
+        invert(root->left);
+        return recur(root->left, root->right);
+
+        
     }
 };
