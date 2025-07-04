@@ -84,7 +84,42 @@ public:
         // return invert_follow_recur(root->left, root->right);
 
         // WITHOUT INVERT THE TREE , DIRECT RECURSION
-        return recur(root->left,root->right);
+        // return recur(root->left,root->right);
+
+        // follow iteration approach 
+
+        if(root==NULL){
+            return true;
+        }
+        queue<TreeNode*>q;
+        q.push(root->left);
+        q.push(root->right);
+        while(!q.empty())
+        {
+            TreeNode*node1=q.front();
+            q.pop();
+            TreeNode*node2=q.front();
+            q.pop();
+            if(node1==NULL && node2==NULL){
+                continue;
+            }
+            if(node1==NULL && node2!=NULL){
+                return false;
+            }
+            if(node1!=NULL && node2==NULL){
+                return false;
+            }
+            if(node1->val!=node2->val)
+            {
+                return false;
+            }
+            q.push(node1->left);
+            q.push(node2->right);
+            q.push(node1->right);
+            q.push(node2->left);
+        }
+        return true;
+        
         
     }
 };
