@@ -32,13 +32,9 @@ public:
             return true;
         }
         
-        // if(root->left == NULL && root->right == NULL && root->val - targetSum == 0)
-        // {
-        //     return true;
-        // }
         bool left=solve(root->left,targetSum-root->val);
         bool right=solve(root->right,targetSum-root->val);
-        return left || right;
+        return left or right;
     }
     bool hasPathSum(TreeNode* root, int targetSum) 
     {
