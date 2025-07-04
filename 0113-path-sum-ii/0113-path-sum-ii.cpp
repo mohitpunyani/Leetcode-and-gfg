@@ -1,42 +1,22 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
 class Solution {
 public:
-   
-    vector<vector<int>>ans;
-    vector<int>temp;
-    void solve(TreeNode*root,int targetSum)
-    {
-        if(root==NULL)
-        {
-            return ;
+    void solution(TreeNode* root,vector<vector<int>>&ans,vector<int>&path,int k){
+        if(!root) return ;
+
+        path.push_back(root->val);
+        if(root->left == NULL && root->right == NULL && root->val == k){ 
+            ans.push_back(path);
         }
-        if(root->left==NULL && root->right==NULL && targetSum-root->val==0)
-        {
-            temp.push_back(root->val);
-            ans.push_back(temp);
-            temp.pop_back();
-            return ;
-        }
-        temp.push_back(root->val);
-        solve(root->left,targetSum-root->val);
-        // temp.pop_back();
-        solve(root->right,targetSum-root->val);
-        temp.pop_back();
-        return ;
+        if(root->left) solution(root->left,ans,path,k - root->val);
+        if(root->right) solution(root->right,ans,path,k - root->val);
+
+        path.pop_back();
     }
-    vector<vector<int>> pathSum(TreeNode* root, int targetSum)
-    {
-        solve(root,targetSum);
+
+    vector<vector<int>> pathSum(TreeNode* root, int k) {
+        vector<vector<int>> ans;
+        vector<int>path;
+        solution(root,ans,path,k);
         return ans;
     }
 };
