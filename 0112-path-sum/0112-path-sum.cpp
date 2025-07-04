@@ -13,16 +13,6 @@ class Solution {
 public:
     bool solve(TreeNode*root,int targetSum)
     { 
-        // if(root==NULL){
-        //     return false;
-        // }
-        // if(targetSum<0){
-        //     return false;
-        // }
-        // if(targetSum==0){
-        //     return true;
-        // }
-
         if(root == NULL)
         {
             return false;
