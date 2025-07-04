@@ -2,8 +2,8 @@ class Solution {
 public:
    
     vector<vector<int>>ans;
-    // vector<int>temp;
-    void solve(TreeNode*root,int targetSum,vector<int>&temp)
+    vector<int>temp;
+    void solve(TreeNode*root,int targetSum)
     {
         if(root==NULL)
         {
@@ -18,15 +18,15 @@ public:
             
         }
         temp.push_back(root->val);
-        solve(root->left,targetSum-root->val,temp);
-        solve(root->right,targetSum-root->val,temp);
+        solve(root->left,targetSum-root->val);
+        solve(root->right,targetSum-root->val);
         temp.pop_back(); // backtrack
         return ;
     }
     vector<vector<int>> pathSum(TreeNode* root, int targetSum)
     {
-        vector<int>temp;
-        solve(root,targetSum,temp);
+    
+        solve(root,targetSum);
         return ans;
     }
 };
