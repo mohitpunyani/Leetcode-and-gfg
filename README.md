@@ -315,6 +315,7 @@ Available All my solved Leetcode Questions with comments
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0107-binary-tree-level-order-traversal-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0107-binary-tree-level-order-traversal-ii) |
+| [0112-path-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0112-path-sum) |
 | [0144-binary-tree-preorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0145-binary-tree-postorder-traversal) |
 | [0226-invert-binary-tree](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0226-invert-binary-tree) |
@@ -334,6 +335,7 @@ Available All my solved Leetcode Questions with comments
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0107-binary-tree-level-order-traversal-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0107-binary-tree-level-order-traversal-ii) |
+| [0112-path-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0112-path-sum) |
 | [0144-binary-tree-preorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0145-binary-tree-postorder-traversal) |
 | [0226-invert-binary-tree](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0226-invert-binary-tree) |
@@ -357,6 +359,7 @@ Available All my solved Leetcode Questions with comments
 | ------- |
 | [0094-binary-tree-inorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0094-binary-tree-inorder-traversal) |
 | [0101-symmetric-tree](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0101-symmetric-tree) |
+| [0112-path-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0112-path-sum) |
 | [0144-binary-tree-preorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0145-binary-tree-postorder-traversal) |
 | [0226-invert-binary-tree](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0226-invert-binary-tree) |
@@ -367,5 +370,6 @@ Available All my solved Leetcode Questions with comments
 | [0102-binary-tree-level-order-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0102-binary-tree-level-order-traversal) |
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0103-binary-tree-zigzag-level-order-traversal) |
 | [0107-binary-tree-level-order-traversal-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0107-binary-tree-level-order-traversal-ii) |
+| [0112-path-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0112-path-sum) |
 | [0226-invert-binary-tree](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0226-invert-binary-tree) |
 <!---LeetCode Topics End-->
