@@ -17,7 +17,7 @@ public:
         {
             return false;
         }
-        if(root->left == NULL && root->right == NULL &&  targetSum == root->val)
+        if(root->left == NULL && root->right == NULL &&  targetSum - root->val==0)
         {
             return true;  // RETURN TRUE WHEN WE REACHED TO THE LEAVE NODE
         }
