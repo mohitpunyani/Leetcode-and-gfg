@@ -12,24 +12,53 @@
 class Solution {
 public:
       
-    void solve(TreeNode*root)
-    {
-        if(root==NULL){
-            return ;
-        }
-        if(root->left==NULL && root->right==NULL)
-        {
-            return ;
+    // void recursive(TreeNode*root)
+    // {
+    //     if(root==NULL){
+    //         return ;
+    //     }
+    //     if(root->left==NULL && root->right==NULL)
+    //     {
+    //         return ;
 
+    //     }
+    //     swap(root->left,root->right);
+    //     reursive(root->left);
+    //     recursive(root->right);
+    //     return ;
+    // }
+
+    stack<TreeNode*>st;
+    void iter(TreeNode*root)
+    {
+        st.push(root);
+        while(!st.empty())
+        {
+            TreeNode*temp=st.top();
+            st.pop();
+            if(temp->left!=NULL){
+                st.push(temp->left);
+            }
+            if(temp->right!=NULL){
+                st.push(temp->right);
+            }
+            swap(temp->left,temp->right);
         }
-        swap(root->left,root->right);
-        solve(root->left);
-        solve(root->right);
-        return ;
+
     }
     TreeNode* invertTree(TreeNode* root) 
     {
-        solve(root);
+        // RECURSIVE
+
+        // recursive(root);
+        // return root;
+
+        // ITERATIVE
+        
+        if(root==NULL){
+            return NULL;
+        }
+        iter(root);
         return root;
     }
 };
