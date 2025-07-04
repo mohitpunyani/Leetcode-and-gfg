@@ -9,14 +9,15 @@ public:
         {
             return ;
         }
-        temp.push_back(root->val);
         if(root->left==NULL && root->right==NULL && targetSum-root->val==0)
         {
-            // temp.push_back(root->val);
+            temp.push_back(root->val);
             ans.push_back(temp);
-            // temp.pop_back(); // backtrack;
-            // return ;
+            temp.pop_back();
+            return ;
+            
         }
+        temp.push_back(root->val);
         solve(root->left,targetSum-root->val,temp);
         solve(root->right,targetSum-root->val,temp);
         temp.pop_back(); // backtrack
