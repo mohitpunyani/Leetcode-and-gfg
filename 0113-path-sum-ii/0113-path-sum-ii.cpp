@@ -20,7 +20,7 @@ public:
         temp.push_back(root->val);
         solve(root->left,targetSum-root->val);
         solve(root->right,targetSum-root->val);
-        temp.pop_back(); // backtrack
+        temp.pop_back(); // backtrack  
         return ;
     }
     vector<vector<int>> pathSum(TreeNode* root, int targetSum)
