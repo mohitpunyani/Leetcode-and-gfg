@@ -58,6 +58,7 @@ Available All my solved Leetcode Questions with comments
 | [0090-subsets-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0090-subsets-ii) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
+| [0108-convert-sorted-array-to-binary-search-tree](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
 | [0152-maximum-product-subarray](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0152-maximum-product-subarray) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0189-rotate-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0189-rotate-array) |
@@ -199,6 +200,7 @@ Available All my solved Leetcode Questions with comments
 | [0053-maximum-subarray](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0053-maximum-subarray) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
+| [0108-convert-sorted-array-to-binary-search-tree](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
 | [0215-kth-largest-element-in-an-array](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0215-kth-largest-element-in-an-array) |
 | [0324-wiggle-sort-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0324-wiggle-sort-ii) |
 | [0347-top-k-frequent-elements](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0347-top-k-frequent-elements) |
@@ -316,6 +318,7 @@ Available All my solved Leetcode Questions with comments
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0107-binary-tree-level-order-traversal-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0107-binary-tree-level-order-traversal-ii) |
+| [0108-convert-sorted-array-to-binary-search-tree](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
 | [0112-path-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0112-path-sum) |
 | [0113-path-sum-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0113-path-sum-ii) |
 | [0144-binary-tree-preorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0144-binary-tree-preorder-traversal) |
@@ -326,6 +329,7 @@ Available All my solved Leetcode Questions with comments
 ## Binary Search Tree
 |  |
 | ------- |
+| [0108-convert-sorted-array-to-binary-search-tree](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0789-kth-largest-element-in-a-stream) |
 ## Binary Tree
 |  |
@@ -337,6 +341,7 @@ Available All my solved Leetcode Questions with comments
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0107-binary-tree-level-order-traversal-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0107-binary-tree-level-order-traversal-ii) |
+| [0108-convert-sorted-array-to-binary-search-tree](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
 | [0112-path-sum](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0112-path-sum) |
 | [0113-path-sum-ii](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0113-path-sum-ii) |
 | [0144-binary-tree-preorder-traversal](https://github.com/mohitpunyani/Leetcode-and-gfg/tree/master/0144-binary-tree-preorder-traversal) |
