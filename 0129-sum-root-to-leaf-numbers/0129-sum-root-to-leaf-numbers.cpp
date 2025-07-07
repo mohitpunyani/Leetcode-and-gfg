@@ -41,3 +41,39 @@ public:
         
     }
 };
+
+
+
+
+// class Solution {
+// public:
+    
+//     int sum=0;
+
+//     int ans=0;
+//     void solve(TreeNode*root)
+//     {
+//         if(root==NULL){
+//             return ;
+//         }
+//         if(root->left==NULL && root->right==NULL)
+//         {
+//             sum=sum*10+root->val;
+//             ans=ans+sum;
+//             sum=sum/10;
+//             return ;
+//         }
+//         sum=sum*10+root->val;
+//         solve(root->left);
+//         solve(root->right);
+//         sum=sum/10;
+//         return ;
+
+//     }
+//     int sumNumbers(TreeNode* root)
+//     {
+//         solve(root);
+//         return ans;
+        
+//     }
+// };
