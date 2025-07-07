@@ -20,7 +20,7 @@ class Solution {
         if(root->val<=mn or root->val>=mx ){
             return false;
         }
-        else{
+        // else{
             bool left=solve(root->left,mn,root->val);
             bool right=solve(root->right,root->val,mx);
             if(left && right){
@@ -29,7 +29,7 @@ class Solution {
             else{
                 return false;
             }
-        }
+        // }
 }
 public:
     bool isValidBST(TreeNode* root) 
