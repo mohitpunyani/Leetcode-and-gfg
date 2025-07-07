@@ -23,7 +23,12 @@ class Solution {
         else{
             bool left=solve(root->left,mn,root->val);
             bool right=solve(root->right,root->val,mx);
-            return left && right;
+            if(left && right){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
 }
 public:
