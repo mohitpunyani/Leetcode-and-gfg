@@ -10,29 +10,30 @@
  * };
  */
 class Solution {
-    bool solve(TreeNode*root,long long int min,long long int max)
+    bool solve(TreeNode*root,long long int mn,long long int mx)
     {
         if(root==NULL)
         {
             return true;
         }
 
-    if(root->val>min && root->val<max)
-    {
-        bool left=solve(root->left,min,root->val);
-        bool right=solve(root->right,root->val,max);
-        return left && right;
-    }
-    else{
-        return false;
-    }
+        if(root->val<=mn or root->val>=mx ){
+            return false;
+        }
+        else{
+            bool left=solve(root->left,mn,root->val);
+            bool right=solve(root->right,root->val,mx);
+            return left && right;
+        }
 }
 public:
     bool isValidBST(TreeNode* root) 
     {
         // solve using range concept by love babbar.
         
-        return solve(root,-21474836470,21474836470);
+        long long int mn=LONG_MIN;
+        long long int mx=LONG_MAX;
+        return solve(root,mn,mx);
       
     }
     
