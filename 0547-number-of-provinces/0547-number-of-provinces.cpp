@@ -1,42 +1,54 @@
 class Solution {
 public:
-void dfs(int s,int n,vector<bool>&visited,vector<vector<int>>&isConnected)
-{
-    visited[s]=true;
-    // s=1
-    // total nodes           1 2 3 4 5
-// nodes connected to s(1)   1 1 0 1 0 // 3 and 5 are not connected to s
 
-// so we only want to traverse the adjacent or neighbours of s but 3 and 
-// 5 are not neighbours
-vector<int>adj;
-for(int i=0;i<n;i++)
-{
-    int x=isConnected[s][i];
-    if(x==1){
-        // means connected we find the neighbour
-        adj.push_back(i);
+    void solve(int node,unordered_map<int,list<int>>&mp,vector<bool>&visited)
+    {
+        visited[node]=true;
+        for(auto &neighbours:mp[node])
+        {
+            if(!visited[neighbours])
+            {
+                solve(neighbours,mp,visited);
+            }
+            else{
+                continue;
+            }
+
+        }
+        return ;
     }
-    
-}
-// traverse the adjacent
-for(auto x:adj){
-    if(!visited[x]){
-        dfs(x,n,visited,isConnected);
-    }
-}
-}
+
     int findCircleNum(vector<vector<int>>& isConnected)
     {
+        
+        // cycle detection in undirected graph
+
+        unordered_map<int,list<int>>mp;
         int n=isConnected.size();
-        int count=0;
-        vector<bool>visited(n+1,false);
-        for(int i=0;i<n;i++){
-            if(visited[i]==false){
-                count++;
-                dfs(i,n,visited,isConnected);
+
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                if(isConnected[i][j]==1 && i!=j)
+                {
+                    mp[i+1].push_back(j+1);
+                    mp[j+1].push_back(i+1);
+                }
+                
             }
         }
-        return count;
+        int counts=0;
+        vector<bool>visited(n+1,false);
+        for(int i=1;i<=n;i++)
+        {
+            if(!visited[i])
+            {
+
+                counts++;
+                solve(i,mp,visited);
+            }
+        }
+        return counts;
     }
 };
