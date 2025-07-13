@@ -38,8 +38,7 @@ class Solution {
     int spanningTree(int V, vector<vector<int>> adj[])
     {
         // code here
-        // int n=adj.size();
-
+        
         vector<bool>visited(V,false);
         return bfs(adj,visited);
     
